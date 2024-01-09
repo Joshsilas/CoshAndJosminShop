@@ -1,5 +1,5 @@
 
-const BasketButton = () => {
+const Button = () => {
     return (
         <>
             <h2>
@@ -8,4 +8,4 @@ const BasketButton = () => {
         </>
     )
 }
-export default BasketButton
+export default Button

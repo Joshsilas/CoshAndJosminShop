@@ -1,9 +1,9 @@
 
-const ButtonCart = () => {
+const CartButton = () => {
     return (
         <button type='button'>
             Click
         </button>
     )
 }
-export default ButtonCart
+export default CartButton
