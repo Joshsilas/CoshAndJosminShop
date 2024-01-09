@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from "./Components/Navbar/index.jsx";
 import CategoryMenu from "./Components/Category Menu/index.jsx";
+import SearchBar from "./Components/Search Bar/index.jsx";
+import ButtonCart from "./Components/Button Cart/index.jsx";
 
 function App() {
 
@@ -12,6 +14,8 @@ function App() {
     <>
         <Navbar />
         <CategoryMenu/>
+        <SearchBar/>
+        <ButtonCart/>
         <p>Hello Cosmin I have set up a repo</p>
     </>
   )
