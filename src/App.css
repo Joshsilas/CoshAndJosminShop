@@ -5,6 +5,15 @@
   text-align: center;
 }
 
+.banner {
+  margin-top: 20px;
+  background-color: #127947;
+  padding: 30px;
+  font-size: 2rem;
+  border-radius: 30px;
+  color: white;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

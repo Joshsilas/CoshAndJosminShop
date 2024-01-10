@@ -14,6 +14,7 @@ const CategoryMenu = ({ text, menuItems }) => {
                 <button className = 'catButton' onClick={toggleMenu}>
                     <img className="barsImage" src='src/assets/bars-solid.svg' alt="BarsLogo" />
                     {text}
+
                 </button>
                 {isOpen && (
                     <ul className="List">

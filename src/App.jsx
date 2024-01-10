@@ -10,6 +10,9 @@ function App() {
   return (
     <>
         <Navbar />
+        <div className = 'banner'>
+            <p>Welcome to Cosh and Josmin. yeah!</p>
+        </div>
     </>
   )
 }
