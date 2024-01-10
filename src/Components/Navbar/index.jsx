@@ -9,7 +9,7 @@ const NavBar = () => {
         <div>
             <nav className="navBar">
                 <p>Cosh And Josmin</p>
-                <CategoryMenu />
+                <CategoryMenu text="Categories" menuItems={['Item 1', 'Item 2', 'Item 3', 'Item 4']} />
                 <SearchBar/>
                 <CartButton />
             </nav>

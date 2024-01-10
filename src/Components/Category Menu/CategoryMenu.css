@@ -1,0 +1,8 @@
+.catButton {
+    background-color: #545459;
+    border: solid black;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    width: 500px;
+}
