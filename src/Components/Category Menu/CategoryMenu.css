@@ -10,12 +10,15 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
+    left: 400px;
 }
 
 .category-menu {
-
     max-height: 0;
     transition: max-height 0.3s ease-out;
+    position: absolute;
+    left: 500px;
+    background-color: #545459;
 }
 
 .category-menu.open {

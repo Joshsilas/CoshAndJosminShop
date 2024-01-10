@@ -9,7 +9,7 @@ const CategoryMenu = ({ text, menuItems }) => {
         };
 
         return (
-
+            <>
                 <div className={`category-menu ${isOpen ? 'open' : ''}`}>
                 <button className = 'catButton' onClick={toggleMenu}>
                     <img className="barsImage" src='src/assets/bars-solid.svg' alt="BarsLogo" />
@@ -23,7 +23,7 @@ const CategoryMenu = ({ text, menuItems }) => {
                     </ul>
                 )}
                 </div>
-
+            </>
         );
     };
 
