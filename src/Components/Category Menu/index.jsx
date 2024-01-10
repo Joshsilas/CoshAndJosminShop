@@ -1,7 +1,7 @@
 
 const CategoryMenu = () => {
     return (<>
-        <h2>CategoryMenu</h2>
+        <button>CategoryMenu</button>
         </>)
 
 }

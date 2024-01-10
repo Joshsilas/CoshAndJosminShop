@@ -10,10 +10,6 @@ function App() {
   return (
     <>
         <Navbar />
-        <CategoryMenu/>
-        <SearchBar/>
-        <CartButton/>
-        <p>Hello Cosmin I have set up a repo</p>
     </>
   )
 }

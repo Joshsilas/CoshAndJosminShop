@@ -1,8 +1,11 @@
+import './Searchbar.css'
 const SearchBar = () => {
-    return (<>
+    return (
+        <>
         <form>
-            <input type='input'/>
+            <input className='search' type='input' placeholder="What would you like to find"/>
         </form>
-    </>)
+    </>
+    )
 }
 export default SearchBar

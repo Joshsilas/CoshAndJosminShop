@@ -236,3 +236,7 @@ ul {
   margin: 0 auto;
   margin-top: 1rem;
 }
+
+body {
+  background-color: grey;
+}
