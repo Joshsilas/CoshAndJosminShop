@@ -13,13 +13,11 @@
 }
 
 .category-menu {
-    max-height: 0;
     transition: max-height 0.50s ease-out;
     background-color: #545459;
 }
 
 .category-menu.open {
-    max-height: 10px;
     background-color: #74857b;
 }
 
