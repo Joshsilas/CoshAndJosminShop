@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-        <p>Hello Cosmin I have set up a repo</p>
+        <p>Hello Cosmin I have set up a repo, hello</p>
     </>
   )
 }
