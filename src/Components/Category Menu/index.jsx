@@ -1,6 +1,7 @@
 import {useState} from "react";
 import './CategoryMenu.css';
 
+
 const CategoryMenu = ({ text, menuItems }) => {
         const [isOpen, setIsOpen] = useState(false);
         const toggleMenu = () => {
@@ -9,7 +10,7 @@ const CategoryMenu = ({ text, menuItems }) => {
 
         return (
             <>
-                <button className = 'catButton' onClick={toggleMenu}>{text}</button>
+                <button className = 'catButton' onClick={toggleMenu}><img className="barsImage" src='src/assets/bars-solid.svg' alt="BarsLogo" />{text}</button>
                 {isOpen && (
                     <ul>
                         {menuItems.map((item, index) => (
