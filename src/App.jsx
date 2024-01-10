@@ -1,17 +1,18 @@
 import './App.css'
 import Navbar from "./Components/Navbar/index.jsx";
 import {useEffect, useState} from "react";
-import Product from "./Components/Product/index.jsx";
+import ProductsContainer from "./Components/Products Container/index.jsx";
 
 const url = 'https://fakestoreapi.com/products';
 function App() {
 
-const[products, setProducts] = useState(true)
+const[products, setProducts] = useState([])
 
  const fetchProducts = async () => {
     try{
      const response = await fetch(url)
      const products = await response.json()
+        setProducts(products)
     } catch(err) {
         console.log(err)}
  }
@@ -26,7 +27,7 @@ const[products, setProducts] = useState(true)
             <p>Welcome to Cosh and Josmin. yeah!</p>
         </div>
         <main className='main'>
-            <Product products={products}/>
+            <ProductsContainer products={products}/>
         </main>
     </>
   )
