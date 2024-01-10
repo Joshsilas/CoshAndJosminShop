@@ -9,16 +9,21 @@ const CategoryMenu = ({ text, menuItems }) => {
         };
 
         return (
-            <>
-                <button className = 'catButton' onClick={toggleMenu}><img className="barsImage" src='src/assets/bars-solid.svg' alt="BarsLogo" />{text}</button>
+
+                <div className={`category-menu ${isOpen ? 'open' : ''}`}>
+                <button className = 'catButton' onClick={toggleMenu}>
+                    <img className="barsImage" src='src/assets/bars-solid.svg' alt="BarsLogo" />
+                    {text}
+                </button>
                 {isOpen && (
-                    <ul>
+                    <ul className="List">
                         {menuItems.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
                     </ul>
                 )}
-            </>
+                </div>
+
         );
     };
 

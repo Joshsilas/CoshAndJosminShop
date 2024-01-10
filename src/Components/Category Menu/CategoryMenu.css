@@ -4,11 +4,20 @@
     padding: 10px;
     color: white;
     font-size: 1rem;
-    width: 500px;
     gap: 20px;
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: flex-start;
+}
+
+.category-menu {
+
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+}
+
+.category-menu.open {
+    max-height: 200px;
 }

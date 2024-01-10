@@ -8,10 +8,10 @@ const NavBar = () => {
     return (
         <div>
             <nav className="navBar">
-                <p>Cosh And Josmin</p>
+                <h3>Cosh And Josmin</h3>
                 <CategoryMenu text="Categories" menuItems={['Item 1', 'Item 2', 'Item 3', 'Item 4']} />
                 <SearchBar/>
-                <CartButton />
+                <CartButton text="Add to cart" />
             </nav>
         </div>
     )

@@ -1,8 +1,8 @@
 
-const CartButton = () => {
+const CartButton = ({className, text}) => {
     return (
-        <button type='button'>
-            Click
+        <button type='button' >
+            {text}
         </button>
     )
 }

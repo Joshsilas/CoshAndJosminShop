@@ -1,5 +1,5 @@
 
-const Button = () => {
+const Button = ({className}) => {
     return (
         <>
             <h2>
