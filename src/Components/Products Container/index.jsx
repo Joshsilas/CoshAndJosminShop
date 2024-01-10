@@ -4,9 +4,9 @@ const ProductsContainer = ({products}) => {
     return (
         <section>
             <div className='products'>
-                {products.map((product) => {
+                {products.slice(0,4).map((product) => {
                     return <Product key={product.id} {...product}/>
-                })}
+                        })}
             </div>
         </section>
     )
