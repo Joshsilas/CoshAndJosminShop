@@ -34,7 +34,7 @@ const CategoryMenu = ({ text, category }) => {
                 {isOpen && (
                     <ul className="List">
                         {categories.map((category, index) => (
-                            <li key={index}>{category}</li>
+                            <li key={index}>{category.toUpperCase()}</li>
                         ))}
                     </ul>
                 )}
