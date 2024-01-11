@@ -11,3 +11,10 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.welcomeLogo
+{
+    font-family: "Cooper Black";
+    font-size: 2rem;
+    color: white;
+}
