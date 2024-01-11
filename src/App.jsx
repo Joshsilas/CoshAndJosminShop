@@ -11,7 +11,8 @@ function App() {
     <>
         <Navbar />
         <div className = 'banner'>
-            <p>Welcome to Cosh and Josmin. yeah!</p>
+            <p>Welcome to Cosh and Josmin.</p>
+            <p>See whats hot!</p>
         </div>
         <main className='main'>
             <Product />
