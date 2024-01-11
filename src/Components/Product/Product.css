@@ -9,7 +9,7 @@
 }
 
 .single-product {
-    flex: 0 0 calc(30% - 0px);
+    flex: 1 0 calc(30% - 0px);
     background-color: #bbb2b2;
     padding: 5px;
     border: solid #413131;

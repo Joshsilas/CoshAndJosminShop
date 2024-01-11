@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar/index.jsx";
 import {useEffect, useState} from "react";
 import ProductsContainer from "./Components/Product/index.jsx";
 import Product from "./Components/Product/index.jsx";
+import Footer from "./Components/Footer/index.jsx";
 
 function App() {
 
@@ -15,7 +16,9 @@ function App() {
         <main className='main'>
             <Product />
         </main>
+        <Footer />
     </>
+
   )
 }
 
