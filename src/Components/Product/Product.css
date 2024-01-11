@@ -9,7 +9,7 @@
 }
 
 .single-product {
-    flex: 1 0 calc(40% - 20px); /* Adjusted width and accounting for the gap */
+    flex: 1 0 calc(40% - 20px);
     background-color: #bbb2b2;
     padding: 5px;
     border-radius: 10px;
@@ -22,7 +22,7 @@
 
 .single-product .img {
     background-color: #ffffff;
-    max-height: 150px; /* Set a maximum height for the image */
+    max-height: 150px;
     object-fit: contain;
     border: 1px solid rgba(16, 15, 15, 0.5);
     border-radius: var(--borderRadius);

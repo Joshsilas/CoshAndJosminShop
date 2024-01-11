@@ -2,13 +2,13 @@ import './ProductContainer.css'
 const ProductContainer = ({id, category, title, price, image, description}) => {
     return (
         <div>
-        <article className='single-product'>
+        <div className='single-product'>
         <img src={image} alt={image} className='img'/>
-         <span className='product-price'>£{price}</span>
+         <div className='product-price'>£{price}</div>
          <h2>{title}</h2>
-         <h5>{category}</h5>
+         <p>{category}</p>
          <p>{description}</p>
-        </article>
+        </div>
             </div>
     )
 }
