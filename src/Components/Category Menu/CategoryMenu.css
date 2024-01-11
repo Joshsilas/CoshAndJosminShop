@@ -1,5 +1,5 @@
 .catButton {
-    background-color: #545459;
+    background-color: #d7c7cd;
     border: solid black;
     padding: 20px;
     color: white;
@@ -21,3 +21,6 @@
     background-color: #74857b;
 }
 
+.catButton:hover {
+    background-color: #211f1f;
+}

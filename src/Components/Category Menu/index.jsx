@@ -1,32 +1,46 @@
-import {useState} from "react";
+import { useEffect, useState } from "react";
 import './CategoryMenu.css';
 
+const CategoryMenu = ({ text, category }) => {
+    const url = 'https://fakestoreapi.com/products/categories';
+    const [categories, setCategories] = useState([]);
 
-const CategoryMenu = ({ text, menuItems }) => {
-        const [isOpen, setIsOpen] = useState(false);
-        const toggleMenu = () => {
-            setIsOpen(!isOpen);
-        };
+    const fetchCategories = async () => {
+        try {
+            const response = await fetch(url);
+            const categories = await response.json();
+            setCategories(categories);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
-        return (
-            <>
-                <div className={`category-menu ${isOpen ? 'open' : ''}`}>
-                <button className = 'catButton' onClick={toggleMenu}>
+    useEffect(() => {
+        fetchCategories();
+    }, []);
+
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    return (
+        <>
+            <div className={`category-menu ${isOpen ? 'open' : ''}`}>
+                <button className='catButton' onClick={toggleMenu}>
                     <img className="barsImage" src='src/assets/bars-solid.svg' alt="BarsLogo" />
                     {text}
-
                 </button>
                 {isOpen && (
                     <ul className="List">
-                        {menuItems.map((item, index) => (
-                            <li key={index}>{item}</li>
+                        {categories.map((category, index) => (
+                            <li key={index}>{category.toUpperCase()}</li>
                         ))}
                     </ul>
                 )}
-                </div>
-            </>
-        );
-    };
+            </div>
+        </>
+    );
+};
 
-
-export default CategoryMenu
+export default CategoryMenu;

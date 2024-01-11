@@ -71,7 +71,7 @@ body {
   font-weight: 400;
   line-height: 1;
   color: var(--textColor);
-  background-color: #a8a4a4;
+  background-color: #cbc8c8;
 }
 p {
   margin: 0;
@@ -237,4 +237,22 @@ ul {
   margin: 0 auto;
   margin-top: 1rem;
 }
+/*.single-product{*/
+/*  background: var(--white);*/
+/*  border-radius: var(--borderRadius);*/
+/*  box-shadow: var(--shadow-1);*/
+/*  transition: var(--transition);*/
+/*}*/
+/*.single-product .img {*/
+/*  border-top-right-radius: var(--borderRadius);*/
+/*  border-top-left-radius: var(--borderRadius);*/
+/*}*/
+/*.products {*/
+/*  width: 50%;*/
+/*  padding: 2rem 0;*/
+/*  display: flex;*/
+/*  gap: 1rem;*/
+/*  flex-wrap: wrap;*/
+/*  flex-direction:row;*/
+/*}*/
 
