@@ -12,6 +12,7 @@
     flex: 1 0 calc(40% - 20px); /* Adjusted width and accounting for the gap */
     background-color: #bbb2b2;
     padding: 5px;
+    border-radius: 10px;
     gap: 5px;
     display: flex;
     align-items: center;
