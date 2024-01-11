@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import './CategoryMenu.css';
 
-const CategoryMenu = ({ text, menuItems }) => {
+const CategoryMenu = ({ text, category }) => {
     const url = 'https://fakestoreapi.com/products/categories';
     const [categories, setCategories] = useState([]);
 
