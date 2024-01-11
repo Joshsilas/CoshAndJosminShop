@@ -29,7 +29,7 @@ const Product = () => {
     return (
         <section>
             <div className='products'>
-                {shuffleArray(products).slice(0, 4).map((product) => (
+                {shuffleArray(products).slice(0, 6).map((product) => (
                     <div className="single-product" key={product.id}>
                         <ProductContainer {...product} />
                     </div>
