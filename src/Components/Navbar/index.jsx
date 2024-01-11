@@ -9,7 +9,7 @@ const NavBar = () => {
         <div>
             <nav className="navBar">
                 <p className="welcomeLogo">Cosh And Josmin</p>
-                <CategoryMenu text="Categories" menuItems={['Item 1', 'Item 2', 'Item 3', 'Item 4']} />
+                <CategoryMenu text="Categories" menuItems={['categories']} />
                 <SearchBar/>
                 <CartButton text="Add to cart" />
             </nav>
