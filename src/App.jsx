@@ -1,5 +1,7 @@
 import './App.css'
 import Navbar from "./Components/Navbar/index.jsx";
+import Product from "./Components/Product/index.jsx";
+import Footer from "./Components/Footer/index.jsx";
 
 function App() {
 
