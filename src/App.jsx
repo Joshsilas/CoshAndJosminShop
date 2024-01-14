@@ -7,6 +7,7 @@ function App() {
 
   return (
     <>
+
         <Navbar />
         <div className = 'banner'>
             <p>Welcome to Cosh and Josmin. The pretend E Shop!</p>
@@ -16,6 +17,7 @@ function App() {
             <Product />
         </main>
         <Footer />
+
     </>
 
   )
