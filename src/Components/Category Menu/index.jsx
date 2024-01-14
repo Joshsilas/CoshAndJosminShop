@@ -29,7 +29,7 @@ const CategoryMenu = ({ text, category }) => {
         <>
             <div className={`category-menu ${isOpen ? 'open' : ''}`}>
                 <button className='catButton' onClick={toggleMenu}>
-                    <img className="barsImage" src='src/assets/bars-solid.svg' alt="BarsLogo" />
+                    <img className="barsImage" src='/src/assets/bars-solid.svg' alt="BarsLogo" />
                     {text}
                 </button>
                 {isOpen && (
