@@ -28,6 +28,10 @@ const Product = () => {
 
     return (
         <section>
+            <div className = 'banner'>
+                <p>Welcome to Cosh and Josmin. The pretend E Shop!</p>
+                <p>See whats hot!</p>
+            </div>
             <div className='products'>
                 {shuffleArray(products).slice(0, 6).map((product) => (
                     <div className="single-product" key={product.id}>

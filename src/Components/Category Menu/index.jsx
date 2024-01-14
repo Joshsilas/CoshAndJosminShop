@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import './CategoryMenu.css';
 
 const CategoryMenu = ({ text, category }) => {
@@ -28,14 +29,17 @@ const CategoryMenu = ({ text, category }) => {
         <>
             <div className={`category-menu ${isOpen ? 'open' : ''}`}>
                 <button className='catButton' onClick={toggleMenu}>
-                    <img className="barsImage" src='src/assets/bars-solid.svg' alt="BarsLogo" />
+                    <img className="barsImage" src='/src/assets/bars-solid.svg' alt="BarsLogo" />
                     {text}
                 </button>
                 {isOpen && (
-                    <ul className="List">
+                    <ul>
                         {categories.map((category, index) => (
-                            <li key={index}>{category.toUpperCase()}</li>
+                            <li key={index}>
+                                <Link className="List" to={`/category/${category.toLowerCase()}`}>{category.toUpperCase()}</Link>
+                            </li>
                         ))}
+                        <Link className="List" to="/">HOME PAGE</Link>
                     </ul>
                 )}
             </div>
