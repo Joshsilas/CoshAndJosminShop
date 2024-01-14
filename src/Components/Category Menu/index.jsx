@@ -33,13 +33,13 @@ const CategoryMenu = ({ text, category }) => {
                     {text}
                 </button>
                 {isOpen && (
-                    <ul className="List">
+                    <ul>
                         {categories.map((category, index) => (
                             <li key={index}>
-                                <Link to={`/category/${category.toLowerCase()}`}>{category.toUpperCase()}</Link>
+                                <Link className="List" to={`/category/${category.toLowerCase()}`}>{category.toUpperCase()}</Link>
                             </li>
                         ))}
-                        <Link to="/">HOME PAGE</Link>
+                        <Link className="List" to="/">HOME PAGE</Link>
                     </ul>
                 )}
             </div>
