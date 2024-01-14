@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 import './CategoryMenu.css';
 
 const CategoryMenu = ({ text, category }) => {
@@ -34,7 +35,9 @@ const CategoryMenu = ({ text, category }) => {
                 {isOpen && (
                     <ul className="List">
                         {categories.map((category, index) => (
-                            <li key={index}>{category.toUpperCase()}</li>
+                            <li key={index}>
+                                <Link to={`/category/${category.toLowerCase()}`}>{category.toUpperCase()}</Link>
+                            </li>
                         ))}
                     </ul>
                 )}
