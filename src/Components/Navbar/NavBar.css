@@ -1,0 +1,20 @@
+.navBar {
+    background-color: #493434;
+    padding: 40px;
+    width: 100%;
+    border: 1px solid rgba(16, 15, 15, 0.5);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.welcomeLogo
+{
+    font-family: "Cooper Black";
+    font-size: 2rem;
+    color: white;
+}
