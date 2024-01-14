@@ -1,4 +1,4 @@
-import Navbar from "../Navbar/index.jsx";
+
 import {useEffect, useState} from "react";
 import ProductContainer from "../ProductContainer/index.jsx";
 import {useParams} from "react-router-dom";
