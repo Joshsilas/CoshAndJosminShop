@@ -5,7 +5,7 @@ import {useParams} from "react-router-dom";
 
 const ProductPage = () => {
     const {id} = useParams()
-    const url = 'https://fakestoreapi.com/products/1';
+    const url = `https://fakestoreapi.com/products/${id}`;
     const [product, setProduct] = useState(null)
 
     const fetchProduct = async () => {
