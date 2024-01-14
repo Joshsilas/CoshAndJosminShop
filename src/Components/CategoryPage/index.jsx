@@ -28,7 +28,7 @@ const CategoryPage = () => {
 
     return (
         <div>
-            <h2>{categoryName}</h2>
+            <h2 className="banner">{categoryName}</h2>
             <section>
                 <div className='products'>
                     {(products).map((product) => (

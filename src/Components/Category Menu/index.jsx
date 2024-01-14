@@ -39,6 +39,7 @@ const CategoryMenu = ({ text, category }) => {
                                 <Link to={`/category/${category.toLowerCase()}`}>{category.toUpperCase()}</Link>
                             </li>
                         ))}
+                        <Link to="/">HOME PAGE</Link>
                     </ul>
                 )}
             </div>

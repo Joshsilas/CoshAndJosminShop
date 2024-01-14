@@ -11,16 +11,18 @@ function App() {
   return (
     <Router>
         <Navbar />
-        <div className = 'banner'>
-            <p>Welcome to Cosh and Josmin. The pretend E Shop!</p>
-            <p>See whats hot!</p>
-        </div>
-        <main className='main'>
-            <Product />
-        </main>
+        {/*<div className = 'banner'>*/}
+        {/*    <p>Welcome to Cosh and Josmin. The pretend E Shop!</p>*/}
+        {/*    <p>See whats hot!</p>*/}
+        {/*</div>*/}
+        {/*<main className='main'>*/}
+        {/*    <Product />*/}
+        {/*</main>*/}
         <Routes>
+            <Route path={"/"} element={<Product/>}/>
             <Route path="/category/:categoryName" element={<CategoryPage />} />
         </Routes>
+
         <Footer />
     </Router>
 
