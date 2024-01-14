@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Navbar from "../Navbar/index.jsx";
 import './CategoryPage.css';
+import ProductContainer from "../ProductContainer/index.jsx";
 
 
 const CategoryPage = () => {
@@ -24,16 +25,19 @@ const CategoryPage = () => {
         fetchProductsByCategory();
     }, [categoryName]);
 
+
     return (
         <div>
             <h2>{categoryName} Category</h2>
-            <ul>
-                {products.map((product) => (
-                    <li key={product.id}>
-                        <Link to={`/product/${product.id}`}>{product.title}</Link>
-                    </li>
-                ))}
-            </ul>
+            <section>
+                <div className='products'>
+                    {(products).map((product) => (
+                        <div className="single-product" key={product.id}>
+                            <ProductContainer {...product} />
+                        </div>
+                    ))}
+                </div>
+            </section>
         </div>
     );
 };
