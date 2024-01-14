@@ -25,7 +25,6 @@ const ProductPage = () => {
 
     return (
         <section>
-        <Navbar/>
         <div className='product'>
             {product && (
                 <div className="single-product" key={product.id}>
