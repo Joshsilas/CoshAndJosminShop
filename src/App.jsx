@@ -19,8 +19,7 @@ function App() {
             <Product />
         </main>
         <Routes>
-        <Route path="/category/:categoryName" element={<CategoryPage />}>
-        </Route>
+            <Route path="/category/:categoryName" element={<CategoryPage />} />
         </Routes>
         <Footer />
     </Router>
