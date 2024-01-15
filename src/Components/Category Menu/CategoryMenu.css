@@ -1,31 +1,51 @@
-.catButton {
-    background-color: #d7c7cd;
-    border: solid black;
-    padding: 30px;
-    color: white;
-    font-size: 1rem;
-    gap: 20px;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-}
-
 .category-menu {
-    transition: max-height 0.50s ease-out;
-    background-color: #545459;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .category-menu.open {
-    background-color: #74857b;
+    position: fixed;
 }
 
-.catButton:hover {
-    background-color: #211f1f;
+.catButton {
+    background-color: #b1b4b6;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
 }
+.catButton:hover {
+    background-color: #333032;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-list li:last-child {
+    border-bottom: none;
+}
+
 .List {
-    color: black;
-    font-family: Cantarell;
-    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+}
+
+.List:hover {
+    background-color: #090909;
+    color: white;
 }
