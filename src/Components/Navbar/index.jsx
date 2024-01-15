@@ -8,7 +8,7 @@ const NavBar = () => {
     return (
         <div>
             <nav className="navBar">
-                <p className="welcomeLogo">Cossh And Josmin</p>
+                <p className="welcomeLogo">Cosh And Josmin</p>
                 <CategoryMenu text="Categories" menuItems={['categories']} />
                 <SearchBar/>
                 <CartButton text="Add to cart" />
