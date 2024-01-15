@@ -32,7 +32,7 @@ const CategoryPage = () => {
             <section>
                 <div className='products'>
                     {(products).map((product) => (
-                        <div className="single-product" key={product.id}>
+                        <div className="single-product-category" key={product.id}>
                             <ProductContainer {...product} />
                         </div>
                     ))}

@@ -5,28 +5,26 @@
     align-items: stretch;
     justify-content: space-around;
     margin: 20px;
-    gap:20px;
+    gap:10px;
 }
 
 .single-product {
-    flex: 0 0 calc(30% - 20px);
-    background-color: #bbb2b2;
+    flex: 1 0 calc(30% - 0px);
+    background-color: #e6e6ec;
     padding: 5px;
-    border: solid #413131;
+    border: solid #a8a5a5;
     border-radius: 10px;
     gap: 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
-
-
 }
 
 .single-product .img {
     background-color: #ffffff;
     max-height: 150px;
     object-fit: contain;
-    border: 1px solid rgba(16, 15, 15, 0.5);
+    border: 1px solid rgba(211, 200, 200, 0.5);
     border-radius: var(--borderRadius);
 }
 
