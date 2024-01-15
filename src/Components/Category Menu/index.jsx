@@ -30,6 +30,7 @@ const CategoryMenu = ({ text, category }) => {
             <button className='catButton' onClick={toggleMenu}>
                 <img className="barsImage" src='/src/assets/bars-solid.svg' alt="BarsLogo" />
                 {text}
+                <img className={`closeImage ${!isOpen ? 'open' : ''}`} src='/src/assets/x-solid.svg' alt="Close" />
             </button>
             {isOpen && (
                 <ul className="sidebar-list">

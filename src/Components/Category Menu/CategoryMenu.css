@@ -13,7 +13,7 @@
 }
 
 .catButton {
-    background-color: #b1b4b6;
+    background-color: #777f83;
     color: #fff;
     border: none;
     padding: 10px;
@@ -22,7 +22,7 @@
     text-align: left;
 }
 .catButton:hover {
-    background-color: #333032;
+    background-color: #837e82;
 }
 
 .sidebar-list {
@@ -36,10 +36,6 @@
     border-bottom: 1px solid #eee;
 }
 
-.sidebar-list li:last-child {
-    border-bottom: none;
-}
-
 .List {
     text-decoration: none;
     color: #000000;
@@ -48,4 +44,19 @@
 .List:hover {
     background-color: #090909;
     color: white;
+}
+
+.barsImage
+{
+    margin-right: 5px;
+}
+
+.closeImage
+{
+    margin-left: 120px;
+}
+
+.closeImage.open
+{
+    display: none;
 }
