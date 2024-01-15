@@ -5,7 +5,7 @@ import CartButton from "../Cart Button/index.jsx";
 
 const NavBar = () => {
     const handleSearch = (searchTerm) => {
-       
+
         console.log('Search term:', searchTerm);
     }
 
