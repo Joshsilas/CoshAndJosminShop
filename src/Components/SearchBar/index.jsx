@@ -1,29 +1,34 @@
-import React, {useEffect, useState} from "react";
-import './Searchbar.css'
+import React, { useEffect, useState } from "react";
+import './Searchbar.css';
+import ProductContainer from "../ProductContainer/index.jsx";
 
-const SearchBar = ({handleSearch}) => {
+const SearchBar = ({ handleSearch }) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const[data, setData]=useState([])
+    const [data, setData] = useState([]);
 
     const url = 'https://fakestoreapi.com/products';
 
     const fetchProducts = async () => {
-        try{
-            const response = await fetch(url)
-            const products = await response.json()
-            setData(products)
-        } catch(err) {
-            console.log(err)}
-    }
+        try {
+            const response = await fetch(url);
+            const products = await response.json();
+            setData(products);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     const performSearch = (e) => {
-        setSearchTerm(e.target.value)
+        setSearchTerm(e.target.value);
     };
 
     useEffect(() => {
-        handleSearch(searchTerm);
-}, [searchTerm, handleSearch]);
+        fetchProducts(); // Fetch products when the component mounts
+    }, []);
 
+    useEffect(() => {
+        handleSearch(searchTerm);
+    }, [searchTerm, handleSearch]);
 
     return (
         <>
@@ -36,18 +41,23 @@ const SearchBar = ({handleSearch}) => {
                     onChange={performSearch}
                 />
             </form>
-            {
-                data.filter((row)=> {
-                    if search =="") {
-                        return row;
-                    }
-                    else if (row.title.toLowerCase().includes(search.toLowerCase())){
-                        return row;
-                    }
-                })
-                    .map((row, i) => {})
-            }
-    </>
-    )
-}
+            {searchTerm !== "" &&
+                data
+                    .filter((product) => {
+                        if (searchTerm === "") {
+                            return true;
+                        } else if (product.title.toLowerCase().includes(searchTerm.toLowerCase())) {
+                            return true;
+                        }
+                        return false;
+                    })
+                    .map((product) => (
+                        <div className="single-product" key={product.id}>
+                            <ProductContainer {...product} />
+                        </div>
+                    ))}
+        </>
+    );
+};
+
 export default SearchBar

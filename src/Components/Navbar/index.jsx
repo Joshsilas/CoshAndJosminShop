@@ -3,12 +3,11 @@ import CategoryMenu from "../Category Menu/index.jsx";
 import SearchBar from "../SearchBar/index.jsx";
 import CartButton from "../Cart Button/index.jsx";
 
-    const NavBar = ({ updateSearchResults }) => {
-        const handleSearch = (searchTerm) => {
-            console.log('Search term:', searchTerm);
-            // Call the updateSearchResults function passed from the App component
-            updateSearchResults(searchTerm);
-        }
+const NavBar = () => {
+    const handleSearch = (searchTerm) => {
+
+        console.log('Search term:', searchTerm);
+    }
 
     return (
         <div>
@@ -23,3 +22,4 @@ import CartButton from "../Cart Button/index.jsx";
 }
 
 export default NavBar
+
