@@ -1,13 +1,14 @@
 import './NavBar.css'
 import CategoryMenu from "../Category Menu/index.jsx";
-import SearchBar from "../Search Bar/index.jsx";
+import SearchBar from "../SearchBar/index.jsx";
 import CartButton from "../Cart Button/index.jsx";
 
-const NavBar = () => {
-    const handleSearch = (searchTerm) => {
-
-        console.log('Search term:', searchTerm);
-    }
+    const NavBar = ({ updateSearchResults }) => {
+        const handleSearch = (searchTerm) => {
+            console.log('Search term:', searchTerm);
+            // Call the updateSearchResults function passed from the App component
+            updateSearchResults(searchTerm);
+        }
 
     return (
         <div>
