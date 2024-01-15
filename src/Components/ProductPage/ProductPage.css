@@ -1,0 +1,21 @@
+.product-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.img {
+    height: 300px;
+    margin-right: 10px;
+}
+
+.product-details {
+    flex:1;
+}
