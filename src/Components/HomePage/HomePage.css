@@ -38,3 +38,14 @@
     background-color: #242931;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .products {
+        margin: 10px;
+        gap: 5px;
+    }
+
+    .single-product {
+        flex: 1 0 calc(50% - 5px);
+    }
+}
