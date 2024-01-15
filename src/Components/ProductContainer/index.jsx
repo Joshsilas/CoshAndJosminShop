@@ -1,8 +1,8 @@
 import './ProductContainer.css'
 import {BrowserRouter, Link, Route, Routes, useNavigate} from "react-router-dom";
 import ProductPage from "../ProductPage/index.jsx";
-import product from "../Product/index.jsx";
-import Product from "../Product/index.jsx";
+import product from "../HomePage/index.jsx";
+import HomePage from "../HomePage/index.jsx";
 const ProductContainer = ({id, category, title, price, image, description,product}) => {
     const navigate = useNavigate()
     const clickOnImage = () => {

@@ -1,7 +1,7 @@
 import ProductContainer from "../ProductContainer/index.jsx";
 import {useEffect, useState} from "react";
-import './Product.css'
-const Product = () => {
+import './HomePage.css'
+const HomePage = () => {
     const url = 'https://fakestoreapi.com/products';
     const[products, setProducts] = useState([])
 
@@ -43,4 +43,4 @@ const Product = () => {
     );
 };
 
-export default Product;
+export default HomePage;

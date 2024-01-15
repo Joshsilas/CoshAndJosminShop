@@ -34,14 +34,14 @@ const CategoryMenu = ({ text, category }) => {
             </button>
             {isOpen && (
                 <ul className="sidebar-list">
+                    <li>
+                        <Link className="List" to="/">HOME PAGE</Link>
+                    </li>
                     {categories.map((category, index) => (
                         <li key={index}>
                             <Link className="List" to={`/category/${category.toLowerCase()}`}>{category.toUpperCase()}</Link>
                         </li>
                     ))}
-                    <li>
-                        <Link className="List" to="/">HOME PAGE</Link>
-                    </li>
                 </ul>
             )}
         </div>
