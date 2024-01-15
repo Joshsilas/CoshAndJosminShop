@@ -15,12 +15,13 @@
 .catButton {
     background-color: #777f83;
     color: #fff;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.5);
     padding: 10px;
     cursor: pointer;
     width: 100%;
     text-align: left;
 }
+
 .catButton:hover {
     background-color: #837e82;
 }
