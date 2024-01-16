@@ -37,7 +37,7 @@ function App() {
                 <Route path="/category/:categoryName" element={<CategoryPage />} />
                 <Route path='/product-page/:id' element={<ProductPage/>}/>
             </Routes>
-            <SearchResults data={data} searchTerm={searchTerm} />
+            
             <Footer />
         </BrowserRouter>
     );
