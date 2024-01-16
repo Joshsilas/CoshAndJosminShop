@@ -21,6 +21,13 @@
 .ohNoMessage {
     font-size: 5rem;
     margin: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.whisper {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {

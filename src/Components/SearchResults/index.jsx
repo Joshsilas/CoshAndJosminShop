@@ -25,6 +25,7 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
                 ) : (
                     <div className="ohNoMessage" >
                     <p className="ohNoMessage">No matching products found.</p>
+                        <p className="whisper">(But enjoy this cow)</p>
                         <img className="sadCow" src='/src/assets/sadCow.jpg' alt='Sad cow' />
                     </div>
                 )
