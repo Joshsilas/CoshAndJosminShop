@@ -1,28 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProductContainer from "../ProductContainer/index.jsx";
-import SearchBar from "../SearchBar/index.jsx";
 
-const SearchResults = ({ data }) => {
-    const [searchTerm, setSearchTerm] = useState("");
+const SearchResults = ({ data: originalData, searchTerm }) => {
+    const [data, setData] = useState([]);
 
-    const handleSearch = (term) => {
-        setSearchTerm(term);
-    };
+    useEffect(() => {
+        const filteredData = originalData.filter((row) =>
+            row.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setData(filteredData);
+    }, [originalData, searchTerm]);
 
     return (
         <div>
-            <SearchBar handleSearch={handleSearch} />
-
             {searchTerm !== "" &&
-                data
-                    .filter((row) =>
-                        row.title.toLowerCase().includes(searchTerm.toLowerCase())
-                    )
-                    .map((row) => (
-                        <div className="single-product" key={row.id}>
-                            <ProductContainer {...row} />
-                        </div>
-                    ))}
+                data.map((row) => (
+                    <div className="single-product" key={row.id}>
+                        <ProductContainer {...row} />
+                    </div>
+                ))}
         </div>
     );
 };

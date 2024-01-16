@@ -1,25 +1,20 @@
-import './NavBar.css'
+import './NavBar.css';
 import CategoryMenu from "../Category Menu/index.jsx";
 import SearchBar from "../SearchBar/index.jsx";
 import CartButton from "../Cart Button/index.jsx";
+import React from "react";
 
-const NavBar = () => {
-    const handleSearch = (searchTerm) => {
-
-        console.log('Search term:', searchTerm);
-    }
-
+const NavBar = ({ handleSearch }) => {
     return (
         <div>
             <nav className="navBar">
                 <p className="welcomeLogo">Cosh And Josmin</p>
                 <CategoryMenu text="Categories" menuItems={['categories']} />
-                <SearchBar handleSearch={handleSearch}/>
+                <SearchBar handleSearch={handleSearch} />
                 <CartButton text="Add to cart" />
             </nav>
         </div>
-    )
-}
+    );
+};
 
-export default NavBar
-
+export default NavBar;
