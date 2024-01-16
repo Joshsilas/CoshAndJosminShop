@@ -16,3 +16,8 @@
     border: 1px solid rgba(211, 200, 200, 0.5);
     border-radius: var(--borderRadius);
 }
+
+.ohNoMessage {
+    font-size: 5rem;
+    margin: 100px;
+}
