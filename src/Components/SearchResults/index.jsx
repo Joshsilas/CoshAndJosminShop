@@ -1,42 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ProductContainer from "../ProductContainer/index.jsx";
+import SearchBar from "../SearchBar/index.jsx";
 
-const SearchResults = ({ searchTerm }) => {
-    const url = 'https://fakestoreapi.com/products';
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
+const SearchResults = ({ data }) => {
+    const [searchTerm, setSearchTerm] = useState("");
 
-    const fetchProducts = async () => {
-        try {
-            const response = await fetch(url);
-            const products = await response.json();
-            setProducts(products);
-            setLoading(false);
-        } catch (err) {
-            console.log(err);
-            setLoading(false);
-        }
+    const handleSearch = (term) => {
+        setSearchTerm(term);
     };
-
-    useEffect(() => {
-        fetchProducts();
-    }, []);
-
-    if (loading) {
-        return <div>Loading...</div>;
-    }
-
-    const filteredData = products.filter((product) =>
-        product.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
 
     return (
         <div>
-            {filteredData.map((product) => (
-                <div className="single-product" key={product.id}>
-                    <ProductContainer {...product} />
-                </div>
-            ))}
+            <SearchBar handleSearch={handleSearch} />
+
+            {searchTerm !== "" &&
+                data
+                    .filter((row) =>
+                        row.title.toLowerCase().includes(searchTerm.toLowerCase())
+                    )
+                    .map((row) => (
+                        <div className="single-product" key={row.id}>
+                            <ProductContainer {...row} />
+                        </div>
+                    ))}
         </div>
     );
 };

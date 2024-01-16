@@ -7,37 +7,41 @@ import CategoryPage from "./Components/CategoryPage";
 import ProductPage from "./Components/ProductPage/index.jsx";
 import SearchBar from "./Components/SearchBar/index.jsx";
 import SearchResults from "./Components/SearchResults/index.jsx";
-import './App.css'
+import './App.css';
 
 function App() {
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
-
-    const handleSearch = async (searchTerm) => {
-        console.log('Search term:', searchTerm);
+    const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
+    };
 
-        if (searchTerm) {
+    useEffect(() => {
+        // Fetch products when the component mounts
+        const fetchProducts = async () => {
             try {
                 const response = await fetch('https://fakestoreapi.com/products');
                 const products = await response.json();
                 setData(products);
-            } catch (error) {
-                console.error('Error fetching data:', error);
+            } catch (err) {
+                console.log(err);
             }
-        }
-    };
+        };
+
+        fetchProducts();
+    }, []);
 
     return (
         <BrowserRouter>
-            <Navbar handleSearch={handleSearch}/>
+            <Navbar handleSearch={handleSearch} />
+            {/*<SearchBar handleSearch={handleSearch} />*/}
+            <SearchResults data={data} searchTerm={searchTerm} />
             <Routes>
-                <Route path={"/"} element={<HomePage/>}  />
+                <Route path={"/"} element={<HomePage />} />
                 <Route path="/category/:categoryName" element={<CategoryPage />} />
-                <Route path='/product-page/:id' element={<ProductPage/>}/>
+                <Route path='/product-page/:id' element={<ProductPage />} />
             </Routes>
-            
             <Footer />
         </BrowserRouter>
     );
