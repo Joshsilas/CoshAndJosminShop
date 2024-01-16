@@ -9,6 +9,7 @@
     flex-direction: column;
     text-align: center;
 }
+
 .search-product .img {
     background-color: #ffffff;
     max-height: 150px;
@@ -19,5 +20,13 @@
 
 .ohNoMessage {
     font-size: 5rem;
-    margin: 100px;
+    margin: 30px;
+}
+
+@media (max-width: 768px) {
+    .sadCow {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 }

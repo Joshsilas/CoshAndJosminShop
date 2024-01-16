@@ -17,6 +17,7 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
             {searchTerm !== "" ? (
                 data.length > 0 ? (
                     data.map((row) => (
+
                         <div className="search-product" key={row.id}>
                             <ProductContainer {...row} />
                         </div>
@@ -24,6 +25,7 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
                 ) : (
                     <div className="ohNoMessage" >
                     <p className="ohNoMessage">No matching products found.</p>
+                        <img className="sadCow" src='/src/assets/sadCow.jpg' alt='Sad cow' />
                     </div>
                 )
             ) : null}
