@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import './SearchResults.css';
 import ProductContainer from "../ProductContainer/index.jsx";
 
 const SearchResults = ({ data: originalData, searchTerm }) => {
@@ -15,7 +16,7 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
         <div>
             {searchTerm !== "" &&
                 data.map((row) => (
-                    <div className="single-product" key={row.id}>
+                    <div className="search-product" key={row.id}>
                         <ProductContainer {...row} />
                     </div>
                 ))}

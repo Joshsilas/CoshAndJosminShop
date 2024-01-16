@@ -34,7 +34,7 @@ function App() {
     return (
         <BrowserRouter>
             <Navbar handleSearch={handleSearch} />
-            <SearchBar handleSearch={handleSearch} />
+            {/*<SearchBar handleSearch={handleSearch} />*/}
             <SearchResults data={data} searchTerm={searchTerm} />
             <Routes>
                 <Route path={"/"} element={<HomePage />} />
