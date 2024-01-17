@@ -42,6 +42,17 @@
     margin-bottom: 5px;
 }
 
+.backToHomePageLink
+{
+    font-size: 2rem;
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+}
+.backToHomePageLink:hover
+{
+    color: #ffffff;
+}
 @media (max-width: 768px) {
     .sadCow {
         width: 100%;
@@ -60,6 +71,9 @@
     {
         font-size: 3rem;
 
+    }
+    .backToHomePageLink {
+        font-size: 1rem;
     }
 }
 

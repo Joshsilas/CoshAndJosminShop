@@ -33,9 +33,7 @@ function App() {
     }, []);
 
     const handleProductClick = () => {
-        // Handle product click logic
         console.log("Product clicked");
-        // Clear the search bar
         setSearchTerm('');
     };
 

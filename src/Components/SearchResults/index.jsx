@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './SearchResults.css';
 import ProductContainer from "../ProductContainer/index.jsx";
+import {Link} from "react-router-dom";
 
 const SearchResults = ({ data: originalData, searchTerm }) => {
     const [data, setData] = useState([]);
@@ -11,6 +12,12 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
         );
         setData(filteredData);
     }, [originalData, searchTerm]);
+
+    const handleLinkClick = () => {
+        console.log("Product clicked");
+        setSearchTerm('');
+    };
+
 
     return (
         <div>
@@ -26,6 +33,7 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
                 ) : (
 
                     <div className="ohNoMessage" >
+                        <Link className="backToHomePageLink" to="/" onClick={handleLinkClick}>Back to home page </Link>
                     <p className="ohNoMessage">No matching products found.</p>
                         <p className="whisper">(But enjoy this cow)</p>
                         <img className="sadCow" src='/src/assets/sadCow.jpg' alt='Sad cow' />
