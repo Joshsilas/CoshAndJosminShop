@@ -31,9 +31,16 @@ function App() {
         fetchProducts();
     }, []);
 
+    const handleProductClick = () => {
+        // Handle product click logic
+        console.log("Product clicked");
+        // Clear the search bar
+        setSearchTerm('');
+    };
+
     return (
         <BrowserRouter>
-            <Navbar handleSearch={handleSearch} />
+            <Navbar handleSearch={handleSearch} handleClearClick={handleProductClick} />
             {searchTerm && <SearchResults data={data} searchTerm={searchTerm} />}
             {!searchTerm && <Routes>
                 <Route path={"/"} element={<HomePage />} />
