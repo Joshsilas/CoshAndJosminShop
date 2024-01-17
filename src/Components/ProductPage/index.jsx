@@ -28,15 +28,15 @@ const ProductPage = () => {
         <section>
         <div className='product-page-container'>
             {product && (
-                <div key={product.id} className="product-container">
-                    <div className="img-container">
-                        <img src={product.image} alt={product.image} className='product-img'/>
+                <div key={product.id} className="product-page-layout">
+                    <div className="img-container-product-page">
+                        <img src={product.image} alt={product.image} className='product-page-img'/>
                     </div>
-                    <div className="product-details">
-                        <div className="product-title">{product.title}</div>
-                        <div className="product-price">£{product.price}</div>
-                        <div className="product-category">{product.category}</div>
-                        <div className="product-description">{product.description}</div>
+                    <div className="product-page-details">
+                        <h1 className="product-page-title">{product.title}</h1>
+                        <div className="product-page-price">£{product.price.toFixed(2)}</div>
+                        <div className="product-page-category">{product.category}</div>
+                        <div className="product-page-description">{product.description}</div>
                     </div>
                 </div>
             )}
