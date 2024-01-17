@@ -48,4 +48,18 @@
         max-width: 100%;
         height: auto;
     }
+    .searchLayout {
+        margin: 10px;
+        gap: 5px;
+    }
+
+    .search-product  {
+        flex: 0 0 calc(50% - 5px);
+    }
+    .ohNoMessage
+    {
+        font-size: 3rem;
+
+    }
 }
+

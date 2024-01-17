@@ -25,7 +25,6 @@ const SearchBar = ({ handleSearch, handleClearClick  }) => {
                 value={searchTerm}
                 onChange={performSearch}
             />
-            <button onClick={handleClearClick}>Clear</button>
         </form>
         </>
     );
