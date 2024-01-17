@@ -5,11 +5,12 @@ import CartButton from "../Cart Button/index.jsx";
 import React from "react";
 
 const NavBar = ({ handleSearch, handleClearClick }) => {
+
     return (
         <div>
             <nav className="navBar">
                 <p className="welcomeLogo">Cosh And Josmin</p>
-                <CategoryMenu text="Categories" menuItems={['categories']} />
+                <CategoryMenu text="Categories" menuItems={['categories']} handleClearClick={handleClearClick} />
                 <SearchBar handleSearch={handleSearch} handleClearClick={handleClearClick} />
                 <CartButton text="Add to cart" />
             </nav>

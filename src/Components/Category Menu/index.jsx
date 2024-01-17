@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import './CategoryMenu.css';
 
-const CategoryMenu = ({ text, category }) => {
+const CategoryMenu = ({ text, category, handleClearClick }) => {
     const url = 'https://fakestoreapi.com/products/categories';
     const [categories, setCategories] = useState([]);
 
