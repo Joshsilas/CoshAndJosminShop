@@ -20,6 +20,8 @@
     cursor: pointer;
     width: 100%;
     text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .catButton:hover {
