@@ -39,7 +39,7 @@ function App() {
 
     return (
         <BrowserRouter>
-            <Navbar handleSearch={handleSearch} handleClearClick={handleProductClick} />
+            <Navbar handleSearch={handleSearch}  />
             {searchTerm && <SearchResults data={data} searchTerm={searchTerm} />}
             {!searchTerm && <Routes>
                 <Route path={"/"} element={<HomePage />} />
