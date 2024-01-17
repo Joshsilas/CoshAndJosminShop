@@ -1,8 +1,26 @@
 import './ProductContainer.css'
-const ProductContainer = ({id, category, title, price, image, description}) => {
+import {BrowserRouter, Link, Route, Routes, useNavigate} from "react-router-dom";
+import ProductPage from "../ProductPage/index.jsx";
+import product from "../HomePage/index.jsx";
+import HomePage from "../HomePage/index.jsx";
+const ProductContainer = ({id, category, title, price, image, description,product,  handleClearClick, setSearchTerm}) => {
+    const navigate = useNavigate()
+
+    const handleProductClick = () => {
+        console.log("Product clicked");
+        setSearchTerm('');
+    };
+
+    const clickOnImage = () => {
+        navigate(`/product-page/${id}`);
+        handleProductClick();
+    };
+
     return (
         <div>
+            <Link to={`/product-page/${id}`} onClick={clickOnImage}>
         <img src={image} alt={image} className='img'/>
+            </Link>
             <br/>
          <div className='product-price'>£{price.toFixed(2)}</div>
             <br/>

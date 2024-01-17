@@ -1,7 +1,7 @@
 import ProductContainer from "../ProductContainer/index.jsx";
 import {useEffect, useState} from "react";
-import './Product.css'
-const Product = () => {
+import './HomePage.css'
+const HomePage = () => {
     const url = 'https://fakestoreapi.com/products';
     const[products, setProducts] = useState([])
 
@@ -28,6 +28,10 @@ const Product = () => {
 
     return (
         <section>
+            <div className = 'banner'>
+                <p>Welcome to Cosh and Josmin. The pretend E Shop!</p>
+                <p>See whats hot!</p>
+            </div>
             <div className='products'>
                 {shuffleArray(products).slice(0, 6).map((product) => (
                     <div className="single-product" key={product.id}>
@@ -39,4 +43,4 @@ const Product = () => {
     );
 };
 
-export default Product;
+export default HomePage;
