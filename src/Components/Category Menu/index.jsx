@@ -16,6 +16,10 @@ const CategoryMenu = ({ text, category }) => {
         }
     };
 
+    const handleCategoryClick = () => {
+        setSearchTerm('');
+    };
+
     useEffect(() => {
         fetchCategories();
     }, []);
@@ -35,11 +39,11 @@ const CategoryMenu = ({ text, category }) => {
             {isOpen && (
                 <ul className="sidebar-list">
                     <li>
-                        <Link className="List" to="/">HOME PAGE</Link>
+                        <Link className="List" to="/" onClick={handleCategoryClick}>HOME PAGE</Link>
                     </li>
                     {categories.map((category, index) => (
                         <li key={index}>
-                            <Link className="List" to={`/category/${category.toLowerCase()}`}>{category.toUpperCase()}</Link>
+                            <Link className="List" to={`/category/${category.toLowerCase()}`} onClick={handleCategoryClick}>{category.toUpperCase()} </Link>
                         </li>
                     ))}
                 </ul>

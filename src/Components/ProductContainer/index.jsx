@@ -7,7 +7,6 @@ const ProductContainer = ({id, category, title, price, image, description,produc
     const navigate = useNavigate()
 
     const handleProductClick = () => {
-        console.log("Product clicked");
         setSearchTerm('');
     };
 

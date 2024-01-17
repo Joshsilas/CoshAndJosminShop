@@ -14,7 +14,6 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
     }, [originalData, searchTerm]);
 
     const handleLinkClick = () => {
-        console.log("Product clicked");
         setSearchTerm('');
     };
 
