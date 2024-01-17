@@ -14,15 +14,17 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
 
     return (
         <div>
+            <div className="searchLayout" >
             {searchTerm !== "" ? (
                 data.length > 0 ? (
                     data.map((row) => (
-
                         <div className="search-product" key={row.id}>
                             <ProductContainer {...row} />
                         </div>
                     ))
+
                 ) : (
+
                     <div className="ohNoMessage" >
                     <p className="ohNoMessage">No matching products found.</p>
                         <p className="whisper">(But enjoy this cow)</p>
@@ -30,6 +32,8 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
                     </div>
                 )
             ) : null}
+
+        </div>
         </div>
     );
 };
