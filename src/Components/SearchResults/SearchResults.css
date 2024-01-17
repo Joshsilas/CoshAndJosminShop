@@ -18,7 +18,16 @@
     flex-direction: column;
     text-align: center;
 }
-
+.search-product:hover
+{
+    background-color: #242931;
+    color: white;
+}
+.single-product.img:hover
+{
+    background-color: #242931;
+    color: white;
+}
 .search-product .img {
     background-color: #ffffff;
     max-height: 150px;
