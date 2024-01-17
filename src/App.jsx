@@ -32,18 +32,19 @@ function App() {
         fetchProducts();
     }, []);
 
-    const handleProductClick = () => {
-        console.log("Product clicked");
+    const handleClearClick = () => {
+        console.log("Clearing search term");
         setSearchTerm('');
     };
 
+
     return (
         <BrowserRouter>
-            <Navbar handleSearch={handleSearch}  />
-            {searchTerm && <SearchResults data={data} searchTerm={searchTerm} />}
+            <Navbar handleSearch={handleSearch} handleClearClick={handleClearClick} />
+            {searchTerm && <SearchResults data={data} searchTerm={searchTerm} handleClearClick={handleClearClick}/>}
             {!searchTerm && <Routes>
                 <Route path={"/"} element={<HomePage />} />
-                <Route path="/category/:categoryName" element={<CategoryPage />} />
+                <Route path="/category/:categoryName" element={<CategoryPage />}  />
                 <Route path='/product-page/:id' element={<ProductPage />} />
             </Routes>}
             <Footer />
