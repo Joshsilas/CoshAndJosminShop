@@ -3,8 +3,9 @@ import './SearchResults.css';
 import ProductContainer from "../ProductContainer/index.jsx";
 import {Link} from "react-router-dom";
 
-const SearchResults = ({ data: originalData, searchTerm }) => {
+const SearchResults = ({ data: originalData, searchTerm, handleClearClick }) => {
     const [data, setData] = useState([]);
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const filteredData = originalData.filter((row) =>
@@ -13,7 +14,10 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
         setData(filteredData);
     }, [originalData, searchTerm]);
 
-
+    const handleCategoryClick = () => {
+        handleClearClick();
+        setIsOpen(false);
+    };
 
     return (
         <div>
@@ -29,7 +33,7 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
                 ) : (
 
                     <div className="ohNoMessage" >
-                        <Link className="backToHomePageLink" to="/" >Back to home page </Link>
+                        <Link className="backToHomePageLink" to="/" onClick={handleCategoryClick}>Back to home page </Link>
                     <p className="ohNoMessage">No matching products found.</p>
                         <p className="whisper">(But enjoy this cow)</p>
                         <img className="sadCow" src='/src/assets/sadCow.jpg' alt='Sad cow' />
