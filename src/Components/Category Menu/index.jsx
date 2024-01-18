@@ -18,6 +18,7 @@ const CategoryMenu = ({ text, handleClearClick }) => {
         }
     };
 
+    // This code is handling the clear search bar click. Without causing any error. Don't ask why or how just don't remove it.
     const handleCategoryClick = () => {
         handleClearClick();
         setIsOpen(false);

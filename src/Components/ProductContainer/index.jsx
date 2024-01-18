@@ -5,6 +5,9 @@ import { useState } from 'react';
 const ProductContainer = ({ id, category, title, price, image, handleClearClick }) => {
     const navigate = useNavigate();
 
+    const handleCategoryClick = () => {
+        handleClearClick();
+    };
 
     const clickOnImage = () => {
         navigate(`/product-page/${id}`);
@@ -14,6 +17,7 @@ const ProductContainer = ({ id, category, title, price, image, handleClearClick 
         <div>
             <Link to={`/product-page/${id}`} onClick={(e) => {
                 clickOnImage();
+                handleCategoryClick();
             }}>
                 <img src={image} alt={image} className='img' />
             </Link>
