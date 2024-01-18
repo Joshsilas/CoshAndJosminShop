@@ -13,9 +13,6 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
         setData(filteredData);
     }, [originalData, searchTerm]);
 
-    const handleLinkClick = () => {
-        setSearchTerm('');
-    };
 
 
     return (
@@ -32,7 +29,7 @@ const SearchResults = ({ data: originalData, searchTerm }) => {
                 ) : (
 
                     <div className="ohNoMessage" >
-                        <Link className="backToHomePageLink" to="/" onClick={handleLinkClick}>Back to home page </Link>
+                        <Link className="backToHomePageLink" to="/" >Back to home page </Link>
                     <p className="ohNoMessage">No matching products found.</p>
                         <p className="whisper">(But enjoy this cow)</p>
                         <img className="sadCow" src='/src/assets/sadCow.jpg' alt='Sad cow' />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import './SearchBar.css';
 
-const SearchBar = ({ handleSearch, handleClearClick  }) => {
+const SearchBar = ({ handleSearch, handleClearClick, clearSearchBar }) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const performSearch = (e) => {
@@ -14,18 +14,24 @@ const SearchBar = ({ handleSearch, handleClearClick  }) => {
         handleSearch(searchTerm);
     }, [searchTerm, handleSearch]);
 
+    useEffect(() => {
+        if (clearSearchBar) {
+            setSearchTerm("");
+            handleClearClick();
+        }
+    }, [clearSearchBar, handleClearClick]);
 
     return (
         <>
-        <form>
-            <input
-                className='search'
-                type='input'
-                placeholder="What would you like to find"
-                value={searchTerm}
-                onChange={performSearch}
-            />
-        </form>
+            <form>
+                <input
+                    className='search'
+                    type='input'
+                    placeholder="What would you like to find"
+                    value={searchTerm}
+                    onChange={performSearch}
+                />
+            </form>
         </>
     );
 };

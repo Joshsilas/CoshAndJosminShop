@@ -5,18 +5,21 @@ import HomePage from "./Components/HomePage/index.jsx";
 import Footer from "./Components/Footer/index.jsx";
 import CategoryPage from "./Components/CategoryPage";
 import ProductPage from "./Components/ProductPage/index.jsx";
-import SearchBar from "./Components/SearchBar/index.jsx";
 import SearchResults from "./Components/SearchResults/index.jsx";
 import './App.css';
 
 function App() {
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const [clearSearchBar, setClearSearchBar] = useState(false);
 
     const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
     };
 
+    const handleClearSearch = () => {
+        setClearSearchBar(true);
+    };
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -32,19 +35,20 @@ function App() {
         fetchProducts();
     }, []);
 
-    const handleProductClick = () => {
-        console.log("Product clicked");
-        setSearchTerm('');
-    };
+    useEffect(() => {
+        if (clearSearchBar) {
+            setClearSearchBar(false);
+        }
+    }, [clearSearchBar]);
 
     return (
         <BrowserRouter>
-            <Navbar handleSearch={handleSearch} handleClearClick={handleProductClick} />
+            <Navbar handleSearch={handleSearch} handleClearClick={handleClearSearch} clearSearchBar={clearSearchBar} />
             {searchTerm && <SearchResults data={data} searchTerm={searchTerm} />}
             {!searchTerm && <Routes>
                 <Route path={"/"} element={<HomePage />} />
                 <Route path="/category/:categoryName" element={<CategoryPage />} />
-                <Route path='/product-page/:id' element={<ProductPage />} />
+                <Route path='/product-page/:id' element={<ProductPage />} handleClearClick={handleClearSearch} />
             </Routes>}
             <Footer />
         </BrowserRouter>

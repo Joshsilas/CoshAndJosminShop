@@ -6,13 +6,9 @@ import HomePage from "../HomePage/index.jsx";
 const ProductContainer = ({id, category, title, price, image, description,product,  handleClearClick, setSearchTerm}) => {
     const navigate = useNavigate()
 
-    const handleProductClick = () => {
-        setSearchTerm('');
-    };
 
     const clickOnImage = () => {
         navigate(`/product-page/${id}`);
-        handleProductClick();
     };
 
     return (

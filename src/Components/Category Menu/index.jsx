@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import './CategoryMenu.css';
 
-const CategoryMenu = ({ text, category, handleClearClick }) => {
+const CategoryMenu = ({ text, handleClearClick }) => {
     const url = 'https://fakestoreapi.com/products/categories';
     const [categories, setCategories] = useState([]);
+    const [isOpen, setIsOpen] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");
 
     const fetchCategories = async () => {
         try {
@@ -17,17 +19,19 @@ const CategoryMenu = ({ text, category, handleClearClick }) => {
     };
 
     const handleCategoryClick = () => {
-        setSearchTerm('');
+        handleClearClick();
+        setIsOpen(false);
     };
 
     useEffect(() => {
         fetchCategories();
     }, []);
 
-    const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+
 
     return (
         <div className={`category-menu ${isOpen ? 'open' : ''}`}>

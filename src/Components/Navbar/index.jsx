@@ -4,14 +4,13 @@ import SearchBar from "../SearchBar/index.jsx";
 import CartButton from "../Cart Button/index.jsx";
 import React from "react";
 
-const NavBar = ({ handleSearch, handleClearClick }) => {
-
+const NavBar = ({ handleSearch, handleClearClick, clearSearchBar }) => {
     return (
         <div>
             <nav className="navBar">
                 <p className="welcomeLogo">Cosh And Josmin</p>
                 <CategoryMenu text="Categories" menuItems={['categories']} handleClearClick={handleClearClick} />
-                <SearchBar handleSearch={handleSearch} handleClearClick={handleClearClick} />
+                <SearchBar handleSearch={handleSearch} handleClearClick={handleClearClick} clearSearchBar={clearSearchBar} />
                 <CartButton text="Add to cart" />
             </nav>
         </div>
