@@ -13,10 +13,8 @@ const ProductContainer = ({ id, category, title, price, image, handleClearClick 
     };
 
     return (
-        <div>
-
-            <img src={image} alt={image} className='img' onClick={clickOnImage} />
-
+        <div onClick={clickOnImage}>
+            <img src={image} alt={image} className='img'/>
             <br />
             <div className='product-price'>£{price.toFixed(2)}</div>
             <br />
