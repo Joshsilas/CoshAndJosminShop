@@ -48,7 +48,7 @@ function App() {
             {!searchTerm && <Routes>
                 <Route path={"/"} element={<HomePage />} />
                 <Route path="/category/:categoryName" element={<CategoryPage />} />
-                <Route path='/product-page/:id' element={<ProductPage />} handleClearClick={handleClearSearch} clearSearchBar={clearSearchBar} />
+                <Route path='/product-page/:id' element={<ProductPage />}/>
             </Routes>}
             <Footer />
         </BrowserRouter>

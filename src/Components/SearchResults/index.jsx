@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 
 const SearchResults = ({ data: originalData, searchTerm, handleClearClick }) => {
     const [data, setData] = useState([]);
-    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
         const filteredData = originalData.filter((row) =>
@@ -16,7 +15,6 @@ const SearchResults = ({ data: originalData, searchTerm, handleClearClick }) => 
 
     const handleCategoryClick = () => {
         handleClearClick();
-        setIsOpen(false);
     };
 
     return (
@@ -26,7 +24,7 @@ const SearchResults = ({ data: originalData, searchTerm, handleClearClick }) => 
                 data.length > 0 ? (
                     data.map((row) => (
                         <div className="search-product" key={row.id}>
-                            <ProductContainer {...row} />
+                            <ProductContainer {...row} onClick={handleCategoryClick}/>
                         </div>
                     ))
 
