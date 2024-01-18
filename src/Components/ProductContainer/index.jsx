@@ -1,15 +1,22 @@
 import './ProductContainer.css';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
-const ProductContainer = ({ id, category, title, price, image, handleClearClick, clearSearchBar }) => {
-
+const ProductContainer = ({ id, category, title, price, image, handleClearClick }) => {
     const navigate = useNavigate();
+
+    const handleProductClick = () => {
+        handleClearClick();
+    };
+
+    const clickOnImage = () => {
+        navigate(`/product-page/${id}`);
+    };
 
     return (
         <div>
-            <Link to={`/product-page/${id}`}>
-                <img src={image} alt={image} className='img' />
-            </Link>
+
+            <img src={image} alt={image} className='img' onClick={clickOnImage} />
+
             <br />
             <div className='product-price'>£{price.toFixed(2)}</div>
             <br />
