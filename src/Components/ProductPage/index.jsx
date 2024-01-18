@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import ProductContainer from "../ProductContainer/index.jsx";
 import {useParams} from "react-router-dom";
 
-const ProductPage = () => {
+const ProductPage = ({handleClearClick}) => {
     const {id} = useParams()
     const url = `https://fakestoreapi.com/products/${id}`;
     const [product, setProduct] = useState(null)
@@ -22,13 +22,16 @@ const ProductPage = () => {
         fetchProduct()
     },[id]);
 
+    const handleProductClick = () => {
+        handleClearClick();
+    };
 
     return (
         <section>
         <div className='product'>
             {product && (
                 <div className="single-product" key={product.id}>
-                <ProductContainer {...product}/>
+                <ProductContainer {...product} handleClearClick={handleProductClick}/>
                 </div>
             )}
         </div>

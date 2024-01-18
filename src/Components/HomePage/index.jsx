@@ -1,7 +1,7 @@
 import ProductContainer from "../ProductContainer/index.jsx";
 import {useEffect, useState} from "react";
 import './HomePage.css'
-const HomePage = () => {
+const HomePage = ({handleClearClick}) => {
     const url = 'https://fakestoreapi.com/products';
     const[products, setProducts] = useState([])
 
@@ -17,6 +17,10 @@ const HomePage = () => {
     useEffect(() => {
         fetchProducts()
     }, []);
+
+    const handleProductClick = () => {
+        handleClearClick();
+    };
 
     const shuffleArray = (array) => {
         for (let i = array.length - 1; i > 0; i--) {
@@ -35,7 +39,7 @@ const HomePage = () => {
             <div className='products'>
                 {shuffleArray(products).slice(0, 6).map((product) => (
                     <div className="single-product" key={product.id}>
-                        <ProductContainer {...product} />
+                        <ProductContainer {...product} handleClearClick={handleProductClick} />
                     </div>
                 ))}
             </div>

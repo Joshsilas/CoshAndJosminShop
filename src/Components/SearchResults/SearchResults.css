@@ -18,6 +18,16 @@
     flex-direction: column;
     text-align: center;
 }
+
+.SearchText
+{
+    color: black;
+}
+
+.SearchText:hover
+{
+    color: white;
+}
 .search-product:hover
 {
     background-color: #242931;

@@ -46,9 +46,9 @@ function App() {
             <Navbar handleSearch={handleSearch} handleClearClick={handleClearSearch} clearSearchBar={clearSearchBar} />
             {searchTerm && <SearchResults data={data} searchTerm={searchTerm} clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch} />}
             {!searchTerm && <Routes>
-                <Route path={"/"} element={<HomePage />} />
+                <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
                 <Route path="/category/:categoryName" element={<CategoryPage />} />
-                <Route path='/product-page/:id' element={<ProductPage />}/>
+                <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
             </Routes>}
             <Footer />
         </BrowserRouter>

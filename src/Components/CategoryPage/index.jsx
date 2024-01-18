@@ -5,7 +5,7 @@ import './CategoryPage.css';
 import ProductContainer from "../ProductContainer/index.jsx";
 
 
-const CategoryPage = () => {
+const CategoryPage = ({handleClearClick}) => {
     const { categoryName } = useParams();
     const [products, setProducts] = useState([]);
 
@@ -25,6 +25,9 @@ const CategoryPage = () => {
         fetchProductsByCategory();
     }, [categoryName]);
 
+    const handleProductClick = () => {
+        handleClearClick();
+    };
 
     return (
         <div>
@@ -33,7 +36,7 @@ const CategoryPage = () => {
                 <div className='products'>
                     {(products).map((product) => (
                         <div className="single-product-category" key={product.id}>
-                            <ProductContainer {...product} />
+                            <ProductContainer {...product} handleClearClick={handleProductClick}/>
                         </div>
                     ))}
                 </div>
