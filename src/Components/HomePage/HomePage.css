@@ -10,9 +10,9 @@
 
 .single-product {
     flex: 1 0 calc(30% - 0px);
-    background-color: #e6e6ec;
+    background-color: #d9dccc;
     padding: 5px;
-    border: solid #a8a5a5;
+    border: 1px solid rgba(122, 118, 118, 0.5);
     border-radius: 10px;
     gap: 5px;
     display: flex;
