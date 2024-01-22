@@ -4,7 +4,7 @@
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-around;
-    margin: 20px;
+    margin: 0 20px 20px 20px;
     gap:10px;
 }
 
@@ -39,6 +39,43 @@
     color: white;
 }
 
+.trendingNowBanner {
+    width: 20%;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+    background-color: #ececec;
+    border-radius: 30px;
+    color: #282626;
+    font-family: "Cooper Black";
+    font-size: 1.5rem;
+    overflow: hidden;
+    border: solid rgba(255, 248, 248, 0.38);
+}
+
+.bannerPlacement
+{
+    display: flex;
+    justify-content: center;
+}
+
+/*.trendingNowBanner .text {*/
+/*    !*animation-name: moveText;*!*/
+/*    white-space: nowrap;*/
+/*    animation: moveText 15s linear infinite;*/
+/*    display: inline-block;*/
+/*    font-size: 2rem;*/
+/*}*/
+
+
+@keyframes moveText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 @media (max-width: 768px) {
     .products {
         margin: 10px;
@@ -47,5 +84,8 @@
 
     .single-product {
         flex: 1 0 calc(50% - 5px);
+    }
+    .trendingNowBanner {
+        width: 100%;
     }
 }

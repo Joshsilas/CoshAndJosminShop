@@ -34,6 +34,11 @@ const HomePage = ({handleClearClick}) => {
     return (
         <section>
             <Banner />
+            <div className="bannerPlacement">
+            <div className="trendingNowBanner">
+                <p>Recently viewed</p>
+            </div>
+        </div>
             <div className='products'>
                 {shuffleArray(products).slice(0, 6).map((product) => (
                     <div className="single-product" key={product.id}>
