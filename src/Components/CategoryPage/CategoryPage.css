@@ -30,6 +30,16 @@
     color: white;
 }
 
+.categoryBanner
+{
+    margin-top: 20px;
+    background-color: #3f4b31;
+    padding: 30px;
+    font-size: 3rem;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
 @media (max-width: 768px) {
     .products {
         margin: 10px;

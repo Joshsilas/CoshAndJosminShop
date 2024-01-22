@@ -31,7 +31,7 @@ const CategoryPage = ({handleClearClick}) => {
 
     return (
         <div>
-            <h2 className="banner">{categoryName}</h2>
+            <h2 className="categoryBanner">{categoryName}</h2>
             <section>
                 <div className='products'>
                     {(products).map((product) => (
