@@ -1,6 +1,7 @@
 import ProductContainer from "../ProductContainer/index.jsx";
 import {useEffect, useState} from "react";
 import './HomePage.css'
+import Banner from "../Banner/index.jsx";
 const HomePage = ({handleClearClick}) => {
     const url = 'https://fakestoreapi.com/products';
     const[products, setProducts] = useState([])
@@ -32,10 +33,7 @@ const HomePage = ({handleClearClick}) => {
 
     return (
         <section>
-            <div className = 'banner'>
-                <p>Welcome to Cosh and Josmin. The pretend E Shop!</p>
-                <p>See whats hot!</p>
-            </div>
+            <Banner />
             <div className='products'>
                 {shuffleArray(products).slice(0, 6).map((product) => (
                     <div className="single-product" key={product.id}>

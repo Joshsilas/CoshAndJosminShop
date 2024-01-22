@@ -33,12 +33,13 @@
 .categoryBanner
 {
     margin-top: 20px;
-    background-color: #3f4b31;
+    background-color: #869d6b;
     padding: 30px;
     font-size: 3rem;
     border-radius: 30px;
     color: white;
     font-family: 'Roboto', sans-serif;
+    border: 5px solid rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 768px) {
     .products {
