@@ -3,7 +3,6 @@ import UserContext from '../UserContext/index.jsx';
 
 const UserProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
-    console.log(users)
 
     useEffect(() => {
         const fetchUsers = async () => {

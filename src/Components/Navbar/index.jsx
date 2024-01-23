@@ -11,6 +11,7 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar }) => {
 
     const clickOnButton = () => {
         navigate(`/LogInPage/`);
+        handleClearClick();
     };
 
     return (
