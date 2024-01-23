@@ -9,6 +9,7 @@ import SearchResults from "./Components/SearchResults/index.jsx";
 import './App.css';
 import UserDisplay from "./Components/UserDisplay/index.jsx";
 import UserProvider from "./Components/UserProvider/index.jsx";
+import LogInPage from "./Components/LogInPage/index.jsx";
 
 function App() {
     const [data, setData] = useState([]);
@@ -52,6 +53,7 @@ function App() {
                 <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
                 <Route path="/category/:categoryName" element={<CategoryPage />} />
                 <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
+                <Route path="/LogInPage/" element={<LogInPage />}/>
             </Routes>}
             <Footer />
             {/*<UserDisplay />*/}
