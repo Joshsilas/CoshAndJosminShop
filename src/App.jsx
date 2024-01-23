@@ -7,6 +7,8 @@ import CategoryPage from "./Components/CategoryPage";
 import ProductPage from "./Components/ProductPage/index.jsx";
 import SearchResults from "./Components/SearchResults/index.jsx";
 import './App.css';
+import UserDisplay from "./Components/UserDisplay/index.jsx";
+import UserProvider from "./Components/UserProvider/index.jsx";
 
 function App() {
     const [data, setData] = useState([]);
@@ -43,6 +45,7 @@ function App() {
 
     return (
         <BrowserRouter>
+            <UserProvider>
             <Navbar handleSearch={handleSearch} handleClearClick={handleClearSearch} clearSearchBar={clearSearchBar} />
             {searchTerm && <SearchResults data={data} searchTerm={searchTerm} clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch} />}
             {!searchTerm && <Routes>
@@ -51,6 +54,8 @@ function App() {
                 <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
             </Routes>}
             <Footer />
+            <UserDisplay />
+            </UserProvider>
         </BrowserRouter>
     );
 }
