@@ -1,16 +1,14 @@
 import React from "react";
 
-const InputForms = ({ handleSearch, handleClearClick, clearSearchBar }) => {
-
+const InputForms = ({ placeholder, className }) => {
     return (
         <>
             <form>
                 <input
-                    className='search'
-                    type='input'
-                    placeholder="What would you like to find"
-                    value={}
-                    onChange={}
+                    id="inputForms"
+                    className={className}
+                    type='text'
+                    placeholder={placeholder}
                 />
             </form>
         </>
