@@ -32,8 +32,6 @@ const CategoryMenu = ({ text, handleClearClick }) => {
         setIsOpen(!isOpen);
     };
 
-
-
     return (
         <div className={`category-menu ${isOpen ? 'open' : ''}`}>
             <button className='catButton' onClick={toggleMenu}>

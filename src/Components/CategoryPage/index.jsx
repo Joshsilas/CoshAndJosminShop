@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import Navbar from "../Navbar/index.jsx";
 import './CategoryPage.css';
 import ProductContainer from "../ProductContainer/index.jsx";
-
 
 const CategoryPage = ({handleClearClick}) => {
     const { categoryName } = useParams();

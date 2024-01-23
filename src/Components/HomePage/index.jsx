@@ -2,6 +2,7 @@ import ProductContainer from "../ProductContainer/index.jsx";
 import {useEffect, useState} from "react";
 import './HomePage.css'
 import Banner from "../Banner/index.jsx";
+
 const HomePage = ({handleClearClick}) => {
     const url = 'https://fakestoreapi.com/products';
     const[products, setProducts] = useState([])
