@@ -10,7 +10,7 @@ function App() {
 
         <Navbar />
         <div className = 'banner'>
-            <p>Welcome to Cosh and Josmin. The pretend E Shop!</p>
+            <p>Welcome to Cosh and Josin. The pretend E Shop!</p>
             <p>See whats hot!</p>
         </div>
         <main className='main'>
