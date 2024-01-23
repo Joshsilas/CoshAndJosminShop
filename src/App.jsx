@@ -54,7 +54,7 @@ function App() {
                 <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
             </Routes>}
             <Footer />
-            <UserDisplay />
+            {/*<UserDisplay />*/}
             </UserProvider>
         </BrowserRouter>
     );
