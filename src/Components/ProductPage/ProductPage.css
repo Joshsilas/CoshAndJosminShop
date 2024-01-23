@@ -14,12 +14,13 @@
     display: flex;
     flex-direction: column;
     flex:1;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     height: 450px;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     padding: 10px;
-    margin: 10px;
+    margin-left: 10px;
 }
 
 .product-page-title  {
@@ -28,8 +29,7 @@ font-weight: bold;
 }
 
 .product-page-price {
-    display: flex;
-    justify-content: flex-start;
+  align-self: flex-start;
     margin-left: 30px;
     color: #065f46;
     font-size: 20px;
@@ -39,7 +39,7 @@ font-weight: bold;
     padding:35px;
     position: relative;
     overflow: hidden;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     background: white;
     display: flex;
     justify-content: center;
@@ -53,4 +53,23 @@ font-weight: bold;
     position: absolute;
     top: 0;
     left: 0;
+}
+.btn-add-to-basket {
+    cursor: pointer;
+    color: var(--white);
+    background: var(--primary-500);
+    border: transparent;
+    border-radius: var(--borderRadius);
+    letter-spacing: var(--letterSpacing);
+    padding: 0.375rem 0.75rem;
+    box-shadow: var(--shadow-1);
+    transition: var(--transition);
+    text-transform: capitalize;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+}
+.btn-add-to-basket:hover {
+    background: var(--primary-700);
+    box-shadow: var(--shadow-3);
 }

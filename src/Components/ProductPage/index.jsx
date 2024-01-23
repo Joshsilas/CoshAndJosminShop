@@ -1,8 +1,9 @@
 
 import {useEffect, useState} from "react";
-import ProductContainer from "../ProductContainer/index.jsx";
 import {useParams} from "react-router-dom";
 import './ProductPage.css'
+import Quantity from "../Quantity Form/index.jsx";
+import Button from "../Button/index.jsx";
 
 const ProductPage = () => {
     const {id} = useParams()
@@ -37,6 +38,8 @@ const ProductPage = () => {
                         <div className="product-page-price">£{product.price.toFixed(2)}</div>
                         <div className="product-page-category">{product.category}</div>
                         <div className="product-page-description">{product.description}</div>
+                        <Quantity/>
+                        <button type='button' className='btn-add-to-basket'>Add to basket</button>
                     </div>
                 </div>
             )}
