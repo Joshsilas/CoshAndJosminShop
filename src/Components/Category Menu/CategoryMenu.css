@@ -23,6 +23,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 0.9rem;
+    border-radius: 10px;
 }
 
 .catButton:hover {
