@@ -64,3 +64,24 @@
 {
     display: none;
 }
+
+.navbarTitle
+{
+    padding: 10px;
+    background-color: #577557;
+    font-weight: bold;
+    color: white;
+}
+
+.closeButton
+{
+    margin: 2px;
+    background-color: #577557;
+    color: white;
+}
+
+.closeButton:hover
+{
+    background-color: #405937;
+    cursor: pointer;
+}
