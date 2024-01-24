@@ -1,7 +1,7 @@
 .productTitle
 {
-    font-family: Cantarell;
-    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     font-weight: bold;
 }
 
@@ -9,9 +9,15 @@
     font-family: Cantarell;
     font-size: 1rem;
     font-weight: bold;
+    color: #000000;
+    text-shadow:
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
 }
 
 .productCategory
 {
-    font-family: Cantarell;
+    font-family: 'Roboto', sans-serif;
 }
