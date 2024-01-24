@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import InputForms from "../InputForms/index.jsx";
 import Button from "../Button/index.jsx";
-import {useNavigate} from "react-router-dom";
+import {  useNavigate } from 'react-router-dom';
 import './LogInPage.css';
 
 const LogInPage = () => {
-    const [username, setUsername] = useState('');
+    const [userName, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
@@ -22,8 +22,8 @@ const LogInPage = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    username: "username",
-                    password: "password"
+                    username: userName,
+                    password: "password^_"
                 }),
             });
 
@@ -50,7 +50,7 @@ const LogInPage = () => {
             <InputForms
                 className="logInforms"
                 placeholder={"Username"}  // Updated placeholder
-                value={username}
+                value={userName}
                 onChange={(e) => setUsername(e.target.value)}
             />
             <InputForms
