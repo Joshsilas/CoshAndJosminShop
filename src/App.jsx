@@ -10,7 +10,7 @@ import ProductPage from "./Components/ProductPage/index.jsx";
 function App() {
   return (
     <>
-
+<BrowserRouter>
         <Navbar />
         <Routes>
             <Route path={"/"} element={<HomePage/>}/>
@@ -18,6 +18,7 @@ function App() {
             <Route path='/product-page/:id' element={<ProductPage/>}/>
         </Routes>
         <Footer />
+</BrowserRouter>
     </>
   )
 }
