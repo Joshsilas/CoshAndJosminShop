@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import InputForms from "../InputForms/index.jsx";
 import Button from "../Button/index.jsx";
 import {  useNavigate } from 'react-router-dom';
+
 import './LogInPage.css';
 
 const LogInPage = () => {
@@ -22,8 +23,8 @@ const LogInPage = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    username: userName,
-                    password: "password^_"
+                    username: "userName",
+                    password: "password",
                 }),
             });
 
@@ -35,14 +36,15 @@ const LogInPage = () => {
             } else {
                 const errorData = await response.json();
                 console.error('Login failed:', errorData.message);
-                alert("fail")
+                alert("LoginFailed")
             }
         } catch (error) {
-            console.error('Error during login:', error);
+            console.error('Error during login:');
             // Handle other errors
             alert("fail")
         }
     };
+
 
     return (
         <>
