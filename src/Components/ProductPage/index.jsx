@@ -36,7 +36,7 @@ const ProductPage = () => {
                     <div className="product-page-details">
                         <h1 className="product-page-title">{product.title}</h1>
                         <div className="product-page-price">£{product.price.toFixed(2)}</div>
-                        <div className="product-page-category">{product.category}</div>
+                        <div className="product-page-category"><strong>Category:</strong> {product.category}</div>
                         <div className="product-page-description">{product.description}</div>
                         <Quantity/>
                         <button type='button' className='btn-add-to-basket'>Add to basket</button>
