@@ -1,7 +1,10 @@
-import Navbar from "../Navbar/index.jsx";
+
 import {useEffect, useState} from "react";
-import ProductContainer from "../ProductContainer/index.jsx";
 import {useParams} from "react-router-dom";
+import './ProductPage.css'
+import Quantity from "../Quantity Form/index.jsx";
+import Button from "../Button/index.jsx";
+import ProductContainer from "../ProductContainer/index.jsx";
 
 const ProductPage = ({handleClearClick}) => {
     const {id} = useParams()
@@ -28,10 +31,24 @@ const ProductPage = ({handleClearClick}) => {
 
     return (
         <section>
-        <div className='product'>
+        <div className='product-page-container'>
             {product && (
-                <div className="single-product" key={product.id}>
-                <ProductContainer {...product} handleClearClick={handleProductClick}/>
+
+
+                <div key={product.id} className="product-page-layout">
+                    <div className="img-container-product-page">
+                        <img src={product.image} alt={product.image} className='product-page-img'/>
+                    </div>
+                    <div className="product-page-details">
+                        <h1 className="product-page-title">{product.title}</h1>
+                        <div className="product-page-price">£{product.price.toFixed(2)}</div>
+                        <div className="product-page-category">{product.category}</div>
+                        <div className="product-page-description">{product.description}</div>
+                        <Quantity/>
+                        <button type='button' className='btn-add-to-basket'>Add to basket</button>
+                    </div>
+
+
                 </div>
             )}
         </div>

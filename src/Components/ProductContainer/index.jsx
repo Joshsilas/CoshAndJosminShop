@@ -1,7 +1,8 @@
+
 import './ProductContainer.css';
 import {  useNavigate } from 'react-router-dom';
 
-const ProductContainer = ({ id, category, title, price, image, handleClearClick }) => {
+const ProductContainer = ({ id, category, title, price, image, handleClearClick , description,product }) => {
     const navigate = useNavigate();
 
     const handleProductClick = () => {
