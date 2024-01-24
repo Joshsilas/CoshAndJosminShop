@@ -32,17 +32,19 @@ const CategoryMenu = ({ text, handleClearClick }) => {
         setIsOpen(!isOpen);
     };
 
-
-
     return (
-        <div className={`category-menu ${isOpen ? 'open' : ''}`}>
+        <div>
             <button className='catButton' onClick={toggleMenu}>
                 <img className="barsImage" src='/src/assets/bars-solid.svg' alt="BarsLogo" />
                 {text}
                 <img className={`closeImage ${!isOpen ? 'open' : ''}`} src='/src/assets/x-solid.svg' alt="Close" />
             </button>
+            <div className={`category-menu ${isOpen ? 'open' : ''}`}>
             {isOpen && (
                 <ul className="sidebar-list">
+                    <div className="navbarTitle">
+                    <p>CATEGORIES</p>
+                </div>
                     <li>
                         <Link className="List" to="/" onClick={handleCategoryClick}>HOME PAGE</Link>
                     </li>
@@ -51,8 +53,10 @@ const CategoryMenu = ({ text, handleClearClick }) => {
                             <Link className="List" to={`/category/${category.toLowerCase()}`} onClick={handleCategoryClick}>{category.toUpperCase()} </Link>
                         </li>
                     ))}
+                    <button className="closeButton" onClick={toggleMenu}>Close</button>
                 </ul>
             )}
+            </div>
         </div>
     );
 };
