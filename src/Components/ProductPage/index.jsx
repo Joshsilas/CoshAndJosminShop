@@ -5,7 +5,7 @@ import './ProductPage.css'
 import Quantity from "../Quantity Form/index.jsx";
 import Button from "../Button/index.jsx";
 
-const ProductPage = () => {
+const ProductPage = ({handleClearClick}) => {
     const {id} = useParams()
     const url = `https://fakestoreapi.com/products/${id}`;
     const [product, setProduct] = useState(null)
@@ -24,6 +24,9 @@ const ProductPage = () => {
         fetchProduct()
     },[id]);
 
+    const handleProductClick = () => {
+        handleClearClick();
+    };
 
     return (
         <section>

@@ -1,0 +1,98 @@
+.searchLayout
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.search-product {
+    flex: 0 0 calc(20% - 0px);
+    background-color: #b1b4ae;
+    padding: 5px;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.SearchText
+{
+    color: black;
+}
+
+.SearchText:hover
+{
+    color: white;
+}
+.search-product:hover
+{
+    background-color: #242931;
+    color: white;
+}
+.single-product.img:hover
+{
+    background-color: #242931;
+    color: white;
+}
+.search-product .img {
+    background-color: #ffffff;
+    max-height: 150px;
+    object-fit: contain;
+    border: 5px solid rgba(14, 14, 14, 0.5);
+    border-radius: 40px;
+}
+
+.ohNoMessage {
+    font-size: 5rem;
+    margin: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.whisper {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.backToHomePageLink
+{
+    font-size: 2rem;
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+}
+.backToHomePageLink:hover
+{
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    .sadCow {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .searchLayout {
+        margin: 10px;
+        gap: 5px;
+    }
+
+    .search-product  {
+        flex: 0 0 calc(50% - 5px);
+    }
+    .ohNoMessage
+    {
+        font-size: 3rem;
+
+    }
+    .backToHomePageLink {
+        font-size: 1rem;
+    }
+}
+

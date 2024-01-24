@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import Navbar from "../Navbar/index.jsx";
 import './CategoryPage.css';
 import ProductContainer from "../ProductContainer/index.jsx";
 
-
-const CategoryPage = () => {
+const CategoryPage = ({handleClearClick}) => {
     const { categoryName } = useParams();
     const [products, setProducts] = useState([]);
 
@@ -25,15 +23,18 @@ const CategoryPage = () => {
         fetchProductsByCategory();
     }, [categoryName]);
 
+    const handleProductClick = () => {
+        handleClearClick();
+    };
 
     return (
         <div>
-            <h2 className="banner">{categoryName}</h2>
+            <h2 className="categoryBanner">{categoryName}</h2>
             <section>
                 <div className='products'>
                     {(products).map((product) => (
                         <div className="single-product-category" key={product.id}>
-                            <ProductContainer {...product} />
+                            <ProductContainer {...product} handleClearClick={handleProductClick}/>
                         </div>
                     ))}
                 </div>

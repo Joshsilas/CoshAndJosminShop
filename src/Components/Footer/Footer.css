@@ -1,6 +1,30 @@
 .footer {
     width: 100%;
     background-color: #b9b3bd;
-    padding: 10px;
-    border: 5px solid black;
+    padding: 20px;
+    border: 5px solid #4d4d4d;
+}
+
+.footerContents {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footerContents p {
+    margin: 10px;
+    font-size: 1rem;
+}
+
+.footerContents a {
+    color: #333;
+    text-decoration: underline;
+    margin: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footerContents a:hover {
+    color: #ffffff;
 }

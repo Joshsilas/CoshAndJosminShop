@@ -9,7 +9,12 @@
     font-family: Cantarell;
     font-size: 1rem;
     font-weight: bold;
-    color: red;
+    color: #000000;
+    text-shadow:
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
 }
 
 .product-category
