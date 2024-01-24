@@ -33,12 +33,13 @@ const CategoryMenu = ({ text, handleClearClick }) => {
     };
 
     return (
-        <div className={`category-menu ${isOpen ? 'open' : ''}`}>
+        <div >
             <button className='catButton' onClick={toggleMenu}>
                 <img className="barsImage" src='/src/assets/bars-solid.svg' alt="BarsLogo" />
                 {text}
                 <img className={`closeImage ${!isOpen ? 'open' : ''}`} src='/src/assets/x-solid.svg' alt="Close" />
             </button>
+            <div className={`category-menu ${isOpen ? 'open' : ''}`}>
             {isOpen && (
                 <ul className="sidebar-list">
                     <li>
@@ -50,7 +51,9 @@ const CategoryMenu = ({ text, handleClearClick }) => {
                         </li>
                     ))}
                 </ul>
+
             )}
+            </div>
         </div>
     );
 };
