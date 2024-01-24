@@ -1,10 +1,8 @@
 
-const Button = ({className}) => {
+const Button = () => {
     return (
         <>
-            <h2>
-                BasketButton
-            </h2>
+            <button type='button' className='btn'>Add to basket</button>
         </>
     )
 }

@@ -1,4 +1,4 @@
-.productTitle
+.product-title
 {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
@@ -12,7 +12,7 @@
     color: red;
 }
 
-.productCategory
+.product-category
 {
     font-family: 'Roboto', sans-serif;
 }
