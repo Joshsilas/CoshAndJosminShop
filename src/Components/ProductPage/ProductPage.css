@@ -66,7 +66,7 @@ font-weight: bold;
 .product-page-description {
     display: flex;
     flex-wrap: wrap;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     color: #333;
     letter-spacing: 0.5px;
@@ -104,4 +104,28 @@ font-weight: bold;
 .btn-add-to-basket:hover {
     background: var(--primary-700);
     box-shadow: var(--shadow-3);
+}
+
+@media (max-width: 768px) {
+    .product-page-container {
+        padding: 10px;
+    }
+    .product-page-layout {
+     display: flex;
+     flex-direction: column;
+    }
+    .product-page-details {
+        height: auto;
+        margin-left: 0;
+    }
+    .product-page-price {
+        margin-left: 0;
+    }
+    .img-container-product-page {
+        width: 100%;
+        padding: 0;
+    }
+    .btn-add-to-basket {
+        width: 80%;
+    }
 }
