@@ -33,7 +33,6 @@ const LogInPage = ({ displayLoggedIn }) => {
     };
 
 
-
     return (
         <>
             <p className="signInMessage">Please enter your username and password to sign in</p>

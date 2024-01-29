@@ -13,6 +13,7 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
     const user = useContext(UserContext);
 
     useEffect(() => {
+        console.log('displayLoggedIn:', displayLoggedIn);
         setLoggedIn(displayLoggedIn);
     }, [displayLoggedIn]);
 
@@ -20,6 +21,7 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
         navigate(`/LogInPage/`);
         handleClearClick();
     };
+
 
     return (
         <div>
@@ -29,10 +31,8 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
                 <SearchBar handleSearch={handleSearch} handleClearClick={handleClearClick} clearSearchBar={clearSearchBar} />
                 <div>
                     <Button className="logInButton" text="Log In" onClick={clickOnButton} />
-                    {loggedIn ? (
-                        <>
-                            <p>Welcome {displayLoggedIn}</p>
-                        </>
+                        {displayLoggedIn ? (
+                            <p>Welcome {user.username}</p>
                     ) : (
                         <>
                             <p>Welcome Guest</p>
