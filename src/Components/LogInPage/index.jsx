@@ -13,29 +13,32 @@ const LogInPage = ({ displayLoggedIn }) => {
     const navigate = useNavigate();
     const users = useContext(UserContext);
 
+    useEffect(() => {
+        console.log('loggedIn in useEffect:', loggedIn);
+        // You can perform any additional actions here when loggedIn changes
+    }, [loggedIn]);
+
+    useEffect(() => {
+        setLoggedIn(displayLoggedIn);
+    }, [displayLoggedIn]);
+
     const handleLogin = () => {
-        console.log('loggedIn after set:', loggedIn); // Log here to check the state
         const user = users.find(u => u.username === userName);
 
         if (user && user.password === password) {
             console.log('Login successful for user:', userName);
             alert(`Welcome, ${userName}!`);
+
+            // Log the state before and after setLoggedIn
+            console.log('Before setLoggedIn, loggedIn:', loggedIn);
             setLoggedIn(true);
-            console.log('loggedIn after set:', loggedIn); // Log here to check the state
+            console.log('After setLoggedIn, loggedIn:', loggedIn);
+
             navigate("/");
         } else {
             console.error('Login failed for user:', userName);
             alert('Wrong username or password. Please try again.');
         }
-    };
-
-    // useEffect(() => {
-    //     console.log('loggedIn in useEffect:', loggedIn); // Log here to check the state
-    // }, [loggedIn]);
-
-    const handleLogout = () => {
-        setLoggedIn(false);
-        // Add any other logout logic here
     };
 
     return (

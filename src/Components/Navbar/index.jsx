@@ -9,14 +9,18 @@ import UserContext from "../UserContext/index.jsx";
 import UserProvider from "../UserProvider/index.jsx";
 
 const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedIn }) => {
-    const [loggedIn, setLoggedIn] = useState(true);
+    const [loggedIn, setLoggedIn] = useState(false);
     const navigate = useNavigate();
     const user = useContext(UserContext);
+
+    useEffect(() => {
+        setLoggedIn(displayLoggedIn);
+    }, [displayLoggedIn]);
 
     const clickOnButton = () => {
         if (loggedIn) {
             setLoggedIn(false);
-            alert("You have successfully been logged out")
+            alert("You have successfully been logged out");
         } else {
             navigate("/LogInPage/");
             handleClearClick();

@@ -15,8 +15,7 @@ function App() {
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [clearSearchBar, setClearSearchBar] = useState(false);
-    const [loggedIn, setLoggedIn] = useState(false);
-    const [displayLoggedIn, setDisplayLoggedIn] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false); // Move the state to App component
     const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
     };
@@ -45,17 +44,23 @@ function App() {
         }
     }, [clearSearchBar]);
 
-
     return (
         <BrowserRouter>
             <UserProvider>
-                <Navbar handleSearch={handleSearch} handleClearClick={handleClearSearch} clearSearchBar={clearSearchBar} displayLoggedIn={displayLoggedIn} />
+                {/* Pass the loggedIn state and its setter function to Navbar */}
+                <Navbar
+                    handleSearch={handleSearch}
+                    handleClearClick={handleClearSearch}
+                    clearSearchBar={clearSearchBar}
+                    loggedIn={loggedIn} // Pass loggedIn state to Navbar
+                    setLoggedIn={setLoggedIn} // Pass the setter function to Navbar
+                />
                 {searchTerm && <SearchResults data={data} searchTerm={searchTerm} clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch} />}
                 {!searchTerm && <Routes>
                     <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
                     <Route path="/category/:categoryName" element={<CategoryPage />} />
                     <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
-                    <Route path="/LogInPage/" element={<LogInPage displayLoggedIn={displayLoggedIn} />} />
+                    <Route path="/LogInPage/" element={<LogInPage displayLoggedIn={loggedIn} setLoggedIn={setLoggedIn} />} />
                 </Routes>}
                 <Footer />
                 {/*<UserDisplay />*/}
