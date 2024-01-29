@@ -8,6 +8,7 @@ import CategoryPage from "./Components/CategoryPage";
 import ProductPage from "./Components/ProductPage/index.jsx";
 import SearchResults from "./Components/SearchResults/index.jsx";
 import './App.css';
+import CartPage from "./Components/CartPage/index.jsx";
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
                 <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
                 <Route path="/category/:categoryName" element={<CategoryPage />} />
                 <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
+                <Route path='/cart-page/' element={<CartPage/>}/>
             </Routes>}
             <Footer />
         </BrowserRouter>

@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
+
 import './ProductPage.css'
 import Quantity from "../Quantity Form/index.jsx";
 
@@ -9,6 +10,7 @@ const ProductPage = ({handleClearClick}) => {
     const url = `https://fakestoreapi.com/products/${id}`;
     const [product, setProduct] = useState(null)
     const [readMore, setreadMore] = useState(false);
+    const[cart, setCart] = useState([])
     const fetchProduct = async () => {
         try {
             const response = await fetch(url)
@@ -26,6 +28,27 @@ const ProductPage = ({handleClearClick}) => {
     const handleProductClick = () => {
         handleClearClick();
     };
+
+    const updateCart = async () => {
+        try {
+            const response = await  fetch('https://fakestoreapi.com/carts/7', {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(
+                    {
+                        userId: parseInt(id),
+                        date: new Date().toISOString(),
+                        products: [{productId: product.id, quantity: 1}],
+                    })
+            })
+                const updatedCart = await response.json()
+            console.log("Updated cart:",updatedCart)
+        } catch(err)  {
+            console.log(err)
+        }
+    }
 
     return (
         <section>
@@ -46,8 +69,7 @@ const ProductPage = ({handleClearClick}) => {
                             </button>
                         </div>
                         <Quantity/>
-                        <button type='button' className='btn-add-to-basket'>Add to basket</button>
-
+                        <button type='button' className='btn-add-to-basket' onClick={updateCart}>Add to cart</button>
                     </div>
                 </div>
             )}
