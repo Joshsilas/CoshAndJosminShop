@@ -17,7 +17,6 @@ function App() {
     const [clearSearchBar, setClearSearchBar] = useState(false);
     const [loggedIn, setLoggedIn] = useState(false);
     const [displayLoggedIn, setDisplayLoggedIn] = useState(false);
-
     const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
     };
@@ -46,24 +45,20 @@ function App() {
         }
     }, [clearSearchBar]);
 
-    useEffect(() => {
-        console.log('displayLoggedIn:', displayLoggedIn);
-        setDisplayLoggedIn(true);
-    }, [displayLoggedIn]);
 
     return (
         <BrowserRouter>
             <UserProvider>
-            <Navbar handleSearch={handleSearch} handleClearClick={handleClearSearch} clearSearchBar={clearSearchBar} displayLoggedIn={displayLoggedIn} />
-            {searchTerm && <SearchResults data={data} searchTerm={searchTerm} clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch} />}
-            {!searchTerm && <Routes>
-                <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
-                <Route path="/category/:categoryName" element={<CategoryPage />} />
-                <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
-                <Route path="/LogInPage/" element={<LogInPage displayLoggedIn={displayLoggedIn} />} />
-            </Routes>}
-            <Footer />
-            {/*<UserDisplay />*/}
+                <Navbar handleSearch={handleSearch} handleClearClick={handleClearSearch} clearSearchBar={clearSearchBar} displayLoggedIn={displayLoggedIn} />
+                {searchTerm && <SearchResults data={data} searchTerm={searchTerm} clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch} />}
+                {!searchTerm && <Routes>
+                    <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
+                    <Route path="/category/:categoryName" element={<CategoryPage />} />
+                    <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
+                    <Route path="/LogInPage/" element={<LogInPage displayLoggedIn={displayLoggedIn} />} />
+                </Routes>}
+                <Footer />
+                {/*<UserDisplay />*/}
             </UserProvider>
         </BrowserRouter>
     );

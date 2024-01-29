@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import InputForms from "../InputForms/index.jsx";
 import Button from "../Button/index.jsx";
 import { useNavigate } from 'react-router-dom';
@@ -14,12 +14,14 @@ const LogInPage = ({ displayLoggedIn }) => {
     const users = useContext(UserContext);
 
     const handleLogin = () => {
+        console.log('loggedIn after set:', loggedIn); // Log here to check the state
         const user = users.find(u => u.username === userName);
 
         if (user && user.password === password) {
             console.log('Login successful for user:', userName);
             alert(`Welcome, ${userName}!`);
             setLoggedIn(true);
+            console.log('loggedIn after set:', loggedIn); // Log here to check the state
             navigate("/");
         } else {
             console.error('Login failed for user:', userName);
@@ -27,11 +29,14 @@ const LogInPage = ({ displayLoggedIn }) => {
         }
     };
 
+    // useEffect(() => {
+    //     console.log('loggedIn in useEffect:', loggedIn); // Log here to check the state
+    // }, [loggedIn]);
+
     const handleLogout = () => {
         setLoggedIn(false);
         // Add any other logout logic here
     };
-
 
     return (
         <>
