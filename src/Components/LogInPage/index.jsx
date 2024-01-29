@@ -6,10 +6,10 @@ import UserContext from "../UserContext/index.jsx";
 
 import './LogInPage.css';
 
-const LogInPage = () => {
+const LogInPage = ({ displayLoggedIn }) => {
     const [userName, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [loggedIn, setLoggedIn] = useState(false); // State to track login status
+    const [loggedIn, setLoggedIn] = useState(false);
     const navigate = useNavigate();
     const users = useContext(UserContext);
 
@@ -18,14 +18,12 @@ const LogInPage = () => {
 
         if (user && user.password === password) {
             console.log('Login successful for user:', userName);
+            alert(`Welcome, ${userName}!`);
             setLoggedIn(true);
             navigate("/");
         } else {
             console.error('Login failed for user:', userName);
             alert('Wrong username or password. Please try again.');
-            console.log('Username:', userName);
-            console.log('Password:', password);
-            console.log('Users:', users);
         }
     };
 
@@ -34,14 +32,7 @@ const LogInPage = () => {
         // Add any other logout logic here
     };
 
-    if (loggedIn) {
-        return (
-            <>
-                <p className="signInMessage">Welcome, {userName}! You are logged in.</p>
-                <Button className="signInButton" text="Logout" onClick={handleLogout} />
-            </>
-        );
-    }
+
 
     return (
         <>
@@ -51,7 +42,6 @@ const LogInPage = () => {
                 placeholder={"Username"}
                 value={userName}
                 onChange={(newValue) => setUsername(newValue)}
-
             />
             <InputForms
                 className="logInforms"

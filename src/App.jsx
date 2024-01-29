@@ -15,6 +15,7 @@ function App() {
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [clearSearchBar, setClearSearchBar] = useState(false);
+    const [loggedIn, setLoggedIn] = useState(false);
 
     const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
@@ -53,7 +54,7 @@ function App() {
                 <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
                 <Route path="/category/:categoryName" element={<CategoryPage />} />
                 <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
-                <Route path="/LogInPage/" element={<LogInPage />}/>
+                <Route path="/LogInPage/" element={<LogInPage displayLoggedIn={loggedIn} />} />
             </Routes>}
             <Footer />
             {/*<UserDisplay />*/}
