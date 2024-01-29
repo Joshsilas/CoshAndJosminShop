@@ -1,65 +1,64 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import InputForms from "../InputForms/index.jsx";
 import Button from "../Button/index.jsx";
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import UserContext from "../UserContext/index.jsx";
 
 import './LogInPage.css';
 
 const LogInPage = () => {
     const [userName, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [loggedIn, setLoggedIn] = useState(false); // State to track login status
     const navigate = useNavigate();
+    const users = useContext(UserContext);
 
-    const clickOnButton = () => {
-        navigate(`/`);
-        handleClearClick();
-    };
+    const handleLogin = () => {
+        const user = users.find(u => u.username === userName);
 
-    const handleLogin = async () => {
-        try {
-            const response = await fetch("https://fakestoreapi.com/auth/login", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    username: userName,
-                    password: password,
-                }),
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                console.log('Login successful:', data);
-                navigate(`/`);
-
-            } else {
-                const errorData = await response.json();
-                console.error('Login failed:', errorData.message);
-                alert("LoginFailed")
-            }
-        } catch (error) {
-            console.error('Error during login:');
-            // Handle other errors
-            alert("fail")
+        if (user && user.password === password) {
+            console.log('Login successful for user:', userName);
+            setLoggedIn(true);
+            navigate("/");
+        } else {
+            console.error('Login failed for user:', userName);
+            alert('Wrong username or password. Please try again.');
+            console.log('Username:', userName);
+            console.log('Password:', password);
+            console.log('Users:', users);
         }
     };
+
+    const handleLogout = () => {
+        setLoggedIn(false);
+        // Add any other logout logic here
+    };
+
+    if (loggedIn) {
+        return (
+            <>
+                <p className="signInMessage">Welcome, {userName}! You are logged in.</p>
+                <Button className="signInButton" text="Logout" onClick={handleLogout} />
+            </>
+        );
+    }
 
     return (
         <>
             <p className="signInMessage">Please enter your username and password to sign in</p>
             <InputForms
                 className="logInforms"
-                placeholder={"Username"}  // Updated placeholder
+                placeholder={"Username"}
                 value={userName}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={(newValue) => setUsername(newValue)}
+
             />
             <InputForms
                 className="logInforms"
                 placeholder={"Password"}
                 type="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(newValue) => setPassword(newValue)}
             />
             <Button className="signInButton" text="Sign In" onClick={handleLogin} />
         </>

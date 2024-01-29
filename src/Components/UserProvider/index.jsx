@@ -3,7 +3,6 @@ import UserContext from '../UserContext/index.jsx';
 
 const UserProvider = ({ children }) => {
     const [users, setUsers] = useState([]);
-    console.log(users)
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -14,9 +13,10 @@ const UserProvider = ({ children }) => {
 
                 setUsers(updatedUsers);
             } catch (err) {
-                console.log('Error fetching user data:', err);
+                console.error('Error fetching user data:', err);
             }
         };
+
         fetchUsers();
     }, []);
 

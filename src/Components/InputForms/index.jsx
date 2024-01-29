@@ -1,6 +1,9 @@
 import React from "react";
 
-const InputForms = ({ placeholder, className }) => {
+const InputForms = ({ placeholder, className, value, onChange  }) => {
+    const handleChange = (e) => {
+        onChange && onChange(e.target.value);
+    };
     return (
         <>
             <form>
@@ -9,6 +12,8 @@ const InputForms = ({ placeholder, className }) => {
                     className={className}
                     type='text'
                     placeholder={placeholder}
+                    value={value}
+                    onChange={handleChange}
                 />
             </form>
         </>
