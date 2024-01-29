@@ -19,8 +19,8 @@ const LogInPage = ({ displayLoggedIn }) => {
     }, [loggedIn]);
 
     useEffect(() => {
-        setLoggedIn(displayLoggedIn);
-    }, [displayLoggedIn]);
+        console.log('loggedIn in useEffect:', loggedIn); // This will log the updated state
+    }, [loggedIn]);
 
     const handleLogin = () => {
         const user = users.find(u => u.username === userName);
