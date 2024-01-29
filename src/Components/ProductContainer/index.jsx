@@ -3,7 +3,6 @@ import {  useNavigate } from 'react-router-dom';
 
 const ProductContainer = ({ id, category, title, price, image, handleClearClick }) => {
     const navigate = useNavigate();
-
     const handleProductClick = () => {
         handleClearClick();
     };
