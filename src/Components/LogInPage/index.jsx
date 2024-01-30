@@ -30,12 +30,14 @@ const LogInPage = ({ setLoggedIn }) => { // Pass setLoggedIn as a prop
         <>
             <p className="signInMessage">Please enter your username and password to sign in</p>
             <InputForms
+                id="userNameForm"
                 className="logInforms"
                 placeholder={"Username"}
                 value={userName}
                 onChange={(newValue) => setUsername(newValue)}
             />
             <InputForms
+                id="PasswordForm"
                 className="logInforms"
                 placeholder={"Password"}
                 type="password"
