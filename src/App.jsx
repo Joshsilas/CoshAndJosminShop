@@ -7,7 +7,6 @@ import CategoryPage from "./Components/CategoryPage";
 import ProductPage from "./Components/ProductPage/index.jsx";
 import SearchResults from "./Components/SearchResults/index.jsx";
 import './App.css';
-import UserDisplay from "./Components/UserDisplay/index.jsx";
 import UserProvider from "./Components/UserProvider/index.jsx";
 import LogInPage from "./Components/LogInPage/index.jsx";
 
