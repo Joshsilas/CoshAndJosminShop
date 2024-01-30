@@ -1,26 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import InputForms from "../InputForms/index.jsx";
-import Button from "../Button/index.jsx";
 import { useNavigate } from 'react-router-dom';
 import UserContext from "../UserContext/index.jsx";
 
 import './LogInPage.css';
+import Button from "../Button/index.jsx";
 
-const LogInPage = ({ displayLoggedIn }) => {
+const LogInPage = ({ setLoggedIn }) => { // Pass setLoggedIn as a prop
     const [userName, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [loggedIn, setLoggedIn] = useState(false);
     const navigate = useNavigate();
     const users = useContext(UserContext);
-
-    useEffect(() => {
-        console.log('loggedIn in useEffect:', loggedIn);
-        // You can perform any additional actions here when loggedIn changes
-    }, [loggedIn]);
-
-    useEffect(() => {
-        console.log('loggedIn in useEffect:', loggedIn); // This will log the updated state
-    }, [loggedIn]);
 
     const handleLogin = () => {
         const user = users.find(u => u.username === userName);
@@ -28,12 +18,7 @@ const LogInPage = ({ displayLoggedIn }) => {
         if (user && user.password === password) {
             console.log('Login successful for user:', userName);
             alert(`Welcome, ${userName}!`);
-
-            // Log the state before and after setLoggedIn
-            console.log('Before setLoggedIn, loggedIn:', loggedIn);
             setLoggedIn(true);
-            console.log('After setLoggedIn, loggedIn:', loggedIn);
-
             navigate("/");
         } else {
             console.error('Login failed for user:', userName);
