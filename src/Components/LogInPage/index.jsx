@@ -26,7 +26,6 @@ const LogInPage = ({ setLoggedIn }) => { // Pass setLoggedIn as a prop
         }
     }
 
-
         useEffect(() => {
             const handleKeyPress = (event) => {
                 if (event.key === 'Enter') {
@@ -40,6 +39,8 @@ const LogInPage = ({ setLoggedIn }) => { // Pass setLoggedIn as a prop
                 document.removeEventListener('keydown', handleKeyPress);
             };
         }, [handleLogin]);
+
+    console.log(users.username)
 
         return (
             <>
