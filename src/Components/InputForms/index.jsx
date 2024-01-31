@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputForms = ({ placeholder, className, value, onChange, type, id  }) => {
+const InputForms = ({ placeholder, className, value, onChange, type, id, onSubmit  }) => {
     const handleChange = (e) => {
         onChange && onChange(e.target.value);
     };
@@ -10,6 +10,7 @@ const InputForms = ({ placeholder, className, value, onChange, type, id  }) => {
                 <input
                     id={id}
                     className={className}
+                    onSubmit={onSubmit}
                     type={type}
                     placeholder={placeholder}
                     value={value}

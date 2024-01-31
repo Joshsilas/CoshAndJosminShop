@@ -38,7 +38,7 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
                     <button className="logInButton" onClick={clickOnButton}>
                         {loggedIn ? 'Log Out' : 'Log In'}
                     </button>
-                    {loggedIn ? <p>Welcome {user.userName}</p> : <p>Welcome Guest</p>}
+                    {loggedIn ? <p>Welcome {user.username}</p> : <p>Welcome Guest</p>}
                 </div>
                 <CartButton text="Add to cart" />
             </nav>
