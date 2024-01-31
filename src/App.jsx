@@ -46,7 +46,6 @@ function App() {
         }
     }, [clearSearchBar]);
 
-    console.log(localStorage.getItem('loggedInUser'))
     return (
         <BrowserRouter>
             <UserProvider>

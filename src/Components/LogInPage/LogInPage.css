@@ -32,10 +32,23 @@
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
     white-space: nowrap;
+    text-align: center;
 }
+.loginFormsDisplay
+{
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    margin:10px;
+    border-radius: 500px;
+    background-color: #b1b4ae;
+}
+
 
 @media (max-width: 768px) {
     .signInMessage {
         font-size: 1.2rem;
+    }
+    .loginFormsDisplay
+    {
+        border-radius: 10px;
     }
 }

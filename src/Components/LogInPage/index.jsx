@@ -55,6 +55,7 @@ const LogInPage = ({ setLoggedIn }) => {
     return (
         <>
             <p className="signInMessage">Please enter your username and password to sign in</p>
+            <div className="loginFormsDisplay">
             <InputForms
                 id="userNameForm"
                 className="logInforms"
@@ -71,6 +72,7 @@ const LogInPage = ({ setLoggedIn }) => {
                 onChange={(newValue) => setPassword(newValue)}
             />
             <Button className="signInButton" text="Sign In" onClick={handleLogin} />
+            </div>
         </>
     );
 };
