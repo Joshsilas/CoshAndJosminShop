@@ -17,6 +17,7 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
             setLoggedIn(false);  // Log out when the button is clicked
             await new Promise(resolve => setTimeout(resolve, 0));
             alert('You have successfully been logged out');
+            localStorage.clear()
             window.location.reload();
         } else {
             navigate('/LogInPage/');
@@ -28,6 +29,8 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
         setLoggedIn(displayLoggedIn);
     }, [displayLoggedIn]);
 
+    const storedUsername = localStorage.getItem('loggedInUser')
+
     return (
         <div>
             <nav className="navBar">
@@ -38,7 +41,7 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
                     <button className="logInButton" onClick={clickOnButton}>
                         {loggedIn ? 'Log Out' : 'Log In'}
                     </button>
-                    {loggedIn ? <p>Welcome {user.username}</p> : <p>Welcome Guest</p>}
+                    {loggedIn ? <p>Welcome {storedUsername || user.username.replace(/['"]/g, '')}</p> : <p>Welcome Guest</p>}
                 </div>
                 <CartButton text="Add to cart" />
             </nav>
