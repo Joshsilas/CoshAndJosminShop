@@ -21,6 +21,7 @@
     padding: 10px;
     margin-left: 10px;
     background-color: #b1b4ae;
+    border: 5px solid rgba(0, 0, 0, 0.5);
 }
 
 .product-page-title  {
@@ -63,6 +64,7 @@ font-weight: bold;
     position: absolute;
     top: 0;
     left: 0;
+    border: 5px solid rgba(14, 14, 14, 0.5);
 }
 .product-page-description {
     display: flex;
