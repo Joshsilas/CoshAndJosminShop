@@ -1,0 +1,41 @@
+.logInforms
+{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.signInButton
+{
+    background-color: #577557;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.signInMessage
+{
+    margin: 10px;
+    font-size: 2rem;
+    background-color: #1f3a2c;
+    padding: 30px;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .signInMessage {
+        font-size: 1.2rem;
+    }
+}
