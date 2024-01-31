@@ -41,8 +41,10 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
                     <button className="logInButton" onClick={clickOnButton}>
                         {loggedIn ? 'Log Out' : 'Log In'}
                     </button>
-                    {loggedIn ? <p>Welcome { JSON.parse(storedUsername) || user.username.replace(/['"]/g,  '')}</p> : <p>Welcome Guest</p>}
+                    {loggedIn ? <p className="welcomeText">Welcome { JSON.parse(storedUsername) || user.username.replace(/['"]/g,  '')}</p >
+                        : <p className="welcomeText">Welcome Guest</p>}
                 </div>
+
                 <CartButton text="Add to cart" />
             </nav>
         </div>

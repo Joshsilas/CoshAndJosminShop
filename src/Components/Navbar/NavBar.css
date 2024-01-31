@@ -29,4 +29,13 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.welcomeText
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffffff;
 }

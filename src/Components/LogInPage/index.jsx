@@ -40,6 +40,18 @@ const LogInPage = ({ setLoggedIn }) => {
         }
     };
 
+    useEffect(() => {
+        const handleKeyPress = (event) => {
+            if (event.key === 'Enter') {
+                handleLogin();
+            }
+        };
+        document.addEventListener('keydown', handleKeyPress);
+        return () => {
+            document.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [handleLogin]);
+
     return (
         <>
             <p className="signInMessage">Please enter your username and password to sign in</p>
