@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/index.jsx";
@@ -12,6 +13,7 @@ import UserProvider from "./Components/UserProvider/index.jsx";
 import LogInPage from "./Components/LogInPage/index.jsx";
 
 function App() {
+
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [clearSearchBar, setClearSearchBar] = useState(false);
@@ -67,6 +69,7 @@ function App() {
             </UserProvider>
         </BrowserRouter>
     );
+
 }
 
 export default App;
