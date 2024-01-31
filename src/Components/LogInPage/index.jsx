@@ -26,9 +26,11 @@ const LogInPage = ({ setLoggedIn }) => {
 
         if (user && user.password === password) {
             console.log('Login successful for user:', userName);
+            console.log('Login successful for user:', userName);
 
 
             localStorage.setItem('loggedInUser', JSON.stringify(user.username));
+            alert(`Welcome ${userName}`);
 
             setLoggedIn(true);
             navigate("/");
