@@ -62,9 +62,9 @@ function App() {
                     <Route path="/category/:categoryName" element={<CategoryPage />} />
                     <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
                     <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />} />
+                    <Route path ="/userPage/" element = { <UserDisplay />}  />
                 </Routes>}
                 <Footer />
-                {/*<UserDisplay />*/}
             </UserProvider>
         </BrowserRouter>
     );

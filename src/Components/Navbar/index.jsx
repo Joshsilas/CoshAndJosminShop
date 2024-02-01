@@ -22,6 +22,7 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
         } else {
             navigate('/LogInPage/');
             handleClearClick();
+            localStorage.clear()
         }
     };
 
