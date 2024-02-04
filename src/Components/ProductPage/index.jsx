@@ -31,22 +31,30 @@ const ProductPage = ({handleClearClick}) => {
 
     const updateCart = async () => {
         try {
-            const response = await  fetch('https://fakestoreapi.com/carts/7', {
-                method: "PUT",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(
-                    {
-                        userId: parseInt(id),
-                        date: new Date().toISOString(),
-                        products: [{productId: product.id, quantity: 1}],
-                    })
-            })
-                const updatedCart = await response.json()
-            console.log("Updated cart:",updatedCart)
+            const response = await  fetch(`https://fakestoreapi.com/carts/${id}`);
+            const currentCart = await response.json()
+            const existingProductIndex = currentCart.findIndex(item=>item.productId === parseInt(id));
+            if (existingProductIndex !== -1) {
+                currentCart[existingProductIndex].quantity += 1
+            } else {
+                currentCart.push({productId: parseInt(id),quantity:1});
+            }
+
+            const updateResponse = await fetch(`https://fakestoreapi.com/carts/${id}`,
+                { method: "PUT",
+                headers:{
+                "Content-Type":"application/json",
+            },
+            body: JSON.stringify(currentCart),
+        });
+            if(updateResponse.ok) {
+                console.log("Product added to cart succesfully")
+            } else {
+                console.log("Failed to add product to cart")
+            }
+
         } catch(err)  {
-            console.log(err)
+            console.log("Error adding product to cart:",err)
         }
     }
 
