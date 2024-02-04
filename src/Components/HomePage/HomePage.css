@@ -8,6 +8,7 @@
     gap:10px;
 }
 
+
 .single-product {
     flex: 1 0 calc(30% - 10px);
     background-color: #b1b4ae;
