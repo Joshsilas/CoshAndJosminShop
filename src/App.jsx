@@ -11,6 +11,7 @@ import './App.css';
 import UserDisplay from "./Components/UserDisplay/index.jsx";
 import UserProvider from "./Components/UserProvider/index.jsx";
 import LogInPage from "./Components/LogInPage/index.jsx";
+import CartPage from "./Components/CartPage/index.jsx";
 
 function App() {
 
@@ -61,7 +62,9 @@ function App() {
                     <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
                     <Route path="/category/:categoryName" element={<CategoryPage />} />
                     <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
-                    <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />} />
+                    <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />}
+                    />
+                    <Route path='/cart-page/' element={<CartPage/>}/>
                 </Routes>}
                 <Footer />
                 {/*<UserDisplay />*/}

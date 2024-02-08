@@ -50,7 +50,6 @@ const ProductPage = ({handleClearClick}) => {
                             </button>
                         </div>
                         <Quantity/>
-                        <button type='button' className='btn-add-to-basket'>Add to basket</button>
                         <button type='button' className='btn-add-to-basket' onClick={addToCart}>Add to cart</button>
                     </div>
                 </div>
