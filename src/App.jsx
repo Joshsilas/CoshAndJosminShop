@@ -12,6 +12,8 @@ import UserDisplay from "./Components/UserDisplay/index.jsx";
 import UserProvider from "./Components/UserProvider/index.jsx";
 import LogInPage from "./Components/LogInPage/index.jsx";
 import CartContext from "./Components/CartContext/index.jsx";
+import CartPage from "./Components/CartPage/index.jsx";
+
 
 function App() {
 
@@ -67,6 +69,7 @@ function App() {
                 </Routes>}
                 <Footer />
                 {/*<UserDisplay />*/}
+                    <Route path='/cart-page/' element={<CartPage/>}/>
                 </CartContext>
             </UserProvider>
         </BrowserRouter>
