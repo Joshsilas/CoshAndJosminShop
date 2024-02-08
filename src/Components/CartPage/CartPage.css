@@ -1,0 +1,8 @@
+.cartProductImage
+{
+    background-color: #ffffff;
+    max-height: 150px;
+    object-fit: contain;
+    border: 5px solid rgba(14, 14, 14, 0.5);
+    border-radius: 40px;
+}

@@ -13,6 +13,7 @@ import UserProvider from "./Components/UserProvider/index.jsx";
 import LogInPage from "./Components/LogInPage/index.jsx";
 import CartContext from "./Components/CartContext/index.jsx";
 import CartPage from "./Components/CartPage/index.jsx";
+import CartProvider from "./Components/CartProvider/index.jsx";
 
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
     return (
         <BrowserRouter>
             <UserProvider>
-                <CartContext>
+            <CartProvider>
                 <Navbar
                     handleSearch={handleSearch}
                     handleClearClick={handleClearSearch}
@@ -66,11 +67,11 @@ function App() {
                     <Route path="/category/:categoryName" element={<CategoryPage />} />
                     <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
                     <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />} />
+                    <Route path='/cart-page/' element={<CartPage/>}/>
                 </Routes>}
                 <Footer />
                 {/*<UserDisplay />*/}
-                    <Route path='/cart-page/' element={<CartPage/>}/>
-                </CartContext>
+            </CartProvider>
             </UserProvider>
         </BrowserRouter>
     );
