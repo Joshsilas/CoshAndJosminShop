@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Cartpage.css';
 const CartPage = ({ cartProducts }) => {
     return (
         <div>
@@ -7,7 +7,7 @@ const CartPage = ({ cartProducts }) => {
 
             {cartProducts.map((product, index) => (
                 <div key={index}>
-                    <img src= {product.image}></img>
+                    <img className="cartproductImage" src={product.image}></img>
                 </div>
             ))}
         </div>

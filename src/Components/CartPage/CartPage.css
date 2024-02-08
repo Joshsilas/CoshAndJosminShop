@@ -1,0 +1,10 @@
+.cartproductImage
+{
+    background-color: #ffffff;
+    height:20%;
+
+    width: 20%;
+    object-fit: contain;
+    border: 5px solid rgba(14, 14, 14, 0.5);
+
+}
