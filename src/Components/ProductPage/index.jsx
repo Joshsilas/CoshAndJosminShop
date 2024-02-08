@@ -27,6 +27,10 @@ const ProductPage = ({handleClearClick}) => {
         handleClearClick();
     };
 
+    const addToCart = () => {
+
+    }
+
     return (
         <section>
         <div className='product-page-container'>
@@ -47,7 +51,7 @@ const ProductPage = ({handleClearClick}) => {
                         </div>
                         <Quantity/>
                         <button type='button' className='btn-add-to-basket'>Add to basket</button>
-
+                        <button type='button' className='btn-add-to-basket' onClick={addToCart}>Add to cart</button>
                     </div>
                 </div>
             )}
