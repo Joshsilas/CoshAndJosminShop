@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
-import CartContext from '../CartContext/index.jsx';
-import './CartPage.css';
+import React, { useContext, useEffect, useState } from "react";
+import CartContext from "../CartContext/index.jsx";
+import "./CartPage.css";
 
 const CartPage = () => {
     const { carts } = useContext(CartContext);
@@ -17,7 +17,7 @@ const CartPage = () => {
                 const productDetails = await response.json();
                 return productDetails;
             } catch (error) {
-                console.error('Error fetching product details:', error.message);
+                console.error("Error fetching product details:", error.message);
                 return null;
             }
         };
@@ -67,7 +67,11 @@ const CartPage = () => {
                                                 <div>
                                                     <p>Product Name: {product.details.title}</p>
                                                     <p>Product Price: £{product.details.price.toFixed(2)}</p>
-                                                    <img className="cartProductImage" src={product.details.image} alt={product.details.title} />
+                                                    <img
+                                                        className="cartProductImage"
+                                                        src={product.details.image}
+                                                        alt={product.details.title}
+                                                    />
                                                     {/* Add other product details as needed */}
                                                 </div>
                                             )}

@@ -1,6 +1,5 @@
 import {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
-
 import './ProductPage.css'
 import Quantity from "../Quantity Form/index.jsx";
 
@@ -31,32 +30,41 @@ const ProductPage = ({handleClearClick}) => {
 
     const updateCart = async () => {
         try {
-            const response = await  fetch(`https://fakestoreapi.com/carts/${id}`);
-            const currentCart = await response.json()
-            const existingProductIndex = currentCart.findIndex(item=>item.productId === parseInt(id));
+            const userId = 1;
+
+            const response = await fetch(`https://fakestoreapi.com/carts/${userId}`);
+            const currentCart = await response.json();
+            console.log("currentCart:", currentCart);
+            console.log("id:", id);
+
+            let cartArray = Array.isArray(currentCart) ? currentCart : (currentCart.products || []);
+
+            const existingProductIndex = cartArray.findIndex(item => item.productId === parseInt(id));
+            console.log("existingProductIndex:", existingProductIndex);
+
             if (existingProductIndex !== -1) {
-                currentCart[existingProductIndex].quantity += 1
+                cartArray[existingProductIndex].quantity += 1;
             } else {
-                currentCart.push({productId: parseInt(id),quantity:1});
+                cartArray.push({ productId: parseInt(id), quantity: 1 });
             }
 
-            const updateResponse = await fetch(`https://fakestoreapi.com/carts/${id}`,
-                { method: "PUT",
-                headers:{
-                "Content-Type":"application/json",
-            },
-            body: JSON.stringify(currentCart),
-        });
-            if(updateResponse.ok) {
-                console.log("Product added to cart succesfully")
-            } else {
-                console.log("Failed to add product to cart")
-            }
+            const updateResponse = await fetch(`https://fakestoreapi.com/carts/${userId}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ products: cartArray }),
+            });
 
-        } catch(err)  {
-            console.log("Error adding product to cart:",err)
+            if (updateResponse.ok) {
+                console.log("Product added to cart successfully");
+            } else {
+                console.log("Failed to add product to cart");
+            }
+        } catch (err) {
+            console.log("Error adding product to cart:", err);
         }
-    }
+    };
 
     return (
         <section>
