@@ -19,6 +19,7 @@ function App() {
     const [searchTerm, setSearchTerm] = useState("");
     const [clearSearchBar, setClearSearchBar] = useState(false);
     const [loggedIn, setLoggedIn] = useState(false);
+    const [cartProducts, setcartProducts] = useState([])
     const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
     };
@@ -47,6 +48,10 @@ function App() {
         }
     }, [clearSearchBar]);
 
+    const addToCart = (product) => {
+        setcartProducts([...cartProducts, product]);
+    };
+
     return (
         <BrowserRouter>
             <UserProvider>
@@ -61,10 +66,10 @@ function App() {
                 {!searchTerm && <Routes>
                     <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
                     <Route path="/category/:categoryName" element={<CategoryPage />} />
-                    <Route path='/product-page/:id' element={<ProductPage   handleClearClick={handleClearSearch}/>} />
+                    <Route path='/product-page/:id' element={<ProductPage addToCart={addToCart} handleClearClick={handleClearSearch}/>} />
                     <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />}
                     />
-                    <Route path='/cart-page/' element={<CartPage/>}/>
+                    <Route path='/cart-page/'  element={<CartPage cartProducts={cartProducts}/>}/>
                 </Routes>}
                 <Footer />
                 {/*<UserDisplay />*/}

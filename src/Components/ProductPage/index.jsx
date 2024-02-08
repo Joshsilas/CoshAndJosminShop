@@ -4,7 +4,7 @@ import './ProductPage.css'
 import Quantity from "../Quantity Form/index.jsx";
 
 
-const ProductPage = ({handleClearClick}) => {
+const ProductPage = ({handleClearClick, addToCart}) => {
     const {id} = useParams()
     const url = `https://fakestoreapi.com/products/${id}`;
     const [product, setProduct] = useState(null)
@@ -27,9 +27,11 @@ const ProductPage = ({handleClearClick}) => {
         handleClearClick();
     };
 
-    const addToCart = () => {
 
-    }
+    const addToCartHandler = () => {
+        addToCart(product);
+    };
+
 
     return (
         <section>
@@ -50,7 +52,7 @@ const ProductPage = ({handleClearClick}) => {
                             </button>
                         </div>
                         <Quantity/>
-                        <button type='button' className='btn-add-to-basket' onClick={addToCart}>Add to cart</button>
+                        <button type='button' className='btn-add-to-basket' onClick={addToCartHandler}>Add to cart</button>
                     </div>
                 </div>
             )}
