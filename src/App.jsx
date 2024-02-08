@@ -11,6 +11,7 @@ import './App.css';
 import UserDisplay from "./Components/UserDisplay/index.jsx";
 import UserProvider from "./Components/UserProvider/index.jsx";
 import LogInPage from "./Components/LogInPage/index.jsx";
+import CartContext from "./Components/CartContext/index.jsx";
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
     return (
         <BrowserRouter>
             <UserProvider>
+                <CartContext>
                 <Navbar
                     handleSearch={handleSearch}
                     handleClearClick={handleClearSearch}
@@ -65,6 +67,7 @@ function App() {
                 </Routes>}
                 <Footer />
                 {/*<UserDisplay />*/}
+                </CartContext>
             </UserProvider>
         </BrowserRouter>
     );
