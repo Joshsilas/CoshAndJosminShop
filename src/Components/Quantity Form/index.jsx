@@ -1,23 +1,22 @@
 import './QuantityForm.css'
-const Quantity = () => {
+import {useState} from "react";
+
+const Quantity = ({selectedQuantity, setSelectedQuantity}) => {
+    const handleQuantityChange = (event) => {
+        setSelectedQuantity(event.target.value)
+    }
+
     return (
         <>
             <form action='#' className='dropdown-menu-container'>
                 <div className='quantity-text'>Quantity</div>
-                <select className='quantityList value-box' id='quantity' >
+                <select className='quantityList value-box' id='quantity' value={selectedQuantity} onChange={handleQuantityChange} >
                     <option value=''>
                         Select quantity
                     </option>
-                    <option value='1'>1</option>
-                    <option value='2'>2</option>
-                    <option value='3'>3</option>
-                    <option value='4'>4</option>
-                    <option value='5'>5</option>
-                    <option value='6'>6</option>
-                    <option value='7'>7</option>
-                    <option value='8'>8</option>
-                    <option value='9'>9</option>
-                    <option value='10'>10</option>
+                    {[...Array(10).keys()].map((num) =>(
+                        <option key={num} value={num + 1}>{num + 1}</option>
+                    ))}
                 </select>
             </form>
         </>

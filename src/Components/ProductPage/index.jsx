@@ -9,6 +9,8 @@ const ProductPage = ({handleClearClick, addToCart}) => {
     const url = `https://fakestoreapi.com/products/${id}`;
     const [product, setProduct] = useState(null)
     const [readMore, setreadMore] = useState(false);
+    const [selectedQuantity, setSelectedQuantity] = useState("")
+    const [error, setError] = useState("");
     const fetchProduct = async () => {
         try {
             const response = await fetch(url)
@@ -27,10 +29,14 @@ const ProductPage = ({handleClearClick, addToCart}) => {
         handleClearClick();
     };
 
-
     const addToCartHandler = () => {
-        addToCart(product);
-    };
+        if(!selectedQuantity) {
+            setError("Please select a quantity");
+        } else {
+            setError("");
+            addToCart({...product, quantity: selectedQuantity})
+        }
+    }
 
 
     return (
@@ -51,7 +57,11 @@ const ProductPage = ({handleClearClick, addToCart}) => {
                                 {readMore ? 'show less' : 'read more'}
                             </button>
                         </div>
-                        <Quantity/>
+                        <Quantity
+                        selectedQuantity={selectedQuantity}
+                        setSelectedQuantity={setSelectedQuantity}
+                        />
+                        {error && <div className="error-message">{error}</div> }
                         <button type='button' className='btn-add-to-basket' onClick={addToCartHandler}>Add to cart</button>
                     </div>
                 </div>
