@@ -8,10 +8,10 @@ import CategoryPage from "./Components/CategoryPage";
 import ProductPage from "./Components/ProductPage/index.jsx";
 import SearchResults from "./Components/SearchResults/index.jsx";
 import './App.css';
-import UserDisplay from "./Components/UserDisplay/index.jsx";
 import UserProvider from "./Components/UserProvider/index.jsx";
 import LogInPage from "./Components/LogInPage/index.jsx";
 import CartPage from "./Components/CartPage/index.jsx";
+
 
 function App() {
 
@@ -27,6 +27,7 @@ function App() {
     const handleClearSearch = () => {
         setClearSearchBar(true);
     };
+
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -52,6 +53,10 @@ function App() {
         setcartProducts([...cartProducts, product]);
     };
 
+    const removeFromCart = (productId) => {
+        setcartProducts(cartProducts.filter(product => product.id !== productId))
+    }
+
     return (
         <BrowserRouter>
             <UserProvider>
@@ -69,7 +74,7 @@ function App() {
                     <Route path='/product-page/:id' element={<ProductPage addToCart={addToCart} handleClearClick={handleClearSearch}/>} />
                     <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />}
                     />
-                    <Route path='/cart-page/'  element={<CartPage cartProducts={cartProducts}/>}/>
+                    <Route path='/cart-page/'  element={<CartPage cartProducts={cartProducts} removeFromCart={removeFromCart}/>}/>
                 </Routes>}
                 <Footer />
                 {/*<UserDisplay />*/}
