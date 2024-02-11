@@ -11,7 +11,7 @@ const CartPage = ({ cartProducts, removeFromCart }) => {
                     <img className="cartproductImage" src={product.image}></img>
                     <div className="cart-product-details">
                         <h3>{product.title}</h3>
-                        <p>Price: £{product.price.toFixed(2)}</p>
+                        <p>Price: £{product.price.toFixed(2 ) * product.quantity}</p>
                         <p>Quantity: {product.quantity}</p>
                         <button type='button' className='btn' onClick={() => removeFromCart(product.id)}>Remove product</button>
                     </div>
