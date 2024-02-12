@@ -40,10 +40,9 @@ const ProductPage = ({handleClearClick, addToCart}) => {
             setError({ message: "Added to cart", type: "success" });
             setTimeout(() => {
                 setError("");
-            }, 2000);
+            }, 3000);
         }
     }
-
 
     return (
         <section>
