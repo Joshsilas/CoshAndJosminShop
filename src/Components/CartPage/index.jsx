@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import './Cartpage.css';
 import Button from "../Button/index.jsx";
 import {Link} from "react-router-dom";
-const CartPage = ({ cartProducts, removeFromCart }) => {
+const CartPage = ({ cartProducts, removeFromCart, handleClearClick }) => {
 
     return (
         <div>

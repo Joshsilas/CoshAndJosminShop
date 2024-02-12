@@ -52,7 +52,7 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
                 </div>
                 <div>
                 <p className="cartTotal">{totalQuantity}</p>
-                <CartButton text="Add to cart" />
+                <CartButton text="Add to cart" handleClearClick={handleClearClick} clearSearchBar={clearSearchBar}/>
         </div>
             </nav>
         </div>

@@ -1,11 +1,12 @@
 import './cartButton.css';
 import {useNavigate} from "react-router-dom";
 
-const CartButton = ({className, text}) => {
+const CartButton = ({className, text, handleClearClick}) => {
     const navigate = useNavigate();
 
     const handleCartNavigation = () => {
         navigate('/cart-page');
+        handleClearClick();
     }
     return (
         <button className="cartImage" type='button' onClick={handleCartNavigation}>

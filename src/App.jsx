@@ -75,7 +75,7 @@ function App() {
                     <Route path='/product-page/:id' element={<ProductPage addToCart={addToCart} handleClearClick={handleClearSearch}/>} />
                     <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />}
                     />
-                    <Route path='/cart-page/'  element={<CartPage cartProducts={cartProducts} removeFromCart={removeFromCart}/>}/>
+                    <Route path='/cart-page/'  element={<CartPage cartProducts={cartProducts} removeFromCart={removeFromCart} clearSearchBar={clearSearchBar} handleClearClick={handleClearSearch}/>}/>
                 </Routes>}
                 <Footer />
                 {/*<UserDisplay />*/}
