@@ -1,13 +1,21 @@
 .banner {
     margin-top: 20px;
-    background-color: #1f3a2c;
-    padding: 30px;
-    font-size: 3rem;
+    background-color: rgba(31, 58, 44, 0.82);
+    padding: 150px;
+    font-size: 5rem;
     border-radius: 30px;
     color: white;
     font-family: 'Roboto', sans-serif;
     overflow: hidden;
-    white-space: nowrap;
+    /*background-image: url('/src/assets/shoppicture.jpg');*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center;*/
+
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .banner {
@@ -30,7 +38,11 @@
 
 @media (max-width: 768px) {
     .banner {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         font-size: 1.5rem;
+        padding: 200px;
     }
     .bannerMainTitle
     {

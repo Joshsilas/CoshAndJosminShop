@@ -23,7 +23,7 @@ const Banner = () => {
     return (
         <div className="banner">
             <p className="bannerMainTitle">Welcome to Cosh and Josmin!</p>
-            <p>{messages[messageIndex]}</p>
+            <p className="bannermessage">{messages[messageIndex]}</p>
         </div>
     );
 };
