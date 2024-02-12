@@ -31,10 +31,16 @@ const ProductPage = ({handleClearClick, addToCart}) => {
 
     const addToCartHandler = () => {
         if(!selectedQuantity) {
-            setError("Please select a quantity");
+            setError({ message: "Please select a quantity", type: "error" });
+            setTimeout(() => {
+                setError("");
+            }, 3000);
         } else {
-            setError("");
             addToCart({...product, quantity: selectedQuantity})
+            setError({ message: "Added to cart", type: "success" });
+            setTimeout(() => {
+                setError("");
+            }, 2000);
         }
     }
 
@@ -61,7 +67,10 @@ const ProductPage = ({handleClearClick, addToCart}) => {
                         selectedQuantity={selectedQuantity}
                         setSelectedQuantity={setSelectedQuantity}
                         />
-                        {error && <div className="error-message">{error}</div> }
+                        {error &&
+                            <div className={`error-message ${error.type}`}>
+                                         {error.message}
+                        </div> }
                         <button type='button' className='btn-add-to-basket' onClick={addToCartHandler}>Add to cart</button>
                     </div>
                 </div>
