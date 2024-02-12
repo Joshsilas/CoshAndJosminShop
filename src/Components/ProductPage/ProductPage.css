@@ -97,7 +97,7 @@ font-weight: bold;
 .btn-add-to-basket {
     cursor: pointer;
     color: var(--white);
-    background: var(--primary-500);
+    background-color: #577557;
     border: transparent;
     border-radius: var(--borderRadius);
     letter-spacing: var(--letterSpacing);
@@ -109,6 +109,7 @@ font-weight: bold;
     width: 40%;
     justify-content: center;
 }
+
 .btn-add-to-basket:hover {
     background: var(--primary-700);
     box-shadow: var(--shadow-3);
