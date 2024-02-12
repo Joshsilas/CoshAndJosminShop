@@ -1,26 +1,12 @@
-.cartproductImage
-{
+.cartproductImage {
     background-color: #ffffff;
-    height:20%;
-
-    width: 20%;
+    max-height: 150px;
     object-fit: contain;
     border: 5px solid rgba(14, 14, 14, 0.5);
-
-}
-.cart-product
-{
-    background-color: #b1b4ae;
-    padding: 5px;
-    border: 5px solid rgba(0, 0, 0, 0.5);
     border-radius: 40px;
-    gap: 5px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
-.cart-layout
-{
+
+.cart-product {
     flex: 0 0 calc(20% - 0px);
     background-color: #b1b4ae;
     padding: 5px;
@@ -30,4 +16,67 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+
+}
+
+.cart-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.cart-product-details {
+    flex-grow: 1;
+    margin-top: 10px; /* Added margin for spacing between product details */
+    text-align: center;
+}
+
+.cartProductTitle
+{
+    margin: 5px;
+    font-family: "Cooper Black";
+}
+.cartProductPrice
+{
+    font-family: "Cooper Black";
+}
+.cartProductQuanity
+{
+    margin: 5px;
+    font-family: "Cooper Black";
+}
+
+.removeButton
+{
+    background-color: #577557;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.emptyCartMessage
+{
+    font-size: 5rem;
+    margin: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backToHomePageLinkCartpage {
+    font-size: 2rem;
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 20px;
 }
