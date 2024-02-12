@@ -10,6 +10,7 @@
     flex-direction: column;
     text-align: center;
     margin-top: 10px;
+    font-family: "Cooper Black";
     }
 
 .single-product-category .img {
@@ -22,7 +23,7 @@
 
 .single-product-category:hover
 {
-    background-color: #242931;
+    background-color: rgba(1, 38, 6, 0.69);
     color: white;
 }
 .single-product-category.img:hover

@@ -8,3 +8,26 @@
     border: 5px solid rgba(14, 14, 14, 0.5);
 
 }
+.cart-product
+{
+    background-color: #b1b4ae;
+    padding: 5px;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.cart-layout
+{
+    flex: 0 0 calc(20% - 0px);
+    background-color: #b1b4ae;
+    padding: 5px;
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}

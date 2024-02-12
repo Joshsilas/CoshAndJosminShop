@@ -17,6 +17,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-family: "Cooper Black";
 }
 
 .SearchText
@@ -30,8 +31,8 @@
 }
 .search-product:hover
 {
-    background-color: #242931;
     color: white;
+    background-color: rgba(1, 38, 6, 0.69);
 }
 .single-product.img:hover
 {
