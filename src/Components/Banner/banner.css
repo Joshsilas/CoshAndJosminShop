@@ -1,15 +1,18 @@
 .banner {
     margin-top: 20px;
-    background-color: #1f3a2c;
-    padding: 30px;
-    font-size: 3rem;
+    background-color: rgba(31, 58, 44, 0.82);
+    padding: 150px;
+    font-size: 5rem;
     border-radius: 30px;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: "JetBrains Mono";
     overflow: hidden;
-    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
+/*I like the banner bigger but heres the original in case we change our minds*/
 /*.banner {*/
 /*    margin-top: 20px;*/
 /*    background-color: #1f3a2c;*/
