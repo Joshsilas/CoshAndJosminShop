@@ -19,7 +19,7 @@ const CartPage = ({ cartProducts, removeFromCart, handleClearClick }) => {
                 </div>
             ) : (
                 <div>
-                    <div >
+                    <div className="cartPagelayout">
                         <p className="cartTotalCost">Cart Total: £{totalCost.toFixed(2)}</p>
                     </div>
                     <div className="cart-layout">
@@ -31,8 +31,9 @@ const CartPage = ({ cartProducts, removeFromCart, handleClearClick }) => {
                                     <p className="cartProductTitle">{product.title}</p>
                                     <p className="cartProductPrice">£{(product.price * product.quantity).toFixed(2)}</p>
                                     <p className="cartProductQuanity">Quantity: {product.quantity}</p>
-                                    <Button type='button' className='removeButton' onClick={() => removeFromCart(product.id)} text="Remove product" />
+
                                 </div>
+                                <Button type='button' className='removeButton' onClick={() => removeFromCart(product.id)} text="Remove product" />
                             </div>
                         ))}
                     </div>

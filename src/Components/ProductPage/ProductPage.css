@@ -34,7 +34,8 @@ font-weight: bold;
   align-self: flex-start;
     margin-left: 30px;
     color: #065f46;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
 .img-container-product-page {
     width: 50%;
@@ -82,7 +83,7 @@ font-weight: bold;
 
 }
 .product-page-category {
-
+    font-family: "Cooper Black";
 }
 
 .product-page-description::before {

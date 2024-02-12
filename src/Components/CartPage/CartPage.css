@@ -1,3 +1,9 @@
+.cartPagelayout
+{
+    display: flex;
+    justify-content: center;
+}
+
 .cartproductImage {
     background-color: #ffffff;
     max-height: 150px;
@@ -41,7 +47,10 @@
 }
 .cartProductPrice
 {
-    font-family: "Cooper Black";
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+
 }
 .cartProductQuanity
 {
@@ -51,16 +60,17 @@
 
 .removeButton
 {
-    background-color: #577557;
+    background-color: #600b13;
     color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.5);
     padding: 10px;
     margin: 10px;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 0.9rem;
+    border-radius: 10px;
 }
 
 .emptyCartMessage
@@ -112,5 +122,8 @@
 
     .backToHomePageLink {
         font-size: 1rem;
+    }
+    .cartTotalCost {
+        width: 100%;
     }
 }
