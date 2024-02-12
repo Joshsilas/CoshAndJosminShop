@@ -7,7 +7,7 @@ import SearchBar from '../SearchBar/index.jsx';
 import CartButton from '../Cart Button/index.jsx';
 import UserContext from '../UserContext/index.jsx';
 
-const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedIn }) => {
+const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedIn, cartProducts }) => {
     const [loggedIn, setLoggedIn] = useState(displayLoggedIn);
     const navigate = useNavigate();
     const user = useContext(UserContext);
@@ -29,6 +29,12 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
         setLoggedIn(displayLoggedIn);
     }, [displayLoggedIn]);
 
+    let totalQuantity = cartProducts.reduce((total, product) => total + Number(product.quantity), 0);
+        if (totalQuantity === 0)
+        {
+            totalQuantity="";
+        }
+
     const storedUsername = localStorage.getItem('loggedInUser')
 
     return (
@@ -44,8 +50,10 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
                     {loggedIn ? <p className="welcomeText">Welcome { JSON.parse(storedUsername) || user.username.replace(/['"]/g,  '')}</p >
                         : <p className="welcomeText">Welcome Guest</p>}
                 </div>
-
+                <div>
+                <p className="cartTotal">{totalQuantity}</p>
                 <CartButton text="Add to cart" />
+        </div>
             </nav>
         </div>
     );

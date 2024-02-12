@@ -66,6 +66,7 @@ function App() {
                     clearSearchBar={clearSearchBar}
                     displayLoggedIn={loggedIn}
                     setLoggedIn={setLoggedIn}
+                    cartProducts={cartProducts}
                 />
                 {searchTerm && <SearchResults data={data} searchTerm={searchTerm} clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch} />}
                 {!searchTerm && <Routes>

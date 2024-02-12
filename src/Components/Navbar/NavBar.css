@@ -39,3 +39,12 @@
     font-size: 1.5rem;
     color: #ffffff;
 }
+
+.cartTotal
+{
+    background-color: orange;
+    margin: 5px;
+    border-radius: 50px;
+    font-weight: bold;
+
+}
