@@ -45,7 +45,7 @@ const HomePage = ({handleClearClick}) => {
                     <div className="single-product" key={product.id}>
                         <ProductContainer {...product} handleClearClick={handleProductClick} />
                     </div>
-                    
+
                 ))}
             </div>
         </section>
