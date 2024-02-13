@@ -45,10 +45,10 @@
 
 @media (max-width: 768px) {
     .banner {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .bannerMainTitle
     {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }

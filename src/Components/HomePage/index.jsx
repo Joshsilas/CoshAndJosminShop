@@ -6,6 +6,17 @@ import Banner from "../Banner/index.jsx";
 const HomePage = ({handleClearClick}) => {
     const url = 'https://fakestoreapi.com/products';
     const[products, setProducts] = useState([])
+    const [productsToShow, setProductsToShow] = useState(getProductsToShow());
+
+    useEffect(() => {
+        function handleResize() {
+            setProductsToShow(getProductsToShow());
+        }
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const fetchProducts = async () => {
         try{
@@ -32,23 +43,30 @@ const HomePage = ({handleClearClick}) => {
         return array;
     };
 
+    function getProductsToShow() {
+        return window.innerWidth <= 768 ? 8 : 9;
+    }
+    const shuffledProducts = shuffleArray(products).slice(0, productsToShow)
+
+
     return (
         <section>
             <Banner />
             <div className="offersBannersPlacement">
                 <div className="offersBanners">
-                <p>Sale</p>
+                <p className="offerText">Sale</p>
                 </div>
-                <img className="offersBanners" src='/src/assets/shoppicture.jpg' alt='Sad cow' />
+                <div className="offersgifts">
+                    <p className="offerText">Gifts</p>
+                </div>
             </div>
             <div className="bannerPlacement">
             <div className="trendingNowBanner">
-
                 <p>Recently viewed</p>
             </div>
         </div>
             <div className='products'>
-                {shuffleArray(products).slice(0, 9).map((product) => (
+                {shuffledProducts.map((product)  => (
                     <div className="single-product" key={product.id}>
                         <ProductContainer {...product} handleClearClick={handleProductClick} />
                     </div>

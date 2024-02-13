@@ -10,18 +10,23 @@
 
 .single-product {
     flex: 1 0 calc(30% - 10px);
-    background-color: rgba(255, 255, 255, 0.64);
-    padding: 5px;
-    border: 5px solid rgba(0, 0, 0, 0.5);
-    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly increase opacity for a softer look */
+    padding: 15px; /* Increase padding for more space inside the container */
+    border: 5px solid rgba(0, 0, 0, 0.2); /* Decrease border opacity for a lighter border */
+    border-radius: 20px; /* Reduce border-radius for a less rounded look */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
     gap: 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
     font-weight: bold;
     font-family: "Cooper Black";
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition for interactive effects */
 }
 
+.single-product:hover {
+    transform: scale(1.05); /* Slightly increase scale on hover for a lift effect */
+}
 .single-product .img {
     background-color: #ffffff;
     max-height: 150px;
@@ -32,8 +37,8 @@
 
 .single-product:hover
 {
-    background-color: rgba(1, 38, 6, 0.69);
-    color: white;
+
+
 }
 .single-product.img:hover
 {
@@ -67,9 +72,11 @@
 /*    display: inline-block;*/
 /*    font-size: 2rem;*/
 /*}*/
+
 .offersBannersPlacement
 {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -77,14 +84,54 @@
 {
     width: 40%;
     margin: 50px;
-    background-color: #f4f4f4; /* Add a background color for contrast */
-    padding: 20px; /* Add padding for space inside the container */
-    border-radius: 10px; /* Add rounded corners for a softer look */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
-    background-image: url('/src/assets/shoppicture.jpg'); /* Corrected syntax with parentheses */
-    background-size: cover; /* Adjust the background size as needed */
-    background-position: center; /* Adjust the background position as needed */
-    position: relative;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.offersgifts {
+    margin: 50px;
+    width: 40%;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+.offersBanners {
+    padding: 200px;
+    background-image: url('/src/assets/shoppicture.jpg');
+}
+
+.offersgifts {
+    padding: 200px;
+    background-image: url('/src/assets/flowers.jpg');
+}
+
+.offersBanners:hover,
+.offersgifts:hover {
+    transform: scale(1.05); /* Increase scale on hover for the pulsating effect */
+}
+
+.offerText
+{
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow:
+            -1px -1px 0 white,
+            1px -1px 0 white,
+            -1px 1px 0 white,
+            1px 1px 0 white;
+
 }
 
 
@@ -109,4 +156,12 @@
     .trendingNowBanner {
         width: 100%;
     }
+    .offersBanners,
+    .offersgifts {
+        width: 100%;
+        min-width: 0;
+        display: flex;
+        flex-direction: row;
+    }
 }
+
