@@ -50,6 +50,9 @@
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
+.logInButton:hover {
+    background-color: #405937;
+}
 
 .welcomeText
 {
