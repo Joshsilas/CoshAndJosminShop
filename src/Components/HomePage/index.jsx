@@ -49,7 +49,6 @@ const HomePage = ({handleClearClick}) => {
     }
     const shuffledProducts = shuffleArray(products).slice(0, productsToShow)
 
-
     return (
         <section>
             <Banner />
