@@ -41,7 +41,7 @@ const HomePage = ({handleClearClick}) => {
             </div>
         </div>
             <div className='products'>
-                {shuffleArray(products).slice(0, 9).map((product) => (
+                {shuffleArray(products).slice(0, 6).map((product) => (
                     <div className="single-product" key={product.id}>
                         <ProductContainer {...product} handleClearClick={handleProductClick} />
                     </div>
