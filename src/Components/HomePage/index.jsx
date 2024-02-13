@@ -2,6 +2,7 @@ import ProductContainer from "../ProductContainer/index.jsx";
 import React, {useEffect, useState} from "react";
 import './HomePage.css'
 import Banner from "../Banner/index.jsx";
+import {Link} from "react-router-dom";
 
 const HomePage = ({handleClearClick}) => {
     const url = 'https://fakestoreapi.com/products';
@@ -53,9 +54,9 @@ const HomePage = ({handleClearClick}) => {
         <section>
             <Banner />
             <div className="offersBannersPlacement">
-                <div className="offersBanners">
-                <p className="offerText">Sale</p>
-                </div>
+                <Link className="offersBanners" to="/SalesPage/">
+                    <p className="offerText">Sale</p>
+                </Link>
                 <div className="offersgifts">
                     <p className="offerText">Gifts</p>
                 </div>

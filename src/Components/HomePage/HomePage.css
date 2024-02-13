@@ -27,6 +27,7 @@
 .single-product:hover {
     transform: scale(1.05); /* Slightly increase scale on hover for a lift effect */
 }
+
 .single-product .img {
     background-color: #ffffff;
     max-height: 150px;
@@ -37,7 +38,7 @@
 
 .single-product:hover
 {
-
+    cursor: pointer;
 
 }
 .single-product.img:hover
@@ -126,6 +127,7 @@
 {
     font-size: 4rem;
     font-weight: bold;
+    color: black;
     text-shadow:
             -1px -1px 0 white,
             1px -1px 0 white,
