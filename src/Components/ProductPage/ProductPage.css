@@ -19,7 +19,7 @@
     align-items: center;
     padding: 10px;
     margin-left: 10px;
-    background-color: #b1b4ae;
+    background-color: rgba(255, 255, 255, 0.64);
     border: 5px solid rgba(0, 0, 0, 0.5);
 
 }

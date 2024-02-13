@@ -1,5 +1,5 @@
 import ProductContainer from "../ProductContainer/index.jsx";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import './HomePage.css'
 import Banner from "../Banner/index.jsx";
 
@@ -36,8 +36,10 @@ const HomePage = ({handleClearClick}) => {
         <section>
             <Banner />
             <div className="offersBannersPlacement">
-            <div className="offersBanners"></div>
-            <div className="offersBanners"></div>
+                <div className="offersBanners">
+                <p>Sale</p>
+                </div>
+                <img className="offersBanners" src='/src/assets/shoppicture.jpg' alt='Sad cow' />
             </div>
             <div className="bannerPlacement">
             <div className="trendingNowBanner">
@@ -46,7 +48,7 @@ const HomePage = ({handleClearClick}) => {
             </div>
         </div>
             <div className='products'>
-                {shuffleArray(products).slice(0, 6).map((product) => (
+                {shuffleArray(products).slice(0, 9).map((product) => (
                     <div className="single-product" key={product.id}>
                         <ProductContainer {...product} handleClearClick={handleProductClick} />
                     </div>

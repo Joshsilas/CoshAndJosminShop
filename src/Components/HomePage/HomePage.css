@@ -10,7 +10,7 @@
 
 .single-product {
     flex: 1 0 calc(30% - 10px);
-    background-color: #b1b4ae;
+    background-color: rgba(255, 255, 255, 0.64);
     padding: 5px;
     border: 5px solid rgba(0, 0, 0, 0.5);
     border-radius: 40px;
@@ -71,14 +71,22 @@
 {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
 }
 .offersBanners
 {
-    background-color: black;
-    padding: 200px;
-
+    width: 40%;
+    margin: 50px;
+    background-color: #f4f4f4; /* Add a background color for contrast */
+    padding: 20px; /* Add padding for space inside the container */
+    border-radius: 10px; /* Add rounded corners for a softer look */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    background-image: url('/src/assets/shoppicture.jpg'); /* Corrected syntax with parentheses */
+    background-size: cover; /* Adjust the background size as needed */
+    background-position: center; /* Adjust the background position as needed */
+    position: relative;
 }
+
 
 @keyframes moveText {
     from {

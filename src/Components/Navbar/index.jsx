@@ -1,6 +1,6 @@
 import './NavBar.css';
 import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import Button from '../Button/index.jsx';
 import CategoryMenu from '../Category Menu/index.jsx';
 import SearchBar from '../SearchBar/index.jsx';
@@ -40,7 +40,11 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
     return (
         <div>
             <nav className="navBar">
-                <p className="welcomeLogo">Cosh And Josmin</p>
+                <div>
+                <Link  to="/" >
+                    <p className="welcomeLogo">Cosh And Josmin</p>
+                </Link>
+        </div>
                 <CategoryMenu text="Categories" menuItems={['categories']} handleClearClick={handleClearClick} />
                 <SearchBar handleSearch={handleSearch} handleClearClick={handleClearClick} clearSearchBar={clearSearchBar} />
                 <div>

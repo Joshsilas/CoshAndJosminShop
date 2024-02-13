@@ -2,7 +2,7 @@
 {
     padding: 10px;
     width: 400px;
-    border: 1px solid #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.45);
     border-radius: 5px;
     font-size: 16px;
 }
@@ -39,7 +39,7 @@
     border: 5px solid rgba(0, 0, 0, 0.5);
     margin:10px;
     border-radius: 500px;
-    background-color: #b1b4ae;
+    background-color: rgba(255, 255, 255, 0.64);
 }
 
 
