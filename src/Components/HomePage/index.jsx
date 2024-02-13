@@ -35,8 +35,13 @@ const HomePage = ({handleClearClick}) => {
     return (
         <section>
             <Banner />
+            <div className="offersBannersPlacement">
+            <div className="offersBanners"></div>
+            <div className="offersBanners"></div>
+            </div>
             <div className="bannerPlacement">
             <div className="trendingNowBanner">
+
                 <p>Recently viewed</p>
             </div>
         </div>

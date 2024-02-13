@@ -67,7 +67,18 @@
 /*    display: inline-block;*/
 /*    font-size: 2rem;*/
 /*}*/
+.offersBannersPlacement
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.offersBanners
+{
+    background-color: black;
+    padding: 200px;
 
+}
 
 @keyframes moveText {
     from {
