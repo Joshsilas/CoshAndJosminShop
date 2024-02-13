@@ -53,7 +53,7 @@ const SalesPage = ({ handleClearClick }) => {
                     <div className="products">
                         {randomProducts.map((product) => (
                             <div className="single-product" key={product.id}>
-                                <p className="pretendSaleFigure">£{(product.price * 1.5).toFixed(2)}</p>
+                                <p className="pretendSaleFigure">£{(product.price * 1.2).toFixed(2)}</p>
                                 <ProductContainer {...product} handleClearClick={handleProductClick} />
                             </div>
                         ))}
