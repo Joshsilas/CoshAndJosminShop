@@ -17,6 +17,24 @@
     font-family: "Cooper Black";
     font-size: 2.5rem;
     color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.welcomeLogo:hover {
+    color: white;
+    animation: colorSweep 1s ;
+}
+
+@keyframes colorSweep {
+    0% {
+        color: white;
+    }
+    50% {
+        color: #7ea067;
+    }
+    100% {
+        color: white;
+    }
 }
 
 .logInButton {

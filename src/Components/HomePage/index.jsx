@@ -56,9 +56,9 @@ const HomePage = ({handleClearClick}) => {
                 <Link className="offersBanners" to="/SalesPage/">
                     <p className="offerText">Sale</p>
                 </Link>
-                <div className="offersgifts">
+                <Link className="offersgifts" to="/GiftsPage/">
                     <p className="offerText">Gifts</p>
-                </div>
+                </Link>
             </div>
             <div className="bannerPlacement">
             <div className="trendingNowBanner">

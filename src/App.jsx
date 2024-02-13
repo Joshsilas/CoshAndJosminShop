@@ -12,6 +12,7 @@ import UserProvider from "./Components/UserProvider/index.jsx";
 import LogInPage from "./Components/LogInPage/index.jsx";
 import CartPage from "./Components/CartPage/index.jsx";
 import SalesPage from "./Components/SalesPage/index.jsx";
+import GiftsPage from "./Components/GiftsPage/index.jsx";
 
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
                     <Route path={"/"} element={<HomePage clearSearchBar={clearSearchBar}  handleClearClick={handleClearSearch}/>}/>
                     <Route path="/category/:categoryName" element={<CategoryPage />} />
                     <Route path="/SalesPage/" element={<SalesPage />} />
+                    <Route path="/GiftsPage/" element={<GiftsPage />} />
                     <Route path='/product-page/:id' element={<ProductPage addToCart={addToCart} handleClearClick={handleClearSearch}/>} />
                     <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />}
                     />
