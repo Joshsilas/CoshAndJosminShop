@@ -16,7 +16,7 @@ const Banner = () => {
     };
 
     useEffect(() => {
-        const intervalId = setInterval(updateBanner, 10000);
+        const intervalId = setInterval(updateBanner, 5000);
         return () => clearInterval(intervalId);
     }, []);
 
