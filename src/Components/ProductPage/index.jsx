@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import './ProductPage.css'
-import Quantity from "../Quantity Form/index.jsx";
+import QuantityForm from "../Quantity Form/index.jsx";
 
 
 const ProductPage = ({handleClearClick, addToCart}) => {
@@ -62,7 +62,7 @@ const ProductPage = ({handleClearClick, addToCart}) => {
                                 {readMore ? 'show less' : 'read more'}
                             </button>
                         </div>
-                        <Quantity
+                        <QuantityForm
                         selectedQuantity={selectedQuantity}
                         setSelectedQuantity={setSelectedQuantity}
                         />

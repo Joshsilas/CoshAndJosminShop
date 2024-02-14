@@ -1,7 +1,7 @@
 import './QuantityForm.css'
 import {useState} from "react";
 
-const Quantity = ({selectedQuantity, setSelectedQuantity}) => {
+const QuantityForm = ({selectedQuantity, setSelectedQuantity}) => {
     const handleQuantityChange = (event) => {
         setSelectedQuantity(event.target.value)
     }
@@ -22,4 +22,4 @@ const Quantity = ({selectedQuantity, setSelectedQuantity}) => {
         </>
     )
 }
-export default Quantity
+export default QuantityForm
