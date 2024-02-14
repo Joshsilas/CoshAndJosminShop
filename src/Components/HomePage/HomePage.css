@@ -107,14 +107,13 @@
 }
 
 
-
 .offersBanners {
-    padding: 200px;
+    padding: 150px;
     background-image: url('/src/assets/shoppicture.jpg');
 }
 
 .offersgifts {
-    padding: 200px;
+    padding: 150px;
     background-image: url('/src/assets/flowers.jpg');
 }
 
