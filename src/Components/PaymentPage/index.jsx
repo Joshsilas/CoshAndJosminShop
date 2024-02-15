@@ -14,7 +14,7 @@ return (
             <InputForms
                 id="PaymentForms"
                 className="paymentforms"
-                placeholder={"sortCode"}
+                placeholder={"Card Number"}
                 type="text"
                 value=""
                 onChange=""
@@ -22,7 +22,15 @@ return (
             <InputForms
                 id="PaymentForms"
                 className="paymentforms"
-                placeholder={"sortCode"}
+                placeholder={"Expiry date"}
+                type="text"
+                value=""
+                onChange=""
+            />
+            <InputForms
+                id="PaymentForms"
+                className="paymentforms"
+                placeholder={"Name"}
                 type="text"
                 value=""
                 onChange=""
