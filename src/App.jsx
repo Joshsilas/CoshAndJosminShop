@@ -29,7 +29,7 @@ function App() {
     const handleClearSearch = () => {
         setClearSearchBar(true);
     };
-    
+
     useEffect(() => {
         const fetchProducts = async () => {
             try {
