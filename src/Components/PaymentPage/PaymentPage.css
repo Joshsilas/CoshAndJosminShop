@@ -51,4 +51,8 @@
     {
         border-radius: 10px;
     }
+    .cartTotalCost
+    {
+        width: 50%;
+    }
 }

@@ -70,3 +70,18 @@
     font-weight: bold;
 
 }
+
+@media screen and (max-width: 768px) {
+    .navBar {
+        padding: 15px;
+    }
+
+    .welcomeLogo {
+        font-size: 2rem;
+        margin: 5px;
+    }
+
+    .welcomeText {
+        font-size: 1rem;
+    }
+}

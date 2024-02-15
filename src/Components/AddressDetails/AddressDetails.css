@@ -33,3 +33,11 @@
     border-radius: 5px;
     font-size: 16px;
 }
+
+
+@media (max-width: 768px) {
+    .PaymentFormsDisplay
+    {
+        border-radius: 10px;
+    }
+}

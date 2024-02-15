@@ -26,7 +26,6 @@ const CartPage = ({ cartProducts, removeFromCart, handleClearClick }) => {
             ) : (
                 <div>
                     {/*<Button className="KeepBrowsingButton" text="Keep browsing" onClick={keepBrowsing} />*/}
-                    <Button className="toAddress" text="Pay Now" onClick={paymentScreen} />
                     <div className="cartPagelayout">
                         <p className="cartTotalCost">Cart Total: £{totalCost.toFixed(2)}</p>
                     </div>
@@ -43,6 +42,9 @@ const CartPage = ({ cartProducts, removeFromCart, handleClearClick }) => {
                                 <Button type='button' className='removeButton' onClick={() => removeFromCart(product.id)} text="Remove product" />
                             </div>
                         ))}
+                    </div>
+                    <div className="paynowDisplay">
+                    <Button className="toAddress" text="Pay Now" onClick={paymentScreen} />
                     </div>
 
                 </div>
