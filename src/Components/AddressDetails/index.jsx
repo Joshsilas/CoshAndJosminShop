@@ -29,6 +29,19 @@ const AddressDetails = () => {
         }));
     };
 
+    useEffect(() => {
+        const handleKeyPress = (event) => {
+            if (event.key === 'Enter') {
+                paymentScreen();
+            }
+        };
+        document.addEventListener('keydown', handleKeyPress);
+        return () => {
+            document.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [paymentScreen]);
+
+
     return (
         <>
             <p className="signInMessage">Please enter your delivery details</p>
@@ -69,8 +82,8 @@ const AddressDetails = () => {
                     value={address.postalCode}
                     onChange={(newValue) => handleInputChange("postalCode", newValue)}
                 />
-                <Button className="Cancel" text="Cancel" onClick={Cancel} />
-                <Button className="toPayment" text="Card details" onClick={paymentScreen} />
+                <Button className="Cancel" text="Cancel" onClick={Cancel} type="button"/>
+                <Button className="toPayment" text="Card details" onClick={paymentScreen} type="button"/>
             </div>
         </>
     );

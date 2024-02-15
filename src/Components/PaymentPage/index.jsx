@@ -1,6 +1,6 @@
 import InputForms from "../InputForms/index.jsx";
 import Button from "../Button/index.jsx";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import './PaymentPage.css';
 import { useNavigate } from "react-router-dom";
 
@@ -45,6 +45,22 @@ const PaymentPage = ({ cartProducts, clearCart }) => {
         navigate("/ThankYouPage/");
     }
 
+    useEffect(() => {
+        const handleKeyPress = (event) => {
+            if (event.key === 'Enter') {
+                validateAndPay();
+            }
+        };
+        document.addEventListener('keydown', handleKeyPress);
+        return () => {
+            document.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [validateAndPay]);
+
+    const handleSubmit = (event) => {
+        event.preventDefault(); // Prevent default form submission behavior
+    };
+
     return (
         <>
             <p className="signInMessage">Please enter your card details</p>
@@ -82,8 +98,8 @@ const PaymentPage = ({ cartProducts, clearCart }) => {
                     value={cardDetails.sortCode}
                     onChange={(newValue) => setCardDetails(prevState => ({ ...prevState, sortCode: newValue }))}
                 />
-                <Button className="Cancel" text="Cancel" onClick={Cancel} />
-                <Button className="PayButton" text="Pay Now" onClick={validateAndPay} />
+                <Button className="Cancel" text="Cancel" onClick={Cancel}  type="button"/>
+                <Button className="PayButton" text="Pay Now" onClick={validateAndPay}  type="button" />
             </div>
         </>
     );
