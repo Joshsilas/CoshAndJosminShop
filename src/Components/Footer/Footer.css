@@ -1,12 +1,12 @@
 .footer {
     width: 100%;
-    background-color: #b9b3bd;
+    background-color: rgba(47, 101, 56, 0.33);
     padding: 20px;
     border: 5px solid #4d4d4d;
 }
 
 .footerContents {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Cooper Black";
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -15,7 +15,7 @@
 
 .footerContents p {
     margin: 10px;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .footerContents a {

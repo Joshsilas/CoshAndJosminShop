@@ -1,16 +1,23 @@
-.single-product-category
-{
+.single-product-category {
     flex: 0 0 calc(30% - 0px);
-    background-color: #b1b4ae;
-    padding: 5px;
-    border: 5px solid rgba(0, 0, 0, 0.5);
-    border-radius: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     gap: 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 10px;
-    }
+    font-weight: bold;
+    font-family: "Cooper Black";
+    transition: transform 0.3s ease-in-out;
+}
+
+.single-product-category:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
 
 .single-product-category .img {
     background-color: #ffffff;
@@ -20,20 +27,19 @@
     border-radius: 40px;
 }
 
-.single-product-category:hover
-{
-    background-color: #242931;
-    color: white;
+.single-product-category:hover {
+    /*background-color: rgba(1, 38, 6, 0.69);*/
+    /*color: white;*/
 }
-.single-product-category.img:hover
-{
+
+.single-product-category.img:hover {
     background-color: #242931;
     color: white;
 }
 
-.categoryBanner
-{
+.categoryBanner {
     margin-top: 20px;
+    margin-bottom: 10px;
     background-color: #869d6b;
     padding: 30px;
     font-size: 3rem;
@@ -42,12 +48,12 @@
     font-family: 'Roboto', sans-serif;
     border: 5px solid rgba(0, 0, 0, 0.5);
 }
+
 @media (max-width: 768px) {
     .products {
         margin: 10px;
         gap: 5px;
     }
-
     .single-product-category {
         flex: 1 0 calc(50% - 5px);
     }

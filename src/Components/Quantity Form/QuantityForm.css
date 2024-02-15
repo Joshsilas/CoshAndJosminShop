@@ -1,0 +1,43 @@
+.dropdown-menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+.quantity-text {
+    font-size:14px;
+    color:#777f83;
+    margin-bottom: 5px;
+}
+
+.value-box {
+    width: 200px;
+    padding:10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    background: #f1f5f9;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-option:hover {
+    background: #ddd;
+}
+
+.validation-message {
+    color:red;
+    font-size:12px;
+    margin-top:5px;
+}
+
+.add-to-basket-btn {
+    display: flex;
+    justify-content: center;
+}

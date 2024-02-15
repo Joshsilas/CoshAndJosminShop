@@ -1,0 +1,11 @@
+.ThankyouMessage {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #869d6b;
+    padding: 30px;
+    font-size: 2.5rem;
+    border-radius: 30px;
+    color: black;
+    font-family: "Cooper Black";
+    border: 5px solid rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,161 @@
+.cartPagelayout {
+    display: flex;
+    justify-content: center;
+}
+
+.cartproductImage {
+    background-color: #ffffff;
+    max-height: 150px;
+    object-fit: contain;
+    border: 5px solid rgba(14, 14, 14, 0.5);
+    border-radius: 40px;
+}
+
+.cart-product {
+    flex: 0 0 calc(20% - 0px);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Cooper Black";
+}
+
+.cart-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.cart-product-details {
+    flex-grow: 1;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cartProductTitle {
+    margin: 5px;
+    font-family: "Cooper Black";
+}
+
+.cartProductPrice {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 5px;
+
+}
+.cartProductQuanity {
+    margin: 5px;
+    font-family: "Cooper Black";
+}
+
+.removeButton {
+    background-color: #600b13;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 10px;
+}
+
+.emptyCartMessage {
+    font-size: 5rem;
+    margin: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backToHomePageLinkCartpage {
+    font-size: 2rem;
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cartTotalCost {
+    margin: 10px;
+    width: 20%;
+    margin: 10px 20px 10px 20px;
+    padding: 10px;
+    background-color: #ececec;
+    border-radius: 30px;
+    color: #282626;
+    font-family: "Cooper Black";
+    font-size: 1.5rem;
+    overflow: hidden;
+    border: solid rgba(255, 248, 248, 0.38);
+}
+
+.toAddress {
+    background-color: #577557;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.toAddress:hover
+{
+    background-color: #405937;
+}
+
+.KeepBrowsingButton {
+    background-color: #577557;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.paynowDisplay {
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    border-radius: 500px;
+    background-color: rgba(255, 255, 255, 0.64);
+}
+
+@media (max-width: 768px) {
+
+    .cart-layout {
+        margin: 10px;
+        gap: 5px;
+    }
+
+    .cart-product  {
+        flex: 0 0 calc(50% - 5px);
+    }
+
+    .backToHomePageLink {
+        font-size: 1rem;
+    }
+    .cartTotalCost {
+        width: 100%;
+    }
+}

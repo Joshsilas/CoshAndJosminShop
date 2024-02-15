@@ -25,6 +25,7 @@ const SearchBar = ({ handleSearch, handleClearClick, clearSearchBar }) => {
         <>
             <form>
                 <input
+                    id="searchBar"
                     className='search'
                     type='input'
                     placeholder="What would you like to find"
