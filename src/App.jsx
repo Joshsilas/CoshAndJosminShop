@@ -16,14 +16,13 @@ import PaymentPage from "./Components/PaymentPage/index.jsx";
 import AddressDetails from "./Components/AddressDetails/index.jsx";
 import ThankYouScreen from "./Components/ThankyouScreen/index.jsx";
 
-
 function App() {
-
     const [data, setData] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [clearSearchBar, setClearSearchBar] = useState(false);
     const [loggedIn, setLoggedIn] = useState(false);
     const [cartProducts, setCartProducts] = useState([])
+
     const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
     };
@@ -105,7 +104,6 @@ function App() {
             </UserProvider>
         </BrowserRouter>
     );
-
 }
 
 export default App;

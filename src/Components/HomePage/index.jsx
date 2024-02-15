@@ -10,12 +10,12 @@ const HomePage = ({handleClearClick}) => {
     const [productsToShow, setProductsToShow] = useState(getProductsToShow());
 
     useEffect(() => {
-        function handleResize() {
+        function handleScreenResize() {
             setProductsToShow(getProductsToShow());
         }
-        window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleScreenResize);
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', handleScreenResize);
         };
     }, []);
 

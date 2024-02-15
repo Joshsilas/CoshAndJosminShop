@@ -52,7 +52,6 @@ const ProductPage = ({handleClearClick, addToCart}) => {
                     <div className="img-container-product-page">
                         <img src={product.image} alt={product.image} className='product-page-img'/>
                     </div>
-
                     <div className="product-page-details">
                         <h1 className="product-page-title">{product.title}</h1>
                         <div className="product-page-price">£{product.price.toFixed(2)}</div>

@@ -39,10 +39,9 @@
 .single-product:hover
 {
     cursor: pointer;
-
 }
-.single-product.img:hover
-{
+
+.single-product.img:hover {
     background-color: #242931;
     color: white;
 }
@@ -60,8 +59,7 @@
     border: solid rgba(255, 248, 248, 0.38);
 }
 
-.bannerPlacement
-{
+.bannerPlacement {
     display: flex;
     justify-content: center;
 }
@@ -74,13 +72,13 @@
 /*    font-size: 2rem;*/
 /*}*/
 
-.offersBannersPlacement
-{
+.offersBannersPlacement {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
 }
+
 .offersBanners
 {
     width: 40%;
@@ -122,8 +120,7 @@
     transform: scale(1.05); /* Increase scale on hover for the pulsating effect */
 }
 
-.offerText
-{
+.offerText {
     font-size: 4rem;
     font-weight: bold;
     color: black;
@@ -132,7 +129,6 @@
             1px -1px 0 white,
             -1px 1px 0 white,
             1px 1px 0 white;
-
 }
 
 

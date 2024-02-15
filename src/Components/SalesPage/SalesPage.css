@@ -1,12 +1,10 @@
-.pretendSaleFigure
-{
+.pretendSaleFigure {
     color: #ff0000;
     font-weight: bold;
     text-decoration: line-through;
 }
 
-.savingsLayout
-{
+.savingsLayout {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -15,7 +13,6 @@
 }
 
 @media (max-width: 768px) {
-
     .savingsLayout {
         flex: 0 0 calc(50% - 5px);
     }

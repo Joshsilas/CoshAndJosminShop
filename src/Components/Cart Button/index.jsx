@@ -8,6 +8,7 @@ const CartButton = ({className, text, handleClearClick}) => {
         navigate('/cart-page');
         handleClearClick();
     }
+
     return (
         <button className="cartImage" type='button' onClick={handleCartNavigation}>
             <img className="cartImage" src='/src/assets/cart-shopping-solid.svg' alt='Shopping Cart' />

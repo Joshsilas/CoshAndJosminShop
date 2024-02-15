@@ -6,9 +6,7 @@ import {Link, useNavigate} from "react-router-dom";
 const CartPage = ({ cartProducts, removeFromCart, handleClearClick }) => {
     const totalCost = cartProducts.reduce((acc, product) => acc + (product.price * product.quantity), 0);
     const navigate = useNavigate();
-    const keepBrowsing = async () => {
-        navigate('/');
-    }
+
     const paymentScreen = () => {
         navigate ("/AddressPage/")
     }
@@ -25,7 +23,6 @@ const CartPage = ({ cartProducts, removeFromCart, handleClearClick }) => {
                 </div>
             ) : (
                 <div>
-                    {/*<Button className="KeepBrowsingButton" text="Keep browsing" onClick={keepBrowsing} />*/}
                     <div className="cartPagelayout">
                         <p className="cartTotalCost">Cart Total: £{totalCost.toFixed(2)}</p>
                     </div>

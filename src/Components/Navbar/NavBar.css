@@ -12,8 +12,7 @@
     justify-content: space-between;
 }
 
-.welcomeLogo
-{
+.welcomeLogo {
     font-family: "Cooper Black";
     font-size: 2.5rem;
     color: white;
@@ -50,20 +49,19 @@
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
+
 .logInButton:hover {
     background-color: #405937;
 }
 
-.welcomeText
-{
+.welcomeText {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 1.5rem;
     color: #ffffff;
 }
 
-.cartTotal
-{
+.cartTotal {
     background-color: orange;
     margin: 5px;
     border-radius: 50px;

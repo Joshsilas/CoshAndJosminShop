@@ -57,10 +57,6 @@ const PaymentPage = ({ cartProducts, clearCart }) => {
         };
     }, [validateAndPay]);
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent default form submission behavior
-    };
-
     return (
         <>
             <p className="signInMessage">Please enter your card details</p>

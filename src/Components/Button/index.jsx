@@ -5,7 +5,6 @@ const Button = ({className, text, onClick}) => {
             <button className={className} type='submit' onClick={onClick}>
                 {text}
             </button>
-
         </>
     )
 }

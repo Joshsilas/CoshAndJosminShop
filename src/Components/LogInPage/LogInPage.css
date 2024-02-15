@@ -1,5 +1,4 @@
-.logInforms
-{
+.logInforms {
     padding: 10px;
     width: 400px;
     border: 1px solid rgba(0, 0, 0, 0.45);
@@ -7,8 +6,7 @@
     font-size: 16px;
 }
 
-.signInButton
-{
+.signInButton {
     background-color: #577557;
     color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -21,8 +19,7 @@
     font-size: 0.9rem;
 }
 
-.signInMessage
-{
+.signInMessage {
     margin: 10px;
     font-size: 2rem;
     background-color: #869d6b;
@@ -34,8 +31,8 @@
     white-space: nowrap;
     text-align: center;
 }
-.loginFormsDisplay
-{
+
+.loginFormsDisplay {
     border: 5px solid rgba(0, 0, 0, 0.5);
     margin:10px;
     border-radius: 500px;

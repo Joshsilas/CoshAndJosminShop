@@ -1,5 +1,4 @@
-.cartPagelayout
-{
+.cartPagelayout {
     display: flex;
     justify-content: center;
 }
@@ -37,30 +36,27 @@
 
 .cart-product-details {
     flex-grow: 1;
-    margin-top: 10px; /* Added margin for spacing between product details */
+    margin-top: 10px;
     text-align: center;
 }
 
-.cartProductTitle
-{
+.cartProductTitle {
     margin: 5px;
     font-family: "Cooper Black";
 }
-.cartProductPrice
-{
+
+.cartProductPrice {
     font-weight: bold;
     font-size: 20px;
     margin: 5px;
 
 }
-.cartProductQuanity
-{
+.cartProductQuanity {
     margin: 5px;
     font-family: "Cooper Black";
 }
 
-.removeButton
-{
+.removeButton {
     background-color: #600b13;
     color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -74,8 +70,7 @@
     border-radius: 10px;
 }
 
-.emptyCartMessage
-{
+.emptyCartMessage {
     font-size: 5rem;
     margin: 30px;
     font-family: 'Roboto', sans-serif;
@@ -93,8 +88,7 @@
     margin-bottom: 20px;
 }
 
-.cartTotalCost
-{
+.cartTotalCost {
     margin: 10px;
     width: 20%;
     margin: 10px 20px 10px 20px;
@@ -106,9 +100,8 @@
     font-size: 1.5rem;
     overflow: hidden;
     border: solid rgba(255, 248, 248, 0.38);
-
-
 }
+
 .toAddress {
     background-color: #577557;
     color: #fff;
@@ -127,6 +120,7 @@
 {
     background-color: #405937;
 }
+
 .KeepBrowsingButton {
     background-color: #577557;
     color: #fff;
@@ -139,6 +133,7 @@
     font-weight: bold;
     font-size: 2rem;
 }
+
 .paynowDisplay {
     border: 5px solid rgba(0, 0, 0, 0.5);
     margin: 10px;
