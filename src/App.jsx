@@ -1,4 +1,4 @@
-
+import './App.css';
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar/index.jsx";
@@ -7,7 +7,6 @@ import Footer from "./Components/Footer/index.jsx";
 import CategoryPage from "./Components/CategoryPage";
 import ProductPage from "./Components/ProductPage/index.jsx";
 import SearchResults from "./Components/SearchResults/index.jsx";
-import './App.css';
 import UserProvider from "./Components/UserProvider/index.jsx";
 import LogInPage from "./Components/LogInPage/index.jsx";
 import CartPage from "./Components/CartPage/index.jsx";
@@ -15,7 +14,7 @@ import SalesPage from "./Components/SalesPage/index.jsx";
 import GiftsPage from "./Components/GiftsPage/index.jsx";
 import PaymentPage from "./Components/PaymentPage/index.jsx";
 import AddressDetails from "./Components/AddressDetails/index.jsx";
-import ThankyouScreen from "./Components/ThankyouScreen/index.jsx";
+import ThankYouScreen from "./Components/ThankyouScreen/index.jsx";
 
 
 function App() {
@@ -43,7 +42,6 @@ function App() {
                 console.log(err);
             }
         };
-
         fetchProducts();
     }, []);
 
@@ -97,15 +95,13 @@ function App() {
                     <Route path="/SalesPage/" element={<SalesPage />} />
                     <Route path="/GiftsPage/" element={<GiftsPage />} />
                     <Route path='/product-page/:id' element={<ProductPage addToCart={addToCart} handleClearClick={handleClearSearch}/>} />
-                    <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />}
-                    />
+                    <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />}/>
                     <Route path='/cart-page/'  element={<CartPage cartProducts={cartProducts} removeFromCart={removeFromCart} clearSearchBar={clearSearchBar} handleClearClick={handleClearSearch}/>}/>
                     <Route path="/AddressPage/" element={<AddressDetails cartProducts={cartProducts} />}/>
                     <Route path="/PaymentPage/" element={<PaymentPage cartProducts={cartProducts} clearCart={clearCart} />}/>
-                    <Route path="/ThankyouPage/" element={<ThankyouScreen />}/>
+                    <Route path="/ThankYouPage/" element={<ThankYouScreen />}/>
                 </Routes>}
                 <Footer />
-                {/*<UserDisplay />*/}
             </UserProvider>
         </BrowserRouter>
     );

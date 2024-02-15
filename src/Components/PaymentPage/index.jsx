@@ -42,7 +42,7 @@ const PaymentPage = ({ cartProducts, clearCart }) => {
 
         alert("Payment successful!");
         clearCart();
-        navigate("/ThankyouPage/");
+        navigate("/ThankYouPage/");
     }
 
     return (
