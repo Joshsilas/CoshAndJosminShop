@@ -2,10 +2,15 @@ import InputForms from "../InputForms/index.jsx";
 import Button from "../Button/index.jsx";
 import React from "react";
 import './PaymentPage.css';
+import {useNavigate} from "react-router-dom";
 
 const PaymentPage = ({cartProducts}) => {
-
+    const navigate = useNavigate();
+    const Cancel = async () => {
+        navigate('/');
+    }
     const totalCost = cartProducts.reduce((acc, product) => acc + (product.price * product.quantity), 0);
+
 return (
     <>
         <p className="signInMessage">Please enter your card details</p>
@@ -43,6 +48,7 @@ return (
                 value=""
                 onChange=""
             />
+            <Button className="Cancel" text="Cancel" onClick={Cancel} />
             <Button className="PayButton" text="Pay Now"  />
         </div>
     </>

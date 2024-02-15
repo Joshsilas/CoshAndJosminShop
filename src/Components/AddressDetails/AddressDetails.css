@@ -1,0 +1,35 @@
+.Cancel {
+    background-color: #600b13;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.toPayment
+{
+    background-color: #577557;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.addressForms
+{
+    padding: 10px;
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+    font-size: 16px;
+}

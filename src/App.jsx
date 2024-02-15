@@ -14,6 +14,7 @@ import CartPage from "./Components/CartPage/index.jsx";
 import SalesPage from "./Components/SalesPage/index.jsx";
 import GiftsPage from "./Components/GiftsPage/index.jsx";
 import PaymentPage from "./Components/PaymentPage/index.jsx";
+import AddressDetails from "./Components/AddressDetails/index.jsx";
 
 
 function App() {
@@ -94,6 +95,7 @@ function App() {
                     <Route path="/LogInPage/" element={<LogInPage setLoggedIn={setLoggedIn} />}
                     />
                     <Route path='/cart-page/'  element={<CartPage cartProducts={cartProducts} removeFromCart={removeFromCart} clearSearchBar={clearSearchBar} handleClearClick={handleClearSearch}/>}/>
+                    <Route path="/AddressPage/" element={<AddressDetails cartProducts={cartProducts} />}/>
                     <Route path="/PaymentPage/" element={<PaymentPage cartProducts={cartProducts} />}/>
                 </Routes>}
                 <Footer />

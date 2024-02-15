@@ -1,11 +1,17 @@
 import React from "react";
 import './Cartpage.css';
 import Button from "../Button/index.jsx";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 const CartPage = ({ cartProducts, removeFromCart, handleClearClick }) => {
-    // Calculate the total cost
     const totalCost = cartProducts.reduce((acc, product) => acc + (product.price * product.quantity), 0);
+    const navigate = useNavigate();
+    const keepBrowsing = async () => {
+        navigate('/');
+    }
+    const paymentScreen = () => {
+        navigate ("/AddressPage/")
+    }
 
     return (
         <div>
@@ -19,11 +25,12 @@ const CartPage = ({ cartProducts, removeFromCart, handleClearClick }) => {
                 </div>
             ) : (
                 <div>
+                    {/*<Button className="KeepBrowsingButton" text="Keep browsing" onClick={keepBrowsing} />*/}
+                    <Button className="toAddress" text="Pay Now" onClick={paymentScreen} />
                     <div className="cartPagelayout">
                         <p className="cartTotalCost">Cart Total: £{totalCost.toFixed(2)}</p>
                     </div>
                     <div className="cart-layout">
-
                         {cartProducts.map((product, index) => (
                             <div key={index} className="cart-product">
                                 <img className="cartproductImage" src={product.image} alt={`Product: ${product.title}`} />

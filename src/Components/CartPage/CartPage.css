@@ -109,6 +109,35 @@
 
 
 }
+.toAddress {
+    background-color: #577557;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.toAddress:hover
+{
+    background-color: #405937;
+}
+.KeepBrowsingButton {
+    background-color: #577557;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+}
 
 @media (max-width: 768px) {
 
