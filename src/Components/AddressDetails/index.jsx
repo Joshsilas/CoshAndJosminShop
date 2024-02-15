@@ -5,13 +5,14 @@ import './AddressDetails.css';
 import {useNavigate} from "react-router-dom";
 
 const AddressDetails = () => {
+    const navigate = useNavigate();
     const [address, setAddress] = useState({
         street: '',
         city: '',
         county: '',
         postalCode: ''
     });
-    const navigate = useNavigate();
+
     const paymentScreen = () => {
         if (address.street && address.city && address.county && address.postalCode) {
             navigate("/PaymentPage/");
@@ -19,9 +20,11 @@ const AddressDetails = () => {
            alert("Please fill in all address fields before proceeding to payment.");
         }
     }
-    const Cancel = async () => {
+
+    const CancelButton = async () => {
         navigate('/');
     }
+
     const handleInputChange = (name, value) => {
         setAddress(prevState => ({
             ...prevState,
@@ -40,7 +43,6 @@ const AddressDetails = () => {
             document.removeEventListener('keydown', handleKeyPress);
         };
     }, [paymentScreen]);
-
 
     return (
         <>
@@ -82,7 +84,7 @@ const AddressDetails = () => {
                     value={address.postalCode}
                     onChange={(newValue) => handleInputChange("postalCode", newValue)}
                 />
-                <Button className="Cancel" text="Cancel" onClick={Cancel} type="button"/>
+                <Button className="Cancel" text="Cancel" onClick={CancelButton} type="button"/>
                 <Button className="toPayment" text="Card details" onClick={paymentScreen} type="button"/>
             </div>
         </>
