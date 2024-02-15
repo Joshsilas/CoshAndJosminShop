@@ -1,10 +1,10 @@
 
-const Button = ({className}) => {
+const Button = ({className, text, onClick}) => {
     return (
         <>
-            <h2>
-                BasketButton
-            </h2>
+            <button className={className} type='submit' onClick={onClick}>
+                {text}
+            </button>
         </>
     )
 }

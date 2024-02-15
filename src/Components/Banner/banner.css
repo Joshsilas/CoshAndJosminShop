@@ -1,21 +1,36 @@
 .banner {
     margin-top: 20px;
-    background-color: #1f3a2c;
-    padding: 30px;
-    font-size: 3rem;
+    background-color: rgba(31, 58, 44, 0.82);
+    padding: 50px;
+    font-size: 5rem;
     border-radius: 30px;
     color: white;
-    font-family: 'Roboto', sans-serif;
+    font-family: "JetBrains Mono";
     overflow: hidden;
-    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 5px solid rgba(0, 0, 0, 0.5);
 }
+
+/*I like the banner bigger but heres the original in case we change our minds*/
+/*.banner {*/
+/*    margin-top: 20px;*/
+/*    background-color: #1f3a2c;*/
+/*    padding: 30px;*/
+/*    font-size: 3rem;*/
+/*    border-radius: 30px;*/
+/*    color: white;*/
+/*    font-family: 'Roboto', sans-serif;*/
+/*    overflow: hidden;*/
+/*    white-space: nowrap;*/
+/*}*/
 
 .banner {
     color: #eee1ff;
 }
 
-.bannerMainTitle
-{
+.bannerMainTitle {
     color: white;
 }
 
@@ -30,10 +45,10 @@
 
 @media (max-width: 768px) {
     .banner {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .bannerMainTitle
     {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }

@@ -1,0 +1,55 @@
+.paymentforms {
+    padding: 10px;
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.PayButton {
+    background-color: #577557;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.signInMessage {
+    margin: 10px;
+    font-size: 2rem;
+    background-color: #869d6b;
+    padding: 30px;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.PaymentFormsDisplay {
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    margin:10px;
+    border-radius: 500px;
+    background-color: rgba(255, 255, 255, 0.64);
+}
+
+
+@media (max-width: 768px) {
+    .signInMessage {
+        font-size: 1.2rem;
+    }
+    .loginFormsDisplay
+    {
+        border-radius: 10px;
+    }
+    .cartTotalCost
+    {
+        width: 50%;
+    }
+}
