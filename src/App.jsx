@@ -74,6 +74,10 @@ function App() {
         }).filter(product => product.quantity > 0));
     };
 
+    const clearCart = () => {
+        setCartProducts([])
+    }
+
     return (
         <BrowserRouter>
             <UserProvider>
@@ -96,7 +100,7 @@ function App() {
                     />
                     <Route path='/cart-page/'  element={<CartPage cartProducts={cartProducts} removeFromCart={removeFromCart} clearSearchBar={clearSearchBar} handleClearClick={handleClearSearch}/>}/>
                     <Route path="/AddressPage/" element={<AddressDetails cartProducts={cartProducts} />}/>
-                    <Route path="/PaymentPage/" element={<PaymentPage cartProducts={cartProducts} />}/>
+                    <Route path="/PaymentPage/" element={<PaymentPage cartProducts={cartProducts} clearCart={clearCart} />}/>
                 </Routes>}
                 <Footer />
                 {/*<UserDisplay />*/}
