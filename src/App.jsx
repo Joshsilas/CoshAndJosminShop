@@ -21,7 +21,7 @@ function App() {
     const [searchTerm, setSearchTerm] = useState("");
     const [clearSearchBar, setClearSearchBar] = useState(false);
     const [loggedIn, setLoggedIn] = useState(false);
-    const [cartProducts, setcartProducts] = useState([])
+    const [cartProducts, setCartProducts] = useState([])
     const handleSearch = (searchTerm) => {
         setSearchTerm(searchTerm);
     };
@@ -29,8 +29,7 @@ function App() {
     const handleClearSearch = () => {
         setClearSearchBar(true);
     };
-
-
+    
     useEffect(() => {
         const fetchProducts = async () => {
             try {
@@ -51,13 +50,27 @@ function App() {
         }
     }, [clearSearchBar]);
 
-    const addToCart = (product) => {
-        setcartProducts([...cartProducts, product]);
+    const addToCart = (product, selectedQuantity) => {
+        const quantityToAdd = parseInt(selectedQuantity, 10);
+        const existingProductIndex = cartProducts.findIndex(p => p.id === product.id);
+        if (existingProductIndex !== -1) {
+            const updatedCart = [...cartProducts];
+            updatedCart[existingProductIndex].quantity += quantityToAdd;
+            setCartProducts(updatedCart);
+        } else {
+            setCartProducts([...cartProducts, { ...product, quantity: quantityToAdd }]);
+        }
     };
 
     const removeFromCart = (productId) => {
-        setcartProducts(cartProducts.filter(product => product.id !== productId))
-    }
+        setCartProducts(cartProducts.map(product => {
+            if (product.id === productId) {
+                return { ...product, quantity: product.quantity - 1 };
+            } else {
+                return product;
+            }
+        }).filter(product => product.quantity > 0));
+    };
 
     return (
         <BrowserRouter>

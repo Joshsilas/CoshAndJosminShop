@@ -9,7 +9,7 @@ const ProductPage = ({handleClearClick, addToCart}) => {
     const url = `https://fakestoreapi.com/products/${id}`;
     const [product, setProduct] = useState(null)
     const [readMore, setreadMore] = useState(false);
-    const [selectedQuantity, setSelectedQuantity] = useState("")
+    const [selectedQuantity, setSelectedQuantity] = useState(1)
     const [error, setError] = useState("");
     const fetchProduct = async () => {
         try {
@@ -30,19 +30,19 @@ const ProductPage = ({handleClearClick, addToCart}) => {
     };
 
     const addToCartHandler = () => {
-        if(!selectedQuantity) {
-            setError({ message: "Please select a quantity", type: "error" });
+        if (!selectedQuantity || isNaN(selectedQuantity) || selectedQuantity <= 0) {
+            setError({ message: "Please select a valid quantity", type: "error" });
             setTimeout(() => {
                 setError("");
             }, 3000);
         } else {
-            addToCart({...product, quantity: selectedQuantity})
+            addToCart(product, selectedQuantity);
             setError({ message: "Added to cart", type: "success" });
             setTimeout(() => {
                 setError("");
             }, 3000);
         }
-    }
+    };
 
     return (
         <section>
