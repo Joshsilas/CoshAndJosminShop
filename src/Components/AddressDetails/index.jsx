@@ -64,7 +64,7 @@ const AddressDetails = () => {
                     id="PostalCode"
                     name="postalCode"
                     className="addressForms"
-                    placeholder={"Postal Code"}
+                    placeholder={"Post Code"}
                     type="text"
                     value={address.postalCode}
                     onChange={(newValue) => handleInputChange("postalCode", newValue)}
