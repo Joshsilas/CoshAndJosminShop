@@ -11,7 +11,7 @@ const CartButton = ({className, text, handleClearClick}) => {
 
     return (
         <button className="cartImage" type='button' onClick={handleCartNavigation}>
-            <img className="cartImage" src='/src/assets/cart-shopping-solid.svg' alt='Shopping Cart' />
+            <img className="cartImage" src='/cart-shopping-solid.svg' alt='Shopping Cart' />
         </button>
 
     )

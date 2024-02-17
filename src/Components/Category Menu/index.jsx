@@ -35,9 +35,9 @@ const CategoryMenu = ({ text, handleClearClick }) => {
     return (
         <div>
             <button className='catButton' onClick={toggleMenu}>
-                <img className="barsImage" src='/src/assets/bars-solid.svg' alt="BarsLogo" />
+                <img className="barsImage" src='/bars-solid.svg' alt="BarsLogo" />
                 {text}
-                <img className={`closeImage ${!isOpen ? 'open' : ''}`} src='/src/assets/x-solid.svg' alt="Close" />
+                <img className={`closeImage ${!isOpen ? 'open' : ''}`} src='/x-solid.svg' alt="Close" />
             </button>
             <div className={`category-menu ${isOpen ? 'open' : ''}`}>
             {isOpen && (
