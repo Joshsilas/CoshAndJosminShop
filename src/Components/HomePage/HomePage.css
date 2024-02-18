@@ -144,10 +144,9 @@
 
 @media (max-width: 768px) {
     .products {
-        margin: 10px;
+        margin: 5px;
         gap: 5px;
     }
-
     .single-product {
         flex: 0 0 calc(50% - 10px);
     }
@@ -163,6 +162,6 @@
     }
     .single-product .img {
         max-height: 100px;
+        min-height: 100px;
     }
 }
-

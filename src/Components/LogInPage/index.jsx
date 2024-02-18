@@ -50,7 +50,10 @@ const LogInPage = ({ setLoggedIn }) => {
 
     return (
         <>
-            <p className="signInMessage">Please enter your username and password to sign in</p>
+            <div className="signInMessage">
+                <p>Please enter your username</p>
+                <p>and password</p>
+            </div>
             <div className="loginFormsDisplay">
             <InputForms
                 id="userNameForm"

@@ -51,7 +51,7 @@
 
 @media (max-width: 768px) {
     .products {
-        margin: 10px;
+        margin: 5px;
         gap: 5px;
     }
     .single-product-category {
@@ -59,5 +59,6 @@
     }
     .single-product-category .img{
         max-height: 100px;
+        min-height: 100px;
     }
 }

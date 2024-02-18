@@ -88,7 +88,7 @@
         height: auto;
     }
     .searchLayout {
-        margin: 10px;
+        margin: 5px;
         gap: 5px;
     }
 
@@ -105,6 +105,7 @@
     }
     .search-product .img {
         max-height: 100px;
+        min-height: 100px;
     }
 }
 

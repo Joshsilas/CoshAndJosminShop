@@ -43,6 +43,7 @@
 @media (max-width: 768px) {
     .signInMessage {
         font-size: 1rem;
+        max-width: 100%
     }
     .loginFormsDisplay
     {
