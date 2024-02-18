@@ -21,7 +21,7 @@
     flex-direction: column;
     text-align: center;
     font-weight: bold;
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -54,7 +54,7 @@
     background-color: #ececec;
     border-radius: 30px;
     color: #282626;
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
     font-size: 1.5rem;
     overflow: hidden;
     border: solid rgba(255, 248, 248, 0.38);

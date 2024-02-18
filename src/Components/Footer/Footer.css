@@ -6,7 +6,7 @@
 }
 
 .footerContents {
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

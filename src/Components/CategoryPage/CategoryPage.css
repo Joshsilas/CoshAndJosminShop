@@ -10,7 +10,7 @@
     flex-direction: column;
     text-align: center;
     font-weight: bold;
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
     transition: transform 0.3s ease-in-out;
 }
 

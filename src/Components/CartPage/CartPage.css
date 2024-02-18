@@ -23,7 +23,7 @@
     flex-direction: column;
     text-align: center;
     font-weight: bold;
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
 }
 
 .cart-layout {
@@ -42,7 +42,7 @@
 
 .cartProductTitle {
     margin: 5px;
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
 }
 
 .cartProductPrice {
@@ -53,7 +53,7 @@
 }
 .cartProductQuanity {
     margin: 5px;
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
 }
 
 .removeButton {
@@ -100,7 +100,7 @@
     background-color: #ececec;
     border-radius: 30px;
     color: #282626;
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
     font-size: 1.5rem;
     overflow: hidden;
     border: solid rgba(255, 248, 248, 0.38);

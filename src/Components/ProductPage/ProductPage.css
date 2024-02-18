@@ -82,11 +82,11 @@ font-weight: bold;
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 4px;
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
 }
 
 .product-page-category {
-    font-family: "Cooper Black";
+    font-family: 'Cooper Black', sans-serif;
 }
 
 .product-page-description::before {
