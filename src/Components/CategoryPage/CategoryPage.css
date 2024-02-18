@@ -56,9 +56,15 @@
     }
     .single-product-category {
         flex: 0 0 calc(50% - 10px);
+
     }
     .single-product-category .img{
         max-height: 100px;
         min-height: 100px;
+    }
+}
+@media (max-width: 470px) {
+    .single-product-category {
+        font-size: 0.7rem;
     }
 }
