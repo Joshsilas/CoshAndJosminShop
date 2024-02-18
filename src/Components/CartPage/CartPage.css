@@ -146,16 +146,15 @@
 }
 
 @media (max-width: 768px) {
-
     .cart-layout {
-        margin: 10px;
+        margin: 5px;
         gap: 5px;
     }
     .emptyCartMessage{
         font-size: 3rem;
     }
     .cart-product  {
-        flex: 0 0 calc(50% - 5px);
+        flex: 0 0 calc(50% - 10px);
     }
 
     .backToHomePageLink {
@@ -166,5 +165,9 @@
     }
     .backToHomePageLinkCartpage{
         font-size: 1rem
+    }
+    .cartproductImage{
+        max-height: 100px;
+
     }
 }

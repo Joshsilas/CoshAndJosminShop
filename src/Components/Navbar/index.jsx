@@ -41,7 +41,7 @@ const NavBar = ({ handleSearch, handleClearClick, clearSearchBar, displayLoggedI
         <div>
             <nav className="navBar">
                 <div>
-                <Link  to="/" >
+                <Link  onClick={handleClearClick} to="/" >
                     <p className="welcomeLogo">Cosh And Josmin</p>
                 </Link>
         </div>
