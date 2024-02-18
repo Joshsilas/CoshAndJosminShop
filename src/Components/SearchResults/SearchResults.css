@@ -93,7 +93,7 @@
     }
 
     .search-product  {
-        flex: 0 0 calc(50% - 5px);
+        flex: 0 0 calc(50% - 10px);
     }
     .ohNoMessage
     {
@@ -102,6 +102,9 @@
     }
     .backToHomePageLink {
         font-size: 1rem;
+    }
+    .search-product .img {
+        max-height: 100px;
     }
 }
 

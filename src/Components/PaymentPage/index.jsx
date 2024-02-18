@@ -76,7 +76,11 @@ const PaymentPage = ({ cartProducts, clearCart }) => {
                     placeholder={"Expiry date (MM/YY)"}
                     type="text"
                     value={cardDetails.expiryDate}
-                    onChange={(newValue) => setCardDetails(prevState => ({ ...prevState, expiryDate: newValue }))}
+                    onChange={(newValue) => {
+                        const cleanedValue = newValue.replace(/\D/g, '');
+                        const formattedValue = cleanedValue.replace(/^(.{2})/, '$1/');
+                        setCardDetails(prevState => ({...prevState, expiryDate: formattedValue}));
+                    }}
                 />
                 <InputForms
                     id="Name"

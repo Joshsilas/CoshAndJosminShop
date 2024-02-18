@@ -55,6 +55,9 @@
         gap: 5px;
     }
     .single-product-category {
-        flex: 1 0 calc(50% - 5px);
+        flex: 0 0 calc(50% - 10px);
+    }
+    .single-product-category .img{
+        max-height: 100px;
     }
 }

@@ -88,6 +88,10 @@
     margin-bottom: 20px;
 }
 
+.backToHomePageLinkCartpage:hover{
+    color: white;
+}
+
 .cartTotalCost {
     margin: 10px;
     width: 20%;
@@ -147,7 +151,9 @@
         margin: 10px;
         gap: 5px;
     }
-
+    .emptyCartMessage{
+        font-size: 3rem;
+    }
     .cart-product  {
         flex: 0 0 calc(50% - 5px);
     }
@@ -157,5 +163,8 @@
     }
     .cartTotalCost {
         width: 100%;
+    }
+    .backToHomePageLinkCartpage{
+        font-size: 1rem
     }
 }
