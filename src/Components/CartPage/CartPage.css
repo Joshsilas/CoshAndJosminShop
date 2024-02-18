@@ -156,7 +156,6 @@
     .cart-product  {
         flex: 0 0 calc(50% - 10px);
     }
-
     .backToHomePageLink {
         font-size: 1rem;
     }
