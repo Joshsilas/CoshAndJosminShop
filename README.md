@@ -57,6 +57,7 @@ See the live version here:
 https://coshandjosmin.2023-joshb.dev.io-academy.uk/
 
 Desktop
+
 ![image](https://github.com/Joshsilas/CoshAndJosminShop/assets/137796554/8f43b740-4d40-4a30-8243-7ba08e88fc8e)
 
 Mobile Friendly
