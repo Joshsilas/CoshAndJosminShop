@@ -15,6 +15,7 @@ Welcome to our E-Commerce Website, a collaborative effort by Josh and Cosmin. Ou
 - Vite
 - Font Awesome
 - Localstorage
+- Plesk
 - Fake Store API ('https://fakestoreapi.com/')
 
 ## Key Features 
